@@ -1,0 +1,61 @@
+@import "./corporate-design.scss";
+
+.logo {
+  max-width: 40%;
+  height: 45px;
+  width: auto;
+  display: inline;
+  margin: 2px;
+  margin-left: 10px;
+}
+.landing-img {
+  height: 90vh;
+  width: auto;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+}
+#landing-container {
+  //background-image: url("../img/bgimage.png");
+  //background-size: cover;
+
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 5vh;
+  z-index: 5;
+
+  .row {
+    padding-left: 5vh;
+  }
+  .col {
+    padding-left: 0px;
+  }
+  h1,
+  .h1 {
+    font-size: 3.5rem !important;
+  }
+}
+#heading {
+  margin-left: 2vw;
+  margin-top: 50px;
+  margin-right: 7vw;
+  p {
+    text-align: justify;
+  }
+}
+#language-dropdown {
+  border-color: $tertiary;
+  background-color: white;
+  color: $secondary-opac;
+}
+#start-button {
+  margin-top: 50px;
+  color: white;
+}
+
+#powered-paragraph {
+  width: 100%;
+  text-align: right;
+}

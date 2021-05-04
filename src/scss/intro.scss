@@ -1,0 +1,29 @@
+@import "./corporate-design.scss";
+
+#intro-container {
+  width: 80vw !important;
+  background-color: $primary;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  transform: translateY(-10vh);
+  -webkit-transform: translateY(-10vh);
+  -moz-transform: translateY(-10vh);
+  -ms-transform: translateY(-10vh);
+  -o-transform: translateY(-10vh);
+  z-index: 14;
+  color: white;
+
+  h2 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .icon {
+    height: 10vh;
+    width: auto;
+  }
+}
