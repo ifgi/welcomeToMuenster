@@ -1,0 +1,19 @@
+@import "./corporate-design.scss";
+
+.navbar {
+  background: transparent;
+  background-color: #ffffff55;
+  backdrop-filter: blur(6px);
+  font-weight: 300;
+  font-style: italic;
+}
+
+.nav-link {
+  color: $secondary !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  margin-left: 50px;
+}
+
+navbar-toggler {
+}

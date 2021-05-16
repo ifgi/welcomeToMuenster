@@ -23,7 +23,7 @@
 
   margin-left: 0px;
   margin-right: 0px;
-  padding-top: 5vh;
+  padding-top: 56px;
   z-index: 5;
 
   .row {
@@ -41,6 +41,10 @@
   margin-left: 2vw;
   margin-top: 50px;
   margin-right: 7vw;
+  height: calc(100% - 50px);
+  #p-container {
+    height: calc(100% - 49px - 4rem - 50px);
+  }
   p {
     text-align: justify;
   }
