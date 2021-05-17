@@ -21,7 +21,7 @@ L.Icon.Default.mergeOptions({
 //centers for the map at all scrollama steps
 const stadtCenter = [51.961563, 7.628202];
 
-function Intro() {
+function Map() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1150px)" });
   const [currentStepIndex, setCurrentStepIndex] = useState(null);
 
@@ -92,4 +92,4 @@ function Intro() {
   );
 }
 
-export default Intro;
+export default Map;

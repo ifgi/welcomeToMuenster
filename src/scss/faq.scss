@@ -5,19 +5,26 @@
   height: auto !important;
   position: relative;
   padding: 0;
-
+  p {
+    text-align: justify;
+  }
   h2 {
     color: white;
   }
   .btn {
+    font-size: 1.2rem;
     text-align: left;
     padding-left: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: $secondary;
+    background-color: $secondary-dark;
     width: 100%;
     margin-top: 10px;
-    font-size: 1.5rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    -webkit-border-radius: 0.25rem 0.25rem 0 0;
+    -moz-border-radius: 0.25rem 0.25rem 0 0;
+    -ms-border-radius: 0.25rem 0.25rem 0 0;
+    -o-border-radius: 0.25rem 0.25rem 0 0;
   }
 }
 .bg-image {
@@ -33,12 +40,12 @@
   padding: 100px;
 }
 .faq-text {
-  background-color: white;
-  color: $secondary;
+  background-color: $secondary;
+  color: white;
   padding: 30px;
-  border-radius: 0.25rem;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  -ms-border-radius: 0.25rem;
-  -o-border-radius: 0.25rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  -webkit-border-radius: 0 0 0.25rem 0.25rem;
+  -moz-border-radius: 0 0 0.25rem 0.25rem;
+  -ms-border-radius: 0 0 0.25rem 0.25rem;
+  -o-border-radius: 0 0 0.25rem 0.25rem;
 }

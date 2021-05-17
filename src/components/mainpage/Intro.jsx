@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useSelector } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -30,6 +31,7 @@ const muensterCenterMobile = [51.961869, 7.383207];
 const stadtCenterMobile = [51.960667, 7.626135];
 
 function Intro() {
+  const language = useSelector((state) => state.language);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1150px)" });
   const [currentStepIndex, setCurrentStepIndex] = useState(null);
   const [currentCenter, setCurrentCenter] = useState(
