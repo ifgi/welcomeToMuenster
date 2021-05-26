@@ -27,7 +27,7 @@ function Navigation() {
             <Nav.Link href='#Münster'>Münster</Nav.Link>
 
             <Nav.Link href='#Studies'>Studium</Nav.Link>
-            <Nav.Link href='#Explore'>Erkundung</Nav.Link>
+            <Nav.Link href='#Discover'>Erkundung</Nav.Link>
           </Nav>
         </>
       );

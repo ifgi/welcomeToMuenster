@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import bike from "../../img/iconmonstr-bicycle-1.svg";
 import { Scrollama, Step } from "react-scrollama";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { useMediaQuery } from "react-responsive";
@@ -13,6 +12,18 @@ import germany from "../../data/germany.json";
 import nrw from "../../data/nrw.json";
 import muensterland from "../../data/muensterland.json";
 import muenster from "../../data/muenster.json";
+
+import mensaCardIcon from "../../img/icons/iconmonstr-mensa-card.svg";
+import globeIcon from "../../img/icons/iconmonstr-globe.svg";
+import speechBubbleIcon from "../../img/icons/iconmonstr-speech-bubble.svg";
+import homeIcon from "../../img/icons/iconmonstr-home.svg";
+import dropdownIcon from "../../img/icons/iconmonstr-dropdown.svg";
+import mensaCardIconMaster from "../../img/icons/iconmonstr-mensa-card-master.svg";
+import courseIconMaster from "../../img/icons/iconmonstr-courses-master.svg";
+import globeIconMaster from "../../img/icons/iconmonstr-globe-master.svg";
+import homeIconMaster from "../../img/icons/iconmonstr-home-master.svg";
+import dropdownIconMaster from "../../img/icons/iconmonstr-dropdown-master.svg";
+
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   shadowUrl:
@@ -77,17 +88,12 @@ function Intro() {
   };
 
   const onEachPolygon = (polygon, layer) => {
-    layer.options.fillColor = "#7ab629";
+    layer.options.fillColor = language === "german" ? "#7ab629" : "#009DD2";
     layer.options.fillOpacity = 0.6;
-    layer.options.color = "#7ab629";
+    layer.options.color = language === "german" ? "#7ab629" : "#009DD2";
   };
 
-  const mapStyle = {
-    fillColor: "white",
-    weight: 1,
-    color: "black",
-    fillOpacity: 1,
-  };
+  const style = { fillColor: " #4C4C4A", color: "#4C4C4A", fillOpacity: 0.6 };
 
   return (
     <>
@@ -112,8 +118,8 @@ function Intro() {
                   ref={geoJsonLayer}
                   key={"theOneGEOJSON"}
                   data={geoData}
-                  onEachFeature={onEachPolygon}
-                  style={mapStyle}
+                  //onEachFeature={onEachPolygon}
+                  style={style}
                 />
               </MapContainer>
             </Col>
@@ -127,32 +133,56 @@ function Intro() {
                   ? "storymap-description mobile first"
                   : "storymap-description first"
               }>
-              <h2>Welcome to Your New Home!</h2>
-              <p>
-                This is going to be very very awesome.
-                <b style={{ color: "#06aa6e" }}>“Trust me”</b>
-                The directive of this movement is to curtail the plastic litter
-                and its associated impact through{" "}
-                <b style={{ color: "#06aa6e" }}>
-                  “Transforming our world: the 2030 Agenda for Sustainable
-                  Development”
-                </b>
-                . In a broader picture, the term{" "}
-                <b style={{ color: "#06aa6e" }}>“waste”</b> contributes
-                countless elements in our everyday routine.
-              </p>
-              <p>
-                The waste statistics displays the household waste in tonnes for
-                Europe as of 2018, of which the top ranked country is Turkey{" "}
-                <b>(32.3 million)</b>, followed by the United Kingdom{" "}
-                <b>(31.9 million)</b>, France <b>(21 million)</b> and{" "}
-                <b style={{ color: "#00441b" }}>Germany (20.6 million)</b>.
-              </p>
-              <p>
-                <b style={{ color: "red" }}>
-                  Click on any country on the map to compare them.
-                </b>
-              </p>
+              {language === "german" ? (
+                <>
+                  {" "}
+                  <h2>Willkommen in deinem neuen Zuhause!</h2>
+                  <p>
+                    Schön, dass du dich entschieden hast, nach Münster zu kommen
+                    und noch viel schöner, dass du ab sofort Geoinformatik
+                    studiert!
+                  </p>
+                  <p>
+                    Aus diesem Grund wollen wir dir auf dieser Seite einerseits
+                    hilfreiche Tipps für deinen Start in Münster geben und
+                    außerdem schonmal einen kleinen Vorgeschmack geben, was mit
+                    Karten alles möglich ist und du im Studium lernst.
+                    Stadterkundung und Studienstart auf die Geoinformatiker-Art.
+                  </p>
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  {" "}
+                  <h2>Welcome to Your New Home!</h2>
+                  <p>
+                    This is going to be very very awesome.
+                    <b style={{ color: "#06aa6e" }}>“Trust me”</b>
+                    The directive of this movement is to curtail the plastic
+                    litter and its associated impact through{" "}
+                    <b style={{ color: "#06aa6e" }}>
+                      “Transforming our world: the 2030 Agenda for Sustainable
+                      Development”
+                    </b>
+                    . In a broader picture, the term{" "}
+                    <b style={{ color: "#06aa6e" }}>“waste”</b> contributes
+                    countless elements in our everyday routine.
+                  </p>
+                  <p>
+                    The waste statistics displays the household waste in tonnes
+                    for Europe as of 2018, of which the top ranked country is
+                    Turkey <b>(32.3 million)</b>, followed by the United Kingdom{" "}
+                    <b>(31.9 million)</b>, France <b>(21 million)</b> and{" "}
+                    <b style={{ color: "#00441b" }}>Germany (20.6 million)</b>.
+                  </p>
+                  <p>
+                    <b style={{ color: "red" }}>
+                      Click on any country on the map to compare them.
+                    </b>
+                  </p>
+                </>
+              ) : (
+                <></>
+              )}
             </div>
           </Step>
           <Step data={2} key={2}>
@@ -162,21 +192,25 @@ function Intro() {
                   ? "storymap-description mobile"
                   : "storymap-description"
               }>
-              <h2>about Germany</h2>
-              <p>
-                According to the Federal Government report, a larger portion of
-                household waste generated in Germany was increased by{" "}
-                <b>0.8%</b> in <b>2019</b>. Ranking of states is based on waste
-                generated per inhabitant in Kilograms (Kg/E). At a glance,
-                states like Rheinland-Pfalz <b>(525 Kg)</b>, Niedersachsen{" "}
-                <b>(511 Kg)</b>, Bayern <b>(479 Kg)</b>, Saarland{" "}
-                <b>(476 Kg)</b> is followed by{" "}
-                <b style={{ color: "#bd0026" }}>Nordrhein-Westfalen (461 Kg)</b>
-                .
-              </p>
-              <p style={{ color: "#06aa6e" }}>
-                Eager to know the condition of our state!
-              </p>
+              {language === "german" ? (
+                <>
+                  <h2>Im Herzen Nordrheinwestfalens</h2>
+                  <p>
+                    Nordrheinwestfalen ist das befölkerungsreichste Bundesland
+                    Deutschlands.
+                  </p>
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  <h2>Part of Northrhine Westfalia</h2>
+                  <p>
+                    Northrhein Westfalie (NRW) is the most populated federal
+                    state of Germany.{" "}
+                  </p>
+                </>
+              ) : (
+                <></>
+              )}
             </div>
           </Step>
           <Step data={3} key={3}>
@@ -186,18 +220,26 @@ function Intro() {
                   ? "storymap-description mobile"
                   : "storymap-description"
               }>
-              <h2>about North Rhine-Westphalia</h2>
-              <p>
-                Looking into the statistics of the five Regierungsbezirke in
-                NRW, <b style={{ color: "#bd0026" }}>Münster</b> generates the
-                highest amount of household waste per inhabitant{" "}
-                <b>(496.71 Kg)</b>, followed by Köln <b>(477.26 Kg)</b>,
-                Arnsberg <b>(461 Kg)</b>, Düsseldorf <b>(454.31 Kg)</b>, Detmold{" "}
-                <b>(422.9 Kg)</b>.
-              </p>
-              <p style={{ color: "#06aa6e" }}>
-                Time for action, Let’s start from our hometown!
-              </p>
+              {language === "german" ? (
+                <>
+                  <h2>Münsterland. Felder, Fahrräder und Schönheit.</h2>
+                  <p>
+                    Mit X Metern Höhe ist der X der höchste Punkt des
+                    Münsterlandes und genau aus diesem Grund ist das Fahrrad der
+                    absolute Renner in Münster. ZAHLEN FAKTEN UNSW.
+                  </p>
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  <h2>Münsterland. Fields, Bicycles and Beauty.</h2>
+                  <p>
+                    Northrhein Westfalie (NRW) is the most populated federal
+                    state of Germany.{" "}
+                  </p>
+                </>
+              ) : (
+                <></>
+              )}
             </div>
           </Step>
 
@@ -208,29 +250,26 @@ function Intro() {
                   ? "storymap-description mobile"
                   : "storymap-description"
               }>
-              <h2>about Münsterland</h2>
-              <p>
-                Here is a small comparison on each category of waste from
-                Münster generated in <b>2018</b> and <b>2019</b>, where
-                household and bulky waste was <b>1799.8 kg/E</b>, which surged
-                to <b>1808.8 kg/E</b> in <b>2019</b>. There was a decrease in
-                the total amount of organic and green waste generated in{" "}
-                <b>2019 (1374.01 kg/E)</b> when compared to{" "}
-                <b>2018 (1381.2 kg/E)</b>. Similarly, there was a decline in the
-                generation of glass wastes from<b> 183.7 kg/E</b> to{" "}
-                <b>182 kg/E</b> between the years <b>2018</b> and <b>2019</b>.
-                There was an increase in the generation of paper waste in
-                Münster, which rose from <b>590.7 kg/E</b> in <b>2018</b> to{" "}
-                <b>597.03 kg/E</b> in <b>2019</b> quantifying waste from each
-                category.
-              </p>
-              <p style={{ color: "#06aa6e" }}>
-                Gain a better insight on the amount of household waste produced
-                per inhabitant in your Stadtteil today!
-              </p>
-              <p style={{ color: "#06aa6e" }}>
-                Small steps make a big difference, Towards <b>MÜNSTAINABLE!</b>
-              </p>
+              {language === "german" ? (
+                <>
+                  <h2>Eine Hansestadt mit bewegter Geschichte</h2>
+                  <p>
+                    Münster ist seit jeher ein zentraler Handelknotenpunkt und
+                    ist auch heute noch ein Zentrum für eine übergeordnete
+                    Region.
+                  </p>
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  <h2>Hanseatic City With an Eventful History</h2>
+                  <p>
+                    Münster has always been an important trading hub and so it
+                    is still a central city .{" "}
+                  </p>
+                </>
+              ) : (
+                <></>
+              )}
             </div>
           </Step>
           <Step data={5} key={5}>
@@ -248,11 +287,271 @@ function Intro() {
             </div>
           </Step>
         </Scrollama>
-        <Container id='intro-container'>
+        <Container
+          id='firststeps-container'
+          className={language === "englisch" ? "master-links" : ""}>
           <Row>
             <Col>
-              <h2>Discover Your New Home</h2>
-              <img src={bike} className='icon' alt='Icon of a Bike' />
+              {language === "german" ? (
+                <h1>Deine ersten Schritte:</h1>
+              ) : language === "englisch" ? (
+                <h1>Your First Steps:</h1>
+              ) : (
+                <></>
+              )}
+            </Col>
+          </Row>
+          <Row>
+            <Col
+              xs='12'
+              md='6'
+              className={
+                language === "englisch"
+                  ? "firststeps-col englisch"
+                  : "firststeps-col"
+              }>
+              {language === "german" ? (
+                <>
+                  <img
+                    src={speechBubbleIcon}
+                    className='firststeps-icon'
+                    alt='Icon of speechbubbles'
+                  />
+
+                  <h3>Mesakarte beantragen!</h3>
+                  <p>
+                    Damit du von der ersten Woche an sofort in der Mensa essen
+                    gehen kannst, ohne ständig einen Aufpreis zahlen zu müssen,
+                    vergiss nicht, deinen Studierendenausweis zu beantragen.
+                    <br />
+                    <a
+                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                      target='_blank'
+                      rel='noreferrer'>
+                      Schau dafür auf dieser Seite
+                    </a>
+                    , was du tun musst und was der Studierendenausweis noch so
+                    alles kann.
+                  </p>
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  <img
+                    src={courseIconMaster}
+                    className='firststeps-icon'
+                    alt='Icon for a course'
+                  />
+                  <h3>Course Enrolment</h3>
+
+                  <p>
+                    To don't get in trouble by don't having a ID card for the
+                    canteen or the library,{" "}
+                    <a
+                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                      target='_blank'
+                      rel='noreferrer'>
+                      check out this page
+                    </a>
+                    . Here you will get all the information you need for getting
+                    your ID card and all the things you can do with it.
+                  </p>
+                </>
+              ) : (
+                <></>
+              )}
+              <img
+                src={dropdownIconMaster}
+                className='dropdown-icon'
+                alt='dropdownbutton'
+              />
+            </Col>
+            <Col
+              xs='12'
+              md='6'
+              className={
+                language === "englisch"
+                  ? "firststeps-col englisch"
+                  : "firststeps-col"
+              }>
+              {language === "german" ? (
+                <>
+                  <img
+                    src={mensaCardIcon}
+                    className='firststeps-icon'
+                    alt='Icon of a Card'
+                  />
+                  <h3>Mesakarte beantragen!</h3>
+                  <p>
+                    Damit du von der ersten Woche an sofort in der Mensa essen
+                    gehen kannst, ohne ständig einen Aufpreis zahlen zu müssen,
+                    vergiss nicht, deinen Studierendenausweis zu beantragen.
+                    <br />
+                    <a
+                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                      target='_blank'
+                      rel='noreferrer'>
+                      Schau dafür auf dieser Seite
+                    </a>
+                    , was du tun musst und was der Studierendenausweis noch so
+                    alles kann.
+                  </p>
+                  <img
+                    src={dropdownIcon}
+                    className='dropdown-icon'
+                    alt='dropdownbutton'
+                  />
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  <img
+                    src={mensaCardIconMaster}
+                    className='firststeps-icon'
+                    alt='Icon of a Card'
+                  />
+                  <h3>Apply for Student ID / Mensacard (Canteen Card)</h3>
+
+                  <p>
+                    To don't get in trouble by don't having a ID card for the
+                    canteen or the library,{" "}
+                    <a
+                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                      target='_blank'
+                      rel='noreferrer'>
+                      check out this page
+                    </a>
+                    . Here you will get all the information you need for getting
+                    your ID card and all the things you can do with it.
+                  </p>
+                  <img
+                    src={dropdownIconMaster}
+                    className='dropdown-icon'
+                    alt='dropdownbutton'
+                  />
+                </>
+              ) : (
+                <></>
+              )}
+            </Col>{" "}
+            <Col xs='12' md='6' className='firststeps-col'>
+              {" "}
+              {language === "german" ? (
+                <>
+                  <img
+                    src={globeIcon}
+                    className='firststeps-icon'
+                    alt='Icon of a LGlobe'
+                  />
+                  <h3>Informiere dich</h3>
+                  <p>
+                    Damit du von der ersten Woche an sofort in der Mensa essen
+                    gehen kannst, ohne ständig einen Aufpreis zahlen zu müssen,
+                    vergiss nicht, deinen Studierendenausweis zu beantragen.
+                    <br />
+                    <a
+                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                      target='_blank'
+                      rel='noreferrer'>
+                      Schau dafür auf dieser Seite
+                    </a>
+                    , was du tun musst und was der Studierendenausweis noch so
+                    alles kann.
+                  </p>
+                  <img
+                    src={dropdownIcon}
+                    className='dropdown-icon'
+                    alt='dropdownbutton'
+                  />
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  <img
+                    src={globeIconMaster}
+                    className='firststeps-icon'
+                    alt='Icon of a LGlobe'
+                  />
+                  <h3>Get well informed</h3>
+
+                  <p>
+                    To don't get in trouble by don't having a ID card for the
+                    canteen or the library,{" "}
+                    <a
+                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                      target='_blank'
+                      rel='noreferrer'>
+                      check out this page
+                    </a>
+                    . Here you will get all the information you need for getting
+                    your ID card and all the things you can do with it.
+                  </p>
+                  <img
+                    src={dropdownIconMaster}
+                    className='dropdown-icon'
+                    alt='dropdownbutton'
+                  />
+                </>
+              ) : (
+                <></>
+              )}
+            </Col>
+            <Col xs='12' md='6' className='firststeps-col'>
+              {language === "german" ? (
+                <>
+                  <img
+                    src={homeIcon}
+                    className='firststeps-icon'
+                    alt='Icon of a Card'
+                  />
+                  <h3>Finde ein neues Zuhause</h3>
+                  <p>
+                    Damit du von der ersten Woche an sofort in der Mensa essen
+                    gehen kannst, ohne ständig einen Aufpreis zahlen zu müssen,
+                    vergiss nicht, deinen Studierendenausweis zu beantragen.
+                    <br />
+                    <a
+                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                      target='_blank'
+                      rel='noreferrer'>
+                      Schau dafür auf dieser Seite
+                    </a>
+                    , was du tun musst und was der Studierendenausweis noch so
+                    alles kann.
+                  </p>
+                  <img
+                    src={dropdownIcon}
+                    className='dropdown-icon'
+                    alt='dropdownbutton'
+                  />
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  <img
+                    src={homeIconMaster}
+                    className='firststeps-icon'
+                    alt='Icon of a Card'
+                  />
+                  <h3>Find a New Home</h3>
+
+                  <p>
+                    To don't get in trouble by don't having a ID card for the
+                    canteen or the library,{" "}
+                    <a
+                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                      target='_blank'
+                      rel='noreferrer'>
+                      check out this page
+                    </a>
+                    . Here you will get all the information you need for getting
+                    your ID card and all the things you can do with it.
+                  </p>
+                  <img
+                    src={dropdownIconMaster}
+                    className='dropdown-icon'
+                    alt='dropdownbutton'
+                  />
+                </>
+              ) : (
+                <></>
+              )}
             </Col>
           </Row>
         </Container>

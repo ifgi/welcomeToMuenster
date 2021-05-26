@@ -1,0 +1,108 @@
+@import "./corporate-design.scss";
+
+$bike-white: url("../img/iconmonstr-bicycle-white.svg");
+$food-white: url("../img/icons/iconmonstr-fast-food-white.svg");
+$building-white: url("../img/icons/iconmonstr-building-white.svg");
+$compass-filled-white: url("../img/icons/iconmonstr-compass-filled-white.svg");
+$info-white: url("../img/icons/iconmonstr-info-white.svg");
+$tree-white: url("../img/icons/iconmonstr-tree-white.svg");
+$soccer-white: url("../img/icons/iconmonstr-soccer-white.svg");
+
+#Selection {
+  padding: 100px;
+  color: white;
+  height: auto !important;
+  background-color: $secondary;
+  .row#button-row {
+    width: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+}
+.button {
+  .icon {
+    display: inline-block;
+    margin-top: 50%;
+    margin-left: 50%;
+    width: 80%;
+    height: 80%;
+    background-size: cover;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    -o-transform: translateY(-50%) translateX(-50%);
+  }
+  .icon-info {
+    background-image: $info-white;
+  }
+  .icon-compass {
+    background-image: $compass-filled-white;
+  }
+  .icon-building {
+    background-image: $building-white;
+  }
+  .icon-soccer {
+    background-image: $soccer-white;
+  }
+  .icon-food {
+    background-image: $food-white;
+  }
+  .icon-tree {
+    background-image: $tree-white;
+  }
+  color: white;
+  margin: 10px;
+  width: 10vw;
+  height: 10vw;
+  min-width: 100px;
+  min-height: 100px;
+  padding: 15px;
+  background-color: $secondary;
+  box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.25),
+    -4px -4px 6px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.22),
+    rgba(255, 255, 255, 0.25)
+  );
+  text-align: center;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.button:hover {
+  opacity: 1;
+}
+.button:active {
+  box-shadow: inset 3px 3px 5px 0 rgba(0, 0, 0, 0.5),
+    inset -3px -3px 5px 0 rgba(110, 110, 110, 0.5);
+  color: $primary;
+  transform: translateX(-50%) translateY(7px);
+  -webkit-transform: translateX(-50%) translateY(7px);
+  -moz-transform: translateX(-50%) translateY(7px);
+  -ms-transform: translateX(-50%) translateY(7px);
+  -o-transform: translateX(-50%) translateY(7px);
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
+}

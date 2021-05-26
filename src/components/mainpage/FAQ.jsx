@@ -5,7 +5,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
-import geo1LichthofImage from "../../img/geo_1_lichthof.jpg";
 
 function FAQ() {
   const language = useSelector((state) => state.language);
@@ -29,15 +28,19 @@ function FAQ() {
   });
   return (
     <>
-      <Container id='FAQ'>
+      <Container
+        id='FAQ'
+        className={
+          language === "englisch" ? "master-backgroundcolor master-links" : ""
+        }>
         <Row id='faq-row'>
           <Col xs='12' md='12'>
             <h2>
               {" "}
               {language === "german" ? (
-                <>Das Wichtigste zuerst: Die meistgestelleten Fragen</>
+                <>Das Wichtigste: Die meistgestelleten Fragen</>
               ) : language === "englisch" ? (
-                <>First Things First: Frequency Asked Questions</>
+                <>Important Things: Frequency Asked Questions</>
               ) : (
                 <></>
               )}
@@ -666,72 +669,6 @@ function FAQ() {
               onClick={() =>
                 setOpen({
                   ...open,
-                  [10]: !open[10],
-                })
-              }
-              aria-controls='example-collapse-text'
-              aria-expanded={open}>
-              {language === "german" ? (
-                <>Studierendenkarte/Mesakarte beantragen nicht vergessen!</>
-              ) : language === "englisch" ? (
-                <>
-                  Don't forget to apply for your student ID/Mensacard (Canteen
-                  Card)
-                </>
-              ) : (
-                <></>
-              )}
-            </Button>
-            <Collapse in={open[10]}>
-              <div>
-                <div id='faq-2' className='faq-text'>
-                  {language === "german" ? (
-                    <>
-                      <p>
-                        Damit du von der ersten Woche an sofort in der Mensa
-                        essen gehen kannst, ohne ständig einen Aufpreis zahlen
-                        zu müssen, vergiss nicht, deinen Studierendenausweis zu
-                        beantragen.
-                        <br />
-                        <a
-                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                          target='_blank'
-                          rel='noreferrer'>
-                          Schau dafür auf dieser Seite
-                        </a>
-                        , was du tun musst und was der Studierendenausweis noch
-                        so alles kann.
-                      </p>
-                    </>
-                  ) : language === "englisch" ? (
-                    <>
-                      <p>
-                        To don't get in trouble by don't having a ID card for
-                        the canteen or the library,{" "}
-                        <a
-                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                          target='_blank'
-                          rel='noreferrer'>
-                          check out this page
-                        </a>
-                        . Here you will get all the information you need for
-                        getting your ID card and all the things you can do with
-                        it.
-                      </p>
-                    </>
-                  ) : (
-                    <></>
-                  )}
-                </div>
-              </div>
-            </Collapse>
-          </Col>
-          <Col xs='12' md='12'>
-            <Button
-              variant='secondary'
-              onClick={() =>
-                setOpen({
-                  ...open,
                   [11]: !open[11],
                 })
               }
@@ -812,39 +749,82 @@ function FAQ() {
             <Collapse in={open[12]}>
               <div>
                 <div id='faq-2' className='faq-text'>
-                  <p>
-                    Das Angebot des Hochschulsports ist es absolut wert, es
-                    einmal auszuprobieren. Neben einer neuen Sportart können
-                    hier auch neue Leute kennengelernt werden. Die Kurse werden
-                    immer für ein Semester angeboten und von
-                    Ausdauer-Inlineskaten über Quidditch bis hin zu Zumba ist
-                    alles vertreten. Das gesamte Kursangebot wird{" "}
-                    <a
-                      href='https://www.hochschulsport-muenster.de/angebote/aktueller_zeitraum/index.html'
-                      target='_blank'
-                      rel='noreferrer'>
-                      hier
-                    </a>{" "}
-                    augeführt.{" "}
-                  </p>
-                  <p>
-                    Falls du Interesse an einem oder sogar mehreren Kursen haben
-                    solltest, informiere dich rechtzeitig über die Freischaltung
-                    der Anmeldung, die nur online stattfindet und sei pünktlich
-                    und schnell. Viele Kurse sind in wenigen Minuten oder sogar
-                    Sekunden ausgebucht.{" "}
-                  </p>
-                  <p>
-                    Über das Angebot der Kurse hinaus bietet der HSP weiter
-                    Touren an, die ebenfalls auf der{" "}
-                    <a
-                      href='https://www.uni-muenster.de/Hochschulsport/'
-                      target='_blank'
-                      rel='noreferrer'>
-                      Homepage
-                    </a>{" "}
-                    aufgelistet sind.{" "}
-                  </p>
+                  {language === "german" ? (
+                    <>
+                      <p>
+                        Das Angebot des Hochschulsports ist es absolut wert, es
+                        einmal auszuprobieren. Neben einer neuen Sportart können
+                        hier auch neue Leute kennengelernt werden. Die Kurse
+                        werden immer für ein Semester angeboten und von
+                        Ausdauer-Inlineskaten über Quidditch bis hin zu Zumba
+                        ist alles vertreten. Das gesamte Kursangebot wird{" "}
+                        <a
+                          href='https://www.hochschulsport-muenster.de/angebote/aktueller_zeitraum/index.html'
+                          target='_blank'
+                          rel='noreferrer'>
+                          hier
+                        </a>{" "}
+                        augeführt.{" "}
+                      </p>
+                      <p>
+                        Falls du Interesse an einem oder sogar mehreren Kursen
+                        haben solltest, informiere dich rechtzeitig über die
+                        Freischaltung der Anmeldung, die nur online stattfindet
+                        und sei pünktlich und schnell. Viele Kurse sind in
+                        wenigen Minuten oder sogar Sekunden ausgebucht.{" "}
+                      </p>
+                      <p>
+                        Über das Angebot der Kurse hinaus bietet der HSP Touren
+                        an, die ebenfalls auf der{" "}
+                        <a
+                          href='https://www.uni-muenster.de/Hochschulsport/'
+                          target='_blank'
+                          rel='noreferrer'>
+                          Homepage
+                        </a>{" "}
+                        aufgelistet sind.{" "}
+                      </p>
+                    </>
+                  ) : language === "englisch" ? (
+                    <>
+                      <p>
+                        {" "}
+                        The university sports programme is absolutely worth to
+                        give it a try. Besides learning a new sport, you can
+                        also get to know new people. The courses are always
+                        offered for one semester and range from Football to
+                        Quidditch and Zumba. Nearly everything is represented.
+                        The entire range of courses is listed{" "}
+                        <a
+                          href='https://www.hochschulsport-muenster.de/angebote/aktueller_zeitraum/index.html'
+                          target='_blank'
+                          rel='noreferrer'>
+                          here
+                        </a>
+                        .
+                      </p>
+                      <p>
+                        If you are interested in one or more of the courses you
+                        should inform yourself in good time about the
+                        registration, which only takes place online and take
+                        care of beeing punctual and quick. Many courses are
+                        booked up in a few minutes or even seconds.{" "}
+                      </p>
+                      <p>
+                        In addition to the courses, the HSP offers sports trips
+                        which are also available on the{" "}
+                        <a
+                          href='https://www.uni-muenster.de/Hochschulsport/'
+                          target='_blank'
+                          rel='noreferrer'>
+                          homepage
+                        </a>
+                        .
+                      </p>
+                    </>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </div>
             </Collapse>
@@ -874,58 +854,57 @@ function FAQ() {
             <Collapse in={open[13]}>
               <div>
                 <div id='faq-2' className='faq-text'>
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life
-                  accusamus terry richardson ad squid. Nihil anim keffiyeh
-                  helvetica, craft beer labore wes anderson cred nesciunt
-                  sapiente ea proident.
-                </div>
-              </div>
-            </Collapse>
-          </Col>
-          <Col xs='12' md='12'>
-            <Button
-              variant='secondary'
-              onClick={() =>
-                setOpen({
-                  ...open,
-                  [14]: !open[14],
-                })
-              }
-              aria-controls='example-collapse-text'
-              aria-expanded={open}>
-              click
-            </Button>
-            <Collapse in={open[14]}>
-              <div>
-                <div id='faq-2' className='faq-text'>
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life
-                  accusamus terry richardson ad squid. Nihil anim keffiyeh
-                  helvetica, craft beer labore wes anderson cred nesciunt
-                  sapiente ea proident.
-                </div>
-              </div>
-            </Collapse>
-          </Col>
-          <Col xs='12' md='12'>
-            <Button
-              variant='secondary'
-              onClick={() =>
-                setOpen({
-                  ...open,
-                  [15]: !open[15],
-                })
-              }
-              aria-controls='example-collapse-text'
-              aria-expanded={open}>
-              click
-            </Button>
-            <Collapse in={open[15]}>
-              <div>
-                <div id='faq-2' className='faq-text'>
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life
-                  accusamus terry richardson ad squid. Nihil anim keffiyeh
-                  helvetica, craft beer labore wes anderson cred nesciunt
-                  sapiente ea proident.
+                  {language === "german" ? (
+                    <>
+                      <p>Defitniv: JA!</p>
+                      <p>
+                        Zusammen mit der Fachschaft GeoLök (Geographie und
+                        Landschaftsökologie) organisiert die Fachschaft
+                        Geoinformatik jedes Jahr zum Beginn des Wintersemesters
+                        eine Einführungswoche, die O-Woche, in der du die
+                        Möglichkeit haben wirst, deine Kommilitoninnen und
+                        Kommilitonen kennenzulernen, Infos über das Studium und
+                        Münster zu bekommst und eine Mege Spaß zu haben. Weitere
+                        Informationen und einen groben Ablaufplan gibt es auf
+                        der{" "}
+                        <a
+                          href='https://geofs.uni-muenster.de/wp/erstsemester/erstiwoche/'
+                          target='_blank'
+                          rel='noreferrer'>
+                          Interenetseite der Fachschaft Geoinformatik
+                        </a>
+                        .
+                      </p>
+                      <p>
+                        Darüber hinaus gibt es ein Ersti-Wochenende geben,
+                        welches ebenfalls in Kooperation der Fachschaften
+                        Geoinformatik und GeoLök durchgeführt wird. Die
+                        Anmeldung für dieses findet während der O-Woche statt.
+                        Weitere Informationen auch hierzu auf der{" "}
+                        <a
+                          href='https://geofs.uni-muenster.de/wp/erstsemester/ersti-we/'
+                          target='_blank'
+                          rel='noreferrer'>
+                          Interenetseite der Fachschaft Geoinformatik
+                        </a>
+                        .
+                      </p>
+                    </>
+                  ) : language === "englisch" ? (
+                    <>
+                      <p>
+                        Due to the fact that the demand of a Masters orientation
+                        week was to low in the last years there is currently not
+                        a special one for Masters. But there is the orientation
+                        week for Bachlor students and if you have interest in
+                        participating or if you would like to have a week to get
+                        to know the other Master students please contact the
+                        Fachschaft.{" "}
+                      </p>
+                    </>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </div>
             </Collapse>

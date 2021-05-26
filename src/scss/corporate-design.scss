@@ -5,5 +5,23 @@ $secondary: #4c4c4a;
 $secondary-opac: #4c4c4aaf;
 $secondary-dark: #3f3f3c;
 $tertiary: #dbdbdb;
-$info: #2e629f;
+$info: #009dd2;
 $danger: #eb5c37;
+$blue-primary: #009dd2;
+
+.master-color {
+  color: $blue-primary !important;
+}
+
+.master-backgroundcolor {
+  background-color: $blue-primary !important;
+}
+
+.master-links {
+  a {
+    color: $blue-primary;
+  }
+  a:hover {
+    color: $blue-primary;
+  }
+}

@@ -3,4 +3,30 @@
 #Footer {
   height: 50vh !important;
   background-color: $secondary;
+
+  .row {
+    height: 100%;
+  }
+  Col {
+    height: 100%;
+  }
+  img,
+  .footer-links {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+}
+
+#white-logo {
+  max-width: 30vw;
+  height: auto;
+  display: inline;
+  margin: 2px;
+  margin-left: 10px;
 }

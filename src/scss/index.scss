@@ -3,7 +3,8 @@
 @import "./navigation.scss";
 @import "./faq.scss";
 @import "./footer.scss";
-
+@import "./selection.scss";
+@import "./discover.scss";
 body {
   margin-top: 10px !important;
   overflow-x: hidden;
@@ -40,3 +41,5 @@ $theme-colors: (
 @import "~bootstrap/scss/bootstrap.scss";
 // Import Leaflet styles and its default variables
 @import "~leaflet/dist/leaflet.css";
+//Import leaflet marker cluster styles
+@import "~react-leaflet-markercluster/dist/styles.min.css";
