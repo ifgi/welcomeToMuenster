@@ -1,6 +1,9 @@
 @import "./corporate-design.scss";
 
-#map-container {
+#Discover {
+  h2 {
+    min-height: 5rem;
+  }
   .col {
     padding: 0;
     padding-right: 15px;
@@ -9,7 +12,7 @@
     text-align: justify;
   }
   margin-left: 15px;
-  padding-top: 15vh;
+  padding-top: 12vh;
   margin-bottom: 10vh;
   z-index: -5;
   top: 0;
@@ -63,13 +66,14 @@
   button {
     height: calc(50px + 1rem);
     width: 30%;
+    padding: 0%;
   }
 }
 .google-link {
   margin-right: 10px;
 }
 #marker-information-col {
-  height: calc(80vh - 39px - 4rem);
+  height: calc(80vh - 72px - 4rem);
   overflow-y: auto;
 }
 #google-maps-icon,
@@ -95,20 +99,25 @@
   -o-transform: translateX(50px);
 }
 .leaflet-bottom.leaflet-right {
-  transform: translateX(-50px);
-  -webkit-transform: translateX(-50px);
-  -moz-transform: translateX(-50px);
-  -ms-transform: translateX(-50px);
-  -o-transform: translateX(-50px);
+  transform: translateX(-70px);
+  -webkit-transform: translateX(-70px);
+  -moz-transform: translateX(-70px);
+  -ms-transform: translateX(-70px);
+  -o-transform: translateX(-70px);
 }
 .leaflet-top.leaflet-left {
   margin: 20px;
 }
-
-polygon {
-  color: $primary;
+.bachelor-clustergroup {
+  polygon {
+    color: $primary;
+  }
 }
-
+.master-clustergroup {
+  polygon {
+    color: $blue-primary;
+  }
+}
 .marker-cluster-small {
   background-color: #7c7c7aac;
 }
@@ -129,4 +138,7 @@ polygon {
 .marker-cluster-large div {
   color: white;
   background-color: #4c4c4aac;
+}
+#map-container {
+  position: relative;
 }

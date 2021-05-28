@@ -10,7 +10,7 @@ import L from "leaflet";
 import noPicturePrimary from "../../img/no-picture-primary.svg";
 import noPictureBlue from "../../img/no-picture-blue.svg";
 //load the icons
-import infoIco from "../../img//marker/info_primary.svg";
+import infoIco from "../../img/marker/info_primary.svg";
 import infoIcoGrey from "../../img/marker/info_grey.svg";
 import sightsIco from "../../img//marker/sights_primary.svg";
 import sightsIcoGrey from "../../img/marker/sights_grey.svg";
@@ -22,12 +22,12 @@ import foodIco from "../../img//marker/food_primary.svg";
 import foodIcoGrey from "../../img/marker/food_grey.svg";
 import natureIco from "../../img//marker/nature_primary.svg";
 import natureIcoGrey from "../../img/marker/nature_grey.svg";
-import infoIcoMaster from "../../img//marker/info_primary_master.svg";
-import sightsIcoMaster from "../../img//marker/sights_primary_master.svg";
-import cultureIcoMaster from "../../img//marker/culture_primary_master.svg";
-import soccerIcoMaster from "../../img//marker/soccer_primary_master.svg";
-import foodIcoMaster from "../../img//marker/food_primary_master.svg";
-import natureIcoMaster from "../../img//marker/nature_primary_master.svg";
+import infoIcoMaster from "../../img/marker/info_primary_master.svg";
+import sightsIcoMaster from "../../img/marker/sights_primary_master.svg";
+import cultureIcoMaster from "../../img/marker/culture_primary_master.svg";
+import soccerIcoMaster from "../../img/marker/soccer_primary_master.svg";
+import foodIcoMaster from "../../img/marker/food_primary_master.svg";
+import natureIcoMaster from "../../img/marker/nature_primary_master.svg";
 const OwnMarker = (point) => {
   const dispatch = useDispatch();
 

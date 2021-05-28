@@ -318,7 +318,7 @@ function Intro() {
                     alt='Icon of speechbubbles'
                   />
 
-                  <h3>Mesakarte beantragen!</h3>
+                  <h3>Mensakarte beantragen!</h3>
                   <p>
                     Damit du von der ersten Woche an sofort in der Mensa essen
                     gehen kannst, ohne ständig einen Aufpreis zahlen zu müssen,
@@ -333,6 +333,11 @@ function Intro() {
                     , was du tun musst und was der Studierendenausweis noch so
                     alles kann.
                   </p>
+                  <img
+                    src={dropdownIcon}
+                    className='dropdown-icon'
+                    alt='dropdownbutton'
+                  />
                 </>
               ) : language === "englisch" ? (
                 <>
@@ -355,15 +360,15 @@ function Intro() {
                     . Here you will get all the information you need for getting
                     your ID card and all the things you can do with it.
                   </p>
+                  <img
+                    src={dropdownIconMaster}
+                    className='dropdown-icon'
+                    alt='dropdownbutton'
+                  />
                 </>
               ) : (
                 <></>
               )}
-              <img
-                src={dropdownIconMaster}
-                className='dropdown-icon'
-                alt='dropdownbutton'
-              />
             </Col>
             <Col
               xs='12'
@@ -380,7 +385,7 @@ function Intro() {
                     className='firststeps-icon'
                     alt='Icon of a Card'
                   />
-                  <h3>Mesakarte beantragen!</h3>
+                  <h3>Mensakarte beantragen!</h3>
                   <p>
                     Damit du von der ersten Woche an sofort in der Mensa essen
                     gehen kannst, ohne ständig einen Aufpreis zahlen zu müssen,

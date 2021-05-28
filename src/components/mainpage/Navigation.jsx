@@ -1,9 +1,9 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { scroller, Link, animateScroll as scroll } from "react-scroll";
 import { useSelector, useDispatch } from "react-redux";
 import { setLanguage } from "../../actions";
-
 function Navigation() {
   const language = useSelector((state) => state.language);
   const dispatch = useDispatch();
@@ -21,13 +21,62 @@ function Navigation() {
         <>
           {" "}
           <Nav className='m-auto'>
-            <Nav.Link href='#Top'>Start</Nav.Link>
-            <Nav.Link href='#Intro'>Intro</Nav.Link>
-            <Nav.Link href='#FAQ'>FAQ</Nav.Link>
-            <Nav.Link href='#Münster'>Münster</Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("Top", {
+                  smooth: true,
+                  offset: -56,
+                  duration: 500,
+                })
+              }>
+              Start
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("Intro", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Intro
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("FAQ", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              FAQ
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("Münster", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Münster
+            </Nav.Link>
 
-            <Nav.Link href='#Studies'>Studium</Nav.Link>
-            <Nav.Link href='#Discover'>Erkundung</Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("Studies", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Studium
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("Discover", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Erkundung
+            </Nav.Link>
           </Nav>
         </>
       );

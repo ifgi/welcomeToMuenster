@@ -1,29 +1,20 @@
 import { useSelector } from "react-redux";
-
+import { Link, animateScroll as scroll } from "react-scroll";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { useMediaQuery } from "react-responsive";
 import { InView } from "react-intersection-observer";
-import Carousel from "react-bootstrap/Carousel";
 //loading images
 import landingImage from "../../img/pexels.jpg";
 import lichthofImage from "../../img/geo_1_lichthof.jpg";
 import schlossImage from "../../img/muenster_schloss.jpg";
 import ifgiLogo from "../../img/ifgiLogo.svg";
-import bike from "../../img/icons/iconmonstr-bicycle-white.svg";
-import eat from "../../img/icons/iconmonstr-fast-food-white.svg";
-import soccer from "../../img/icons/iconmonstr-soccer-white.svg";
-import compass from "../../img/icons/iconmonstr-compass-white.svg";
-import building from "../../img/icons/iconmonstr-building-white.svg";
-import info from "../../img/icons/iconmonstr-info-white.svg";
-import tree from "../../img/icons/iconmonstr-tree-white.svg";
+
 function Landing() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const language = useSelector((state) => state.language);
 
   return (
-    <Container id='landing-container'>
+    <Container id='Top'>
       <div id='heading'>
         <h1>Moin Münster</h1>
         <div id='p-container'>
@@ -42,63 +33,48 @@ function Landing() {
           ) : (
             <></>
           )}
-          <Container
-            id='contentlist-container'
-            className={language === "englisch" ? "master-backgroundcolor" : ""}>
-            <Row>
-              <Col>
-                {" "}
-                <img src={bike} className='icon' alt='Icon of a Bike' />
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <img src={info} className='icon' alt='Icon of a Infobubble' />{" "}
-              </Col>
-              <Col>
-                <img src={eat} className='icon' alt='Icon of a Pizza' />
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                {" "}
-                <img src={compass} className='icon' alt='Icon of a Compass' />
-              </Col>
-              <Col>
-                {" "}
-                <img src={soccer} className='icon' alt='Icon of a Football' />
-              </Col>
-            </Row>
-
-            <Row>
-              <Col>
-                {" "}
-                <img src={building} className='icon' alt='Icon of a Building' />
-              </Col>
-              <Col>
-                {" "}
-                <img src={tree} className='icon' alt='Icon of a Tree' />
-              </Col>
-            </Row>
-          </Container>
         </div>
-        <div id='powered-paragraph'>
-          <p>
-            powered by
-            <a
-              href='https://www.uni-muenster.de/Geoinformatics/'
-              target='_blank'
-              rel='noreferrer'>
-              <img src={ifgiLogo} className='logo' alt='Logo of ifgi' />
-            </a>
-          </p>
+      </div>{" "}
+      <Link
+        activeClass='active'
+        to='Intro'
+        spy={true}
+        smooth={true}
+        duration={500}>
+        <div
+          id='start-journey-container'
+          className={language === "englisch" ? "master-backgroundcolor" : ""}>
+          {language === "german" ? (
+            <p>starte deinen Rundgang</p>
+          ) : language === "englisch" ? (
+            <p>start the journey</p>
+          ) : (
+            <></>
+          )}
+          <p></p>
         </div>
-        <br />
+      </Link>
+      <div id='powered-paragraph'>
+        <p>
+          powered by
+          <a
+            href='https://www.uni-muenster.de/Geoinformatics/'
+            target='_blank'
+            rel='noreferrer'>
+            <img src={ifgiLogo} className='logo' alt='Logo of ifgi' />
+          </a>
+        </p>
       </div>
       <div
         className='landing-img-col'
         xs={{ span: 12, order: 2 }}
         md={{ span: 6, order: 2 }}>
+        <img
+          src={schlossImage}
+          className='landing-img'
+          alt='Münsters Schloss'
+        />
+        {/*
         <Carousel className='landing-image-carousel' controls={false} fade>
           <Carousel.Item>
             <img
@@ -140,7 +116,7 @@ function Landing() {
             />
             <Carousel.Caption></Carousel.Caption>
           </Carousel.Item>
-        </Carousel>
+            </Carousel>*/}
       </div>
     </Container>
   );

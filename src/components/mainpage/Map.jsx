@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Container from "react-bootstrap/Container";
+import Selection from "./Selection";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
@@ -19,7 +20,6 @@ import muenster from "../../data/muenster.json";
 import googleMaps from "../../img/icons/google.png";
 import copy from "../../img/copy.svg";
 import globeIco from "../../img/icons/iconmonstr-globe-white.svg";
-
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   shadowUrl:
@@ -41,14 +41,14 @@ function Map() {
   const [geoData, setGeoData] = useState(sights);
   const geoJsonLayer = useRef(null);
 
-  //that was for polygons but may be changed to marker design
-  const geoJSONstyle = () => {
+  //the polygon styling for the clustergroups
+  const polygonStyle = () => {
     return {
       // the fillColor is adapted from a property which can be changed by the user (segment)
-      fillColor: "#91c736af",
+      fillColor: "#ACACAA",
       //stroke-width: to have a constant width on the screen need to adapt with scale
       opacity: 1,
-      color: "#91c736",
+      color: "#ACACAA",
       fillOpacity: 0.5,
     };
   };
@@ -59,116 +59,184 @@ function Map() {
     }
   }, [geoData]);
 
-  const onEachPolygon = (polygon, layer) => {
-    layer.options.fillColor = "#7ab629";
-    layer.options.fillOpacity = 0.6;
-    layer.options.color = "#7ab629";
-  };
-
-  const mapStyle = {
-    fillColor: "white",
-    weight: 1,
-    color: "black",
-    fillOpacity: 1,
-  };
-
   return (
     <>
-      <div
-        id='Discover'
-        className={language === "englisch" ? "master-links" : ""}>
-        <Container id='map-container'>
-          <Row>
-            <Col xs='12' md='4'>
-              <h2>
-                {currentSight === 0 ? (
-                  "Choose a Points"
-                ) : language === "german" ? (
-                  points.features.find((element) => element.id === currentSight)
-                    .properties.NAME_D
-                ) : language === "englisch" ? (
-                  points.features.find((element) => element.id === currentSight)
-                    .properties.NAME
+      <Container id='Discover'>
+        <Row>
+          <Col xs='12' md='4'>
+            <h2>
+              {currentSight === 0 ? (
+                language === "german" ? (
+                  "Wähle einen Punkt"
                 ) : (
-                  <></>
-                )}
-              </h2>
-              <div id='marker-information-col'>
-                <p>
-                  {currentSight === 0 ? (
-                    ""
-                  ) : language === "german" ? (
-                    points.features.find(
-                      (element) => element.id === currentSight
-                    ).properties.DESCRIPTION_D
-                  ) : language === "englisch" ? (
-                    points.features.find(
-                      (element) => element.id === currentSight
-                    ).properties.DESCRIPTION
-                  ) : (
-                    <></>
-                  )}
-                </p>
-              </div>
-              <div className='routing-link'>
-                <a
-                  href={
+                  "Choose a Points"
+                )
+              ) : language === "german" ? (
+                points.features.find((element) => element.id === currentSight)
+                  .properties.NAME_D
+              ) : language === "englisch" ? (
+                points.features.find((element) => element.id === currentSight)
+                  .properties.NAME
+              ) : (
+                <></>
+              )}
+            </h2>
+            <div id='marker-information-col'>
+              {currentSight === 0 ? (
+                language === "german" ? (
+                  <p>
+                    {" "}
+                    "oder navigiere zum Mittelpunkt von Münster oder kopiere die
+                    Koordinaten in deine Zwischenablage."{" "}
+                  </p>
+                ) : (
+                  <p>
+                    {" "}
+                    "or use one of the buttons below to navigate to Münster's
+                    city Center or copy it's position to clipboard."{" "}
+                  </p>
+                )
+              ) : language === "german" ? (
+                <>
+                  <p>
+                    {
+                      points.features.find(
+                        (element) => element.id === currentSight
+                      ).properties.DESCRIPTION_D
+                    }
+                  </p>
+                  <p>
+                    {
+                      points.features.find(
+                        (element) => element.id === currentSight
+                      ).properties.HINT_D
+                    }
+                  </p>
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  <p>
+                    {" "}
+                    {
+                      points.features.find(
+                        (element) => element.id === currentSight
+                      ).properties.DESCRIPTION
+                    }{" "}
+                  </p>
+                  <p>
+                    {" "}
+                    {
+                      points.features.find(
+                        (element) => element.id === currentSight
+                      ).properties.HINT
+                    }{" "}
+                  </p>
+                </>
+              ) : (
+                <></>
+              )}
+            </div>
+            <div className='routing-link'>
+              <a
+                href={
+                  currentSight === 0
+                    ? "https://www.muenster.de/"
+                    : points.features.find(
+                        (element) => element.id === currentSight
+                      ).properties.LINK
+                }
+                target='_blank'
+                rel='noreferrer'
+                className='google-link'>
+                <Button
+                  variant={language === "englisch" ? "info" : "primary"}
+                  disabled={
                     currentSight === 0
-                      ? "https://www.muenster.de/"
+                      ? true
                       : points.features.find(
                           (element) => element.id === currentSight
-                        ).properties.LINK
-                  }
-                  target='_blank'
-                  rel='noreferrer'
-                  className='google-link'>
+                        ).properties.LINK === null
+                      ? true
+                      : false
+                  }>
+                  <img src={globeIco} id='www-icon' alt={"www icon"} /> www.
+                </Button>
+              </a>
+              <a
+                href={
+                  currentSight === 0
+                    ? "http://www.google.com/maps/place/51.961563,7.628202"
+                    : "http://www.google.com/maps/place/" +
+                      points.features.find(
+                        (element) => element.id === currentSight
+                      ).geometry.coordinates[1] +
+                      "," +
+                      points.features.find(
+                        (element) => element.id === currentSight
+                      ).geometry.coordinates[0]
+                }
+                target='_blank'
+                rel='noreferrer'
+                className='google-link'>
+                <Button variant={language === "englisch" ? "info" : "primary"}>
+                  <img
+                    src={googleMaps}
+                    id='google-maps-icon'
+                    alt={"Google Maps logo"}
+                  />{" "}
+                  Navigation
+                </Button>
+              </a>
+              {currentSight === 0 ? (
+                <Button
+                  variant={language === "englisch" ? "info" : "primary"}
+                  onClick={() => {
+                    setShowTooltip(true);
+
+                    navigator.clipboard.writeText("51.961563, 7.628202");
+                    setTimeout(() => {
+                      setShowTooltip(false);
+                    }, 2000);
+                  }}>
+                  {language === "german" ? (
+                    <>
+                      <img
+                        src={copy}
+                        id='clipboard-icon'
+                        alt={"Copy to Clipboard icon"}
+                      />
+                      kopieren
+                    </>
+                  ) : language === "englisch" ? (
+                    <>
+                      <img
+                        src={copy}
+                        id='clipboard-icon'
+                        alt={"Copy to Clipboard icon"}
+                      />
+                      copy
+                    </>
+                  ) : (
+                    ""
+                  )}
+                </Button>
+              ) : (
+                <>
                   <Button
                     variant={language === "englisch" ? "info" : "primary"}
-                    disabled={
-                      currentSight === 0
-                        ? true
-                        : points.features.find(
-                            (element) => element.id === currentSight
-                          ).properties.LINK === null
-                        ? true
-                        : false
-                    }>
-                    <img src={globeIco} id='www-icon' alt={"www icon"} /> www.
-                  </Button>
-                </a>
-                <a
-                  href={
-                    currentSight === 0
-                      ? "http://www.google.com/maps/place/51.961563,7.628202"
-                      : "http://www.google.com/maps/place/" +
-                        points.features.find(
-                          (element) => element.id === currentSight
-                        ).geometry.coordinates[1] +
-                        "," +
-                        points.features.find(
-                          (element) => element.id === currentSight
-                        ).geometry.coordinates[0]
-                  }
-                  target='_blank'
-                  rel='noreferrer'
-                  className='google-link'>
-                  <Button
-                    variant={language === "englisch" ? "info" : "primary"}>
-                    <img
-                      src={googleMaps}
-                      id='google-maps-icon'
-                      alt={"Google Maps logo"}
-                    />{" "}
-                    Navigation
-                  </Button>
-                </a>
-                {currentSight === 0 ? (
-                  <Button
-                    variant={language === "englisch" ? "info" : "primary"}
+                    ref={targetTooltip}
                     onClick={() => {
                       setShowTooltip(true);
-
-                      navigator.clipboard.writeText("51.961563, 7.628202");
+                      navigator.clipboard.writeText(
+                        "" +
+                          points.features.find(
+                            (element) => element.id === currentSight
+                          ).geometry.coordinates[1] +
+                          ", " +
+                          points.features.find(
+                            (element) => element.id === currentSight
+                          ).geometry.coordinates[0]
+                      );
                       setTimeout(() => {
                         setShowTooltip(false);
                       }, 2000);
@@ -195,110 +263,58 @@ function Map() {
                       ""
                     )}
                   </Button>
-                ) : (
-                  <>
-                    <Button
-                      variant={language === "englisch" ? "info" : "primary"}
-                      ref={targetTooltip}
-                      onClick={() => {
-                        setShowTooltip(true);
-                        navigator.clipboard.writeText(
-                          "" +
-                            points.features.find(
-                              (element) => element.id === currentSight
-                            ).geometry.coordinates[1] +
-                            ", " +
-                            points.features.find(
-                              (element) => element.id === currentSight
-                            ).geometry.coordinates[0]
-                        );
-                        setTimeout(() => {
-                          setShowTooltip(false);
-                        }, 2000);
-                      }}>
-                      {language === "german" ? (
-                        <>
-                          <img
-                            src={copy}
-                            id='clipboard-icon'
-                            alt={"Copy to Clipboard icon"}
-                          />
-                          kopieren
-                        </>
-                      ) : language === "englisch" ? (
-                        <>
-                          <img
-                            src={copy}
-                            id='clipboard-icon'
-                            alt={"Copy to Clipboard icon"}
-                          />
-                          copy
-                        </>
-                      ) : (
-                        ""
-                      )}
-                    </Button>
-                    <Overlay
-                      target={targetTooltip.current}
-                      show={showTooltip}
-                      placement='top'>
-                      {({
-                        placement,
-                        arrowProps,
-                        show: _show,
-                        popper,
-                        ...props
-                      }) => (
-                        <div {...props} className='tooltip-clipboard'>
-                          {language === "german"
-                            ? "kopiert"
-                            : language === "englisch"
-                            ? "copied"
-                            : ""}
-                        </div>
-                      )}
-                    </Overlay>
-                  </>
-                )}
-              </div>
-            </Col>
-            <Col xs='12' md='8'>
-              <MapContainer
-                scrollWheelZoom={true}
-                zoomControl={true}
-                dragging={true}
-                tap={true}
-                center={stadtCenter}
-                zoom={13}
-                id='map'>
-                <TileLayer
-                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                  url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-                />
+                  <Overlay
+                    target={targetTooltip.current}
+                    show={showTooltip}
+                    placement='top'>
+                    {({
+                      placement,
+                      arrowProps,
+                      show: _show,
+                      popper,
+                      ...props
+                    }) => (
+                      <div {...props} className='tooltip-clipboard'>
+                        {language === "german"
+                          ? "kopiert"
+                          : language === "englisch"
+                          ? "copied"
+                          : ""}
+                      </div>
+                    )}
+                  </Overlay>
+                </>
+              )}
+            </div>
+          </Col>
+          <Col xs='12' md='8' id='map-container'>
+            <MapContainer
+              scrollWheelZoom={true}
+              zoomControl={true}
+              dragging={true}
+              tap={true}
+              center={stadtCenter}
+              zoom={13}
+              id='map'>
+              <TileLayer
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+              />
 
-                <MarkerClusterGroup polygonOptions={geoJSONstyle()}>
-                  {isTabletOrMobile
-                    ? points.features.map((p) => (
-                        <OwnMarker point={p} key={p.id} />
-                      ))
-                    : points.features.map((p) => (
-                        <OwnMarker point={p} key={p.id} />
-                      ))}
-                </MarkerClusterGroup>
-              </MapContainer>
-            </Col>
-          </Row>
-        </Container>
-        y
-        <Container id='intro-container'>
-          <Row>
-            <Col>
-              <h2>Discover Your New Home</h2>
-              <img src={bike} className='icon' alt='Icon of a Bike' />
-            </Col>
-          </Row>
-        </Container>
-      </div>
+              <MarkerClusterGroup polygonOptions={polygonStyle()}>
+                {isTabletOrMobile
+                  ? points.features.map((p) => (
+                      <OwnMarker point={p} key={p.id} />
+                    ))
+                  : points.features.map((p) => (
+                      <OwnMarker point={p} key={p.id} />
+                    ))}
+              </MarkerClusterGroup>
+            </MapContainer>
+            <Selection />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }

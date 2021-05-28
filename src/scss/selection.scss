@@ -1,12 +1,69 @@
 @import "./corporate-design.scss";
 
-$bike-white: url("../img/iconmonstr-bicycle-white.svg");
-$food-white: url("../img/icons/iconmonstr-fast-food-white.svg");
-$building-white: url("../img/icons/iconmonstr-building-white.svg");
-$compass-filled-white: url("../img/icons/iconmonstr-compass-filled-white.svg");
-$info-white: url("../img/icons/iconmonstr-info-white.svg");
-$tree-white: url("../img/icons/iconmonstr-tree-white.svg");
-$soccer-white: url("../img/icons/iconmonstr-soccer-white.svg");
+#selection-container {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 500;
+  transform: translateX(160px);
+  -webkit-transform: translateX(160px);
+  -moz-transform: translateX(160px);
+  -ms-transform: translateX(160px);
+  -o-transform: translateX(160px);
+}
+#selection-button {
+  .collapse-icon {
+    margin-top: 50%;
+    margin-left: 50%;
+    width: 30px;
+    height: auto;
+    transform: rotateY(0deg) translate(-50%, -50%);
+    -webkit-transform: rotateY(0deg) translate(-50%, -50%);
+    -moz-transform: rotateY(0deg) translate(-50%, -50%);
+    -ms-transform: rotateY(0deg) translate(-50%, -50%);
+    -o-transform: rotateY(0deg) translate(-50%, -50%);
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+  }
+
+  margin-top: 60px;
+  height: 35px;
+  width: 35px;
+  background-color: $primary;
+  border-radius: 50% 0 0 50%;
+  -webkit-border-radius: 50% 0 0 50%;
+  -moz-border-radius: 50% 0 0 50%;
+  -ms-border-radius: 50% 0 0 50%;
+  -o-border-radius: 50% 0 0 50%;
+}
+#selection-content {
+  height: 80vh;
+  background-color: $primary;
+  width: 200px;
+}
+.selection-collapsed {
+  .collapse-icon {
+    transform: rotateY(180deg) translate(50%, -50%) !important;
+    -webkit-transform: rotateY(180deg) translate(50%, -50%) !important;
+    -moz-transform: rotateY(180deg) translate(50%, -50%) !important;
+    -ms-transform: rotateY(180deg) translate(50%, -50%) !important;
+    -o-transform: rotateY(180deg) translate(50%, -50%) !important;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+  }
+  transform: translateX(0) !important;
+  -webkit-transform: translateX(0) !important;
+  -moz-transform: translateX(0) !important;
+  -ms-transform: translateX(0) !important;
+  -o-transform: translateX(0) !important;
+}
 
 #Selection {
   padding: 100px;
@@ -23,7 +80,7 @@ $soccer-white: url("../img/icons/iconmonstr-soccer-white.svg");
     -o-transform: translateX(-50%);
   }
 }
-.button {
+.cathegory-button {
   .icon {
     display: inline-block;
     margin-top: 50%;
@@ -36,24 +93,6 @@ $soccer-white: url("../img/icons/iconmonstr-soccer-white.svg");
     -moz-transform: translateY(-50%) translateX(-50%);
     -ms-transform: translateY(-50%) translateX(-50%);
     -o-transform: translateY(-50%) translateX(-50%);
-  }
-  .icon-info {
-    background-image: $info-white;
-  }
-  .icon-compass {
-    background-image: $compass-filled-white;
-  }
-  .icon-building {
-    background-image: $building-white;
-  }
-  .icon-soccer {
-    background-image: $soccer-white;
-  }
-  .icon-food {
-    background-image: $food-white;
-  }
-  .icon-tree {
-    background-image: $tree-white;
   }
   color: white;
   margin: 10px;
@@ -88,10 +127,10 @@ $soccer-white: url("../img/icons/iconmonstr-soccer-white.svg");
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
 }
-.button:hover {
+.category-button:hover {
   opacity: 1;
 }
-.button:active {
+.category-button:active {
   box-shadow: inset 3px 3px 5px 0 rgba(0, 0, 0, 0.5),
     inset -3px -3px 5px 0 rgba(110, 110, 110, 0.5);
   color: $primary;
