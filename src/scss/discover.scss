@@ -84,6 +84,17 @@
   margin-right: 5px;
 }
 #map {
+  .leaflet-bottom.leaflet-right {
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+  }
+  .leaflet-top.leaflet-left {
+    margin: 20px;
+  }
+
   border-radius: 50px;
   width: 100%;
   height: 80vh;
@@ -92,22 +103,8 @@
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
-  transform: translateX(50px);
-  -webkit-transform: translateX(50px);
-  -moz-transform: translateX(50px);
-  -ms-transform: translateX(50px);
-  -o-transform: translateX(50px);
 }
-.leaflet-bottom.leaflet-right {
-  transform: translateX(-70px);
-  -webkit-transform: translateX(-70px);
-  -moz-transform: translateX(-70px);
-  -ms-transform: translateX(-70px);
-  -o-transform: translateX(-70px);
-}
-.leaflet-top.leaflet-left {
-  margin: 20px;
-}
+
 .bachelor-clustergroup {
   polygon {
     color: $primary;
@@ -141,4 +138,31 @@
 }
 #map-container {
   position: relative;
+  transform: translateX(33px);
+  -webkit-transform: translateX(33px);
+  -moz-transform: translateX(33px);
+  -ms-transform: translateX(33px);
+  -o-transform: translateX(33px);
+}
+
+#Discover.mobile {
+  margin-left: 0;
+
+  #map {
+    border-radius: 50px;
+    width: 100%;
+    height: 80vh;
+    margin-top: 0px !important;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+  }
+  #map-container {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
 }

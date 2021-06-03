@@ -61,7 +61,7 @@ function Map() {
 
   return (
     <>
-      <Container id='Discover'>
+      <Container id='Discover' className={isTabletOrMobile ? "mobile" : ""}>
         <Row>
           <Col xs='12' md='4'>
             <h2>

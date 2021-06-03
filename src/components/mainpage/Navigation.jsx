@@ -19,7 +19,6 @@ function Navigation() {
     if (language === "german") {
       return (
         <>
-          {" "}
           <Nav className='m-auto'>
             <Nav.Link
               onClick={() =>
@@ -98,7 +97,7 @@ function Navigation() {
   };
   return (
     <>
-      <Navbar expand='lg' fixed='top'>
+      <Navbar expand='lg' fixed='top' collapseOnSelect>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <NavDropdown title={whatLanguage()} id='basic-nav-dropdown'>

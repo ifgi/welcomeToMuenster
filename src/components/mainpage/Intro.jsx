@@ -43,7 +43,7 @@ const stadtCenterMobile = [51.960667, 7.626135];
 
 function Intro() {
   const language = useSelector((state) => state.language);
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1150px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const [currentStepIndex, setCurrentStepIndex] = useState(null);
   const [currentCenter, setCurrentCenter] = useState(
     isTabletOrMobile ? germanyCenterMobile : germanyCenter
@@ -98,33 +98,29 @@ function Intro() {
   return (
     <>
       <div id='Intro'>
-        <Container id='storymap-container'>
-          <Row>
-            <Col>
-              <MapContainer
-                scrollWheelZoom={false}
-                zoomControl={false}
-                dragging={false}
-                tap={false}
-                center={germanyCenter}
-                zoom={5}
-                id='storymap'>
-                <ChangeView center={currentCenter} zoom={currentZoom} />
-                <TileLayer
-                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                  url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-                />
-                <GeoJSON
-                  ref={geoJsonLayer}
-                  key={"theOneGEOJSON"}
-                  data={geoData}
-                  //onEachFeature={onEachPolygon}
-                  style={style}
-                />
-              </MapContainer>
-            </Col>
-          </Row>
-        </Container>
+        <div id='storymap-container'>
+          <MapContainer
+            scrollWheelZoom={false}
+            zoomControl={false}
+            dragging={false}
+            tap={false}
+            center={germanyCenter}
+            zoom={5}
+            id='storymap'>
+            <ChangeView center={currentCenter} zoom={currentZoom} />
+            <TileLayer
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+            />
+            <GeoJSON
+              ref={geoJsonLayer}
+              key={"theOneGEOJSON"}
+              data={geoData}
+              //onEachFeature={onEachPolygon}
+              style={style}
+            />
+          </MapContainer>
+        </div>
         <Scrollama onStepEnter={onStepEnter}>
           <Step data={1} key={1}>
             <div
@@ -289,7 +285,15 @@ function Intro() {
         </Scrollama>
         <Container
           id='firststeps-container'
-          className={language === "englisch" ? "master-links" : ""}>
+          className={
+            language === "englisch"
+              ? isTabletOrMobile
+                ? "master-links mobile"
+                : "master-links"
+              : isTabletOrMobile
+              ? "mobile"
+              : ""
+          }>
           <Row>
             <Col>
               {language === "german" ? (

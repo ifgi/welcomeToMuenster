@@ -6,11 +6,11 @@
   right: 0;
   top: 0;
   z-index: 500;
-  transform: translateX(160px);
-  -webkit-transform: translateX(160px);
-  -moz-transform: translateX(160px);
-  -ms-transform: translateX(160px);
-  -o-transform: translateX(160px);
+  transform: translateX(-50px);
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
 }
 #selection-button {
   .collapse-icon {
@@ -40,108 +40,111 @@
   -ms-border-radius: 50% 0 0 50%;
   -o-border-radius: 50% 0 0 50%;
 }
+
+#selection-banner {
+  margin-top: 60px;
+  height: 35px;
+  width: 35px;
+  background-color: $primary;
+}
 #selection-content {
   height: 80vh;
   background-color: $primary;
-  width: 200px;
+  width: 0px;
 }
-.selection-collapsed {
-  .collapse-icon {
-    transform: rotateY(180deg) translate(50%, -50%) !important;
-    -webkit-transform: rotateY(180deg) translate(50%, -50%) !important;
-    -moz-transform: rotateY(180deg) translate(50%, -50%) !important;
-    -ms-transform: rotateY(180deg) translate(50%, -50%) !important;
-    -o-transform: rotateY(180deg) translate(50%, -50%) !important;
-    transition: transform 1s;
-    -webkit-transition: transform 1s;
-    -moz-transition: transform 1s;
-    -ms-transition: transform 1s;
-    -o-transition: transform 1s;
-  }
-  transform: translateX(0) !important;
-  -webkit-transform: translateX(0) !important;
-  -moz-transform: translateX(0) !important;
-  -ms-transform: translateX(0) !important;
-  -o-transform: translateX(0) !important;
+.category-button {
+  width: 0;
 }
+#selection-content.selection-collapsed {
+  width: 180px !important;
 
-#Selection {
-  padding: 100px;
-  color: white;
-  height: auto !important;
-  background-color: $secondary;
-  .row#button-row {
+  .all-category-buttons {
     width: 100%;
     margin-left: 50%;
+    margin-top: calc(10vh - 30px);
+  }
+  .category-button {
+    .icon {
+      display: inline-block;
+      margin-top: 50%;
+      margin-left: 50%;
+      width: 80%;
+      height: 80%;
+      background-size: cover;
+      transform: translateY(-50%) translateX(-50%);
+      -webkit-transform: translateY(-50%) translateX(-50%);
+      -moz-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+      -o-transform: translateY(-50%) translateX(-50%);
+    }
+    color: white;
+    margin-bottom: 10px;
+    height: 10vh;
+    width: 10vh;
+
+    padding: 10%;
+    background-color: $secondary;
+    box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.25),
+      -4px -4px 6px 0 rgba(255, 255, 255, 0.3);
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.22),
+      rgba(255, 255, 255, 0.25)
+    );
+    text-align: center;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
   }
-}
-.cathegory-button {
-  .icon {
-    display: inline-block;
-    margin-top: 50%;
-    margin-left: 50%;
-    width: 80%;
-    height: 80%;
-    background-size: cover;
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%);
-    -moz-transform: translateY(-50%) translateX(-50%);
-    -ms-transform: translateY(-50%) translateX(-50%);
-    -o-transform: translateY(-50%) translateX(-50%);
+  .category-button:hover {
+    opacity: 0.6;
   }
-  color: white;
-  margin: 10px;
-  width: 10vw;
-  height: 10vw;
-  min-width: 100px;
-  min-height: 100px;
-  padding: 15px;
-  background-color: $secondary;
-  box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.25),
-    -4px -4px 6px 0 rgba(255, 255, 255, 0.3);
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.22),
-    rgba(255, 255, 255, 0.25)
-  );
-  text-align: center;
-  border-radius: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
-  transition: all 0.1s;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -ms-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
+  .category-button:active {
+    box-shadow: inset 3px 3px 5px 0 rgba(0, 0, 0, 0.5),
+      inset -3px -3px 5px 0 rgba(110, 110, 110, 0.5);
+    color: $primary;
+    transform: translateX(-50%) translateY(7px);
+    -webkit-transform: translateX(-50%) translateY(7px);
+    -moz-transform: translateX(-50%) translateY(7px);
+    -ms-transform: translateX(-50%) translateY(7px);
+    -o-transform: translateX(-50%) translateY(7px);
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+  }
 }
-.category-button:hover {
-  opacity: 1;
+
+.collapse-icon.selection-collapsed {
+  transform: rotateY(180deg) translate(50%, -50%) !important;
+  -webkit-transform: rotateY(180deg) translate(50%, -50%) !important;
+  -moz-transform: rotateY(180deg) translate(50%, -50%) !important;
+  -ms-transform: rotateY(180deg) translate(50%, -50%) !important;
+  -o-transform: rotateY(180deg) translate(50%, -50%) !important;
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
 }
-.category-button:active {
-  box-shadow: inset 3px 3px 5px 0 rgba(0, 0, 0, 0.5),
-    inset -3px -3px 5px 0 rgba(110, 110, 110, 0.5);
-  color: $primary;
-  transform: translateX(-50%) translateY(7px);
-  -webkit-transform: translateX(-50%) translateY(7px);
-  -moz-transform: translateX(-50%) translateY(7px);
-  -ms-transform: translateX(-50%) translateY(7px);
-  -o-transform: translateX(-50%) translateY(7px);
-  transition: all 0.1s;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -ms-transition: all 0.1s;
-  -o-transition: all 0.1s;
+
+#selection-container.mobile {
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
 }

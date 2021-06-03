@@ -1,5 +1,8 @@
 @import "./corporate-design.scss";
 
+#Intro {
+  margin: 0;
+}
 #storymap-container {
   .col {
     padding: 0;
@@ -11,10 +14,16 @@
   top: 0;
 }
 #storymap {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
-  margin-top: 0px !important;
+  .leaflet-bottom.leaflet-right {
+    transform: translateX(-17px);
+    -webkit-transform: translateX(-17px);
+    -moz-transform: translateX(-17px);
+    -ms-transform: translateX(-17px);
+    -o-transform: translateX(-17px);
+  }
 }
 
 .section {
@@ -42,25 +51,6 @@
 
   /* for Firefox */
   min-height: 0;
-}
-
-.storymap {
-  width: 100vw;
-  height: unquote("calc(100vh - 25px)") !important;
-  z-index: 0;
-  margin-top: 0px !important;
-
-  .leaflet-left {
-    margin-top: 74px;
-  }
-}
-.storymap-text {
-  width: 50vw;
-  height: unquote("calc(100vh - 89px)");
-  margin-top: 64px;
-  margin-left: 100px;
-  position: absolute;
-  z-index: 1;
 }
 
 .storymap-description {
@@ -91,11 +81,13 @@
 .storymap-description.first {
   margin-top: -80vh;
 }
-.storymap-description.mobile {
-  margin-right: 5vw;
-  padding: 30px;
-}
 
+.scrollama-container {
+  width: 100vw;
+  height: 100vh;
+  margin: 50vh 0;
+  border: 2px dashed skyblue;
+}
 #firststeps-container {
   width: 80vw !important;
   height: auto !important;
@@ -143,4 +135,26 @@
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+}
+
+.storymap-description.mobile {
+  margin-left: 0;
+  width: 100vw;
+  padding: 30px;
+}
+#firststeps-container.mobile {
+  margin-left: 0 !important;
+  width: 100vw !important;
+  padding: 30px;
+
+  .firststeps-icon {
+    width: 30vw;
+    height: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
 }

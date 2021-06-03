@@ -43,7 +43,15 @@ function Landing() {
         duration={500}>
         <div
           id='start-journey-container'
-          className={language === "englisch" ? "master-backgroundcolor" : ""}>
+          className={
+            language === "englisch"
+              ? isTabletOrMobile
+                ? "master-backgroundcolor mobile"
+                : "master-backgroudcolor"
+              : isTabletOrMobile
+              ? "mobile"
+              : ""
+          }>
           {language === "german" ? (
             <p>starte deinen Rundgang</p>
           ) : language === "englisch" ? (

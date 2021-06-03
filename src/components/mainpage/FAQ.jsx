@@ -5,8 +5,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
+import { useMediaQuery } from "react-responsive";
 
 function FAQ() {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const language = useSelector((state) => state.language);
   const [open, setOpen] = useState({
     1: false,
@@ -31,16 +33,22 @@ function FAQ() {
       <Container
         id='FAQ'
         className={
-          language === "englisch" ? "master-backgroundcolor master-links" : ""
+          language === "englisch"
+            ? isTabletOrMobile
+              ? "master-backgroundcolor master-links mobile"
+              : "master-backgroundcolor master-links"
+            : isTabletOrMobile
+            ? "mobile"
+            : ""
         }>
         <Row id='faq-row'>
           <Col xs='12' md='12'>
             <h2>
               {" "}
               {language === "german" ? (
-                <>Das Wichtigste: Die meistgestelleten Fragen</>
+                <>Die meistgestelleten Fragen</>
               ) : language === "englisch" ? (
-                <>Important Things: Frequency Asked Questions</>
+                <>Frequency Asked Questions</>
               ) : (
                 <></>
               )}
