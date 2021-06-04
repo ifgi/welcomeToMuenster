@@ -8,15 +8,10 @@ import Button from "react-bootstrap/Button";
 import Overlay from "react-bootstrap/Overlay";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import OwnMarker from "./Marker";
-import bike from "../../img/iconmonstr-bicycle-1.svg";
-import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 import { useMediaQuery } from "react-responsive";
 import L from "leaflet";
-import ChangeView from "./ChangeView.jsx";
 import sights from "../../data/sights.json";
-import nrw from "../../data/nrw.json";
-import muensterland from "../../data/muensterland.json";
-import muenster from "../../data/muenster.json";
 import googleMaps from "../../img/icons/google.png";
 import copy from "../../img/copy.svg";
 import globeIco from "../../img/icons/iconmonstr-globe-white.svg";
@@ -65,7 +60,9 @@ function Map() {
         <Row>
           <Col xs='12' md='4'>
             <h2>
-              {currentSight === 0 ? (
+              {currentSight === 0 ||
+              points.features.find((element) => element.id === currentSight) ===
+                undefined ? (
                 language === "german" ? (
                   "Wähle einen Punkt"
                 ) : (
@@ -82,7 +79,9 @@ function Map() {
               )}
             </h2>
             <div id='marker-information-col'>
-              {currentSight === 0 ? (
+              {currentSight === 0 ||
+              points.features.find((element) => element.id === currentSight) ===
+                undefined ? (
                 language === "german" ? (
                   <p>
                     {" "}
@@ -139,7 +138,10 @@ function Map() {
             <div className='routing-link'>
               <a
                 href={
-                  currentSight === 0
+                  currentSight === 0 ||
+                  points.features.find(
+                    (element) => element.id === currentSight
+                  ) === undefined
                     ? "https://www.muenster.de/"
                     : points.features.find(
                         (element) => element.id === currentSight
@@ -151,7 +153,10 @@ function Map() {
                 <Button
                   variant={language === "englisch" ? "info" : "primary"}
                   disabled={
-                    currentSight === 0
+                    currentSight === 0 ||
+                    points.features.find(
+                      (element) => element.id === currentSight
+                    ) === undefined
                       ? true
                       : points.features.find(
                           (element) => element.id === currentSight
@@ -164,7 +169,10 @@ function Map() {
               </a>
               <a
                 href={
-                  currentSight === 0
+                  currentSight === 0 ||
+                  points.features.find(
+                    (element) => element.id === currentSight
+                  ) === undefined
                     ? "http://www.google.com/maps/place/51.961563,7.628202"
                     : "http://www.google.com/maps/place/" +
                       points.features.find(
@@ -187,7 +195,9 @@ function Map() {
                   Navigation
                 </Button>
               </a>
-              {currentSight === 0 ? (
+              {currentSight === 0 ||
+              points.features.find((element) => element.id === currentSight) ===
+                undefined ? (
                 <Button
                   variant={language === "englisch" ? "info" : "primary"}
                   onClick={() => {

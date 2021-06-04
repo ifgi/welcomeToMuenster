@@ -15,53 +15,60 @@
 #selection-button {
   .collapse-icon {
     margin-top: 50%;
-    margin-left: 50%;
-    width: 30px;
+    margin-left: 70%;
+    width: 50px;
     height: auto;
     transform: rotateY(0deg) translate(-50%, -50%);
     -webkit-transform: rotateY(0deg) translate(-50%, -50%);
     -moz-transform: rotateY(0deg) translate(-50%, -50%);
     -ms-transform: rotateY(0deg) translate(-50%, -50%);
     -o-transform: rotateY(0deg) translate(-50%, -50%);
-    transition: transform 1s;
-    -webkit-transition: transform 1s;
-    -moz-transition: transform 1s;
-    -ms-transition: transform 1s;
-    -o-transition: transform 1s;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
   }
-
   margin-top: 60px;
-  height: 35px;
-  width: 35px;
+  height: 65px;
+  width: 65px;
   background-color: $primary;
-  border-radius: 50% 0 0 50%;
-  -webkit-border-radius: 50% 0 0 50%;
-  -moz-border-radius: 50% 0 0 50%;
-  -ms-border-radius: 50% 0 0 50%;
-  -o-border-radius: 50% 0 0 50%;
+  border-radius: 10px 0 0 10px;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  -ms-border-radius: 10px 0 0 10px;
+  -o-border-radius: 10px 0 0 10px;
 }
 
 #selection-banner {
   margin-top: 60px;
-  height: 35px;
-  width: 35px;
+  height: 65px;
+  width: 40px;
   background-color: $primary;
 }
 #selection-content {
   height: 80vh;
   background-color: $primary;
   width: 0px;
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -ms-transition: width 0.5s;
+  -o-transition: width 0.5s;
 }
 .category-button {
-  width: 0;
+  opacity: 0;
+  transition: opacity 0s;
+  -webkit-transition: opacity 0s;
+  -moz-transition: opacity 0s;
+  -ms-transition: opacity 0s;
+  -o-transition: opacity 0s;
 }
 #selection-content.selection-collapsed {
-  width: 180px !important;
-
   .all-category-buttons {
     width: 100%;
     margin-left: 50%;
-    margin-top: calc(10vh - 30px);
+    margin-top: calc(10vh - 45px);
   }
   .category-button {
     .icon {
@@ -78,10 +85,9 @@
       -o-transform: translateY(-50%) translateX(-50%);
     }
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     height: 10vh;
     width: 10vh;
-
     padding: 10%;
     background-color: $secondary;
     box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.25),
@@ -107,6 +113,7 @@
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
+    opacity: 1;
   }
   .category-button:hover {
     opacity: 0.6;
@@ -126,6 +133,27 @@
     -ms-transition: all 0.1s;
     -o-transition: all 0.1s;
   }
+  .active-button {
+    box-shadow: inset 3px 3px 5px 0 rgba(0, 0, 0, 0.5),
+      inset -3px -3px 5px 0 rgba(110, 110, 110, 0.5);
+    color: $primary;
+    transform: translateX(-50%) translateY(7px);
+    -webkit-transform: translateX(-50%) translateY(7px);
+    -moz-transform: translateX(-50%) translateY(7px);
+    -ms-transform: translateX(-50%) translateY(7px);
+    -o-transform: translateX(-50%) translateY(7px);
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+  }
+  width: 180px !important;
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -ms-transition: width 0.5s;
+  -o-transition: width 0.5s;
 }
 
 .collapse-icon.selection-collapsed {
@@ -134,11 +162,11 @@
   -moz-transform: rotateY(180deg) translate(50%, -50%) !important;
   -ms-transform: rotateY(180deg) translate(50%, -50%) !important;
   -o-transform: rotateY(180deg) translate(50%, -50%) !important;
-  transition: transform 1s;
-  -webkit-transition: transform 1s;
-  -moz-transition: transform 1s;
-  -ms-transition: transform 1s;
-  -o-transition: transform 1s;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
 }
 
 #selection-container.mobile {

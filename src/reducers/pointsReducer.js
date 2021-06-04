@@ -10,10 +10,29 @@ const sightPoints = require("../data/sights.json");
 const getPoints = (cat) => {
   let array = [];
   for (var prop in cat) {
+    console.log("test" + prop + cat[prop]);
     if (cat[prop] === true) {
-      let current = sightPoints.features.filter(
-        (element) => element.properties.CATEGORY === prop
-      );
+      let current = [];
+      if (prop === "food") {
+        current = sightPoints.features.filter(
+          (element) =>
+            element.properties.CATEGORY === prop ||
+            element.properties.CATEGORY === "canteen"
+        );
+      } else {
+        if (prop === "info") {
+          current = sightPoints.features.filter(
+            (element) =>
+              element.properties.CATEGORY === "uni-buildings" ||
+              element.properties.CATEGORY === "library" ||
+              element.properties.CATEGORY === "contact-points"
+          );
+        } else {
+          current = sightPoints.features.filter(
+            (element) => element.properties.CATEGORY === prop
+          );
+        }
+      }
       array = array.concat(current);
     }
   }
@@ -29,11 +48,9 @@ const pointReducer = (state = sightPoints, action) => {
         type: "FeatureCollection",
         features: getPoints(cat),
       };
-      if (points.features.length === 0) {
-        return sightPoints;
-      } else {
-        return points;
-      }
+
+      return points;
+
     default:
       return state;
   }

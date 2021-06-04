@@ -284,7 +284,7 @@ function Intro() {
           </Step>
         </Scrollama>
         <Container
-          id='firststeps-container'
+          id="FirstSteps"
           className={
             language === "englisch"
               ? isTabletOrMobile
@@ -377,6 +377,7 @@ function Intro() {
             <Col
               xs='12'
               md='6'
+
               className={
                 language === "englisch"
                   ? "firststeps-col englisch"

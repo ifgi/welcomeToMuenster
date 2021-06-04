@@ -1,20 +1,28 @@
 import { SET_CATEGORY } from "../actions";
 
 const initialState = {
-  food: false,
-  info: false,
-  fun: false,
-  culture: false,
-  sights: false,
-  nature: false,
+  food: true,
+  info: true,
+  fun: true,
+  culture: true,
+  sights: true,
+  nature: true,
 };
 
 const categoryReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_CATEGORY:
       let cat = action.payload.category;
-      state[cat] = !state[cat];
-      return state;
+      let newState =  {
+        food: state["food"],
+        info: state["info"],
+        fun: state["fun"],
+        culture: state["culture"],
+        sights: state["sights"],
+        nature: state["nature"],
+      };
+      newState[cat] = !newState[cat];
+      return newState;
     default:
       return state;
   }

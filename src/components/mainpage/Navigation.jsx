@@ -28,7 +28,7 @@ function Navigation() {
                   duration: 500,
                 })
               }>
-              Start
+              Anfang
             </Nav.Link>
             <Nav.Link
               onClick={() =>
@@ -41,31 +41,21 @@ function Navigation() {
             </Nav.Link>
             <Nav.Link
               onClick={() =>
+                scroller.scrollTo("FirstSteps", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Erste Schritte
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
                 scroller.scrollTo("FAQ", {
                   smooth: true,
                   duration: 500,
                 })
               }>
               FAQ
-            </Nav.Link>
-            <Nav.Link
-              onClick={() =>
-                scroller.scrollTo("Münster", {
-                  smooth: true,
-                  duration: 500,
-                })
-              }>
-              Münster
-            </Nav.Link>
-
-            <Nav.Link
-              onClick={() =>
-                scroller.scrollTo("Studies", {
-                  smooth: true,
-                  duration: 500,
-                })
-              }>
-              Studium
             </Nav.Link>
             <Nav.Link
               onClick={() =>
@@ -76,6 +66,15 @@ function Navigation() {
               }>
               Erkundung
             </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("Footer", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              About
+            </Nav.Link>
           </Nav>
         </>
       );
@@ -85,11 +84,60 @@ function Navigation() {
         <>
           {" "}
           <Nav className='m-auto'>
-            <Nav.Link href='#Top'>Start</Nav.Link>
-            <Nav.Link href='#Intro'>Intro</Nav.Link>
-            <Nav.Link href='#Münster'>Münster</Nav.Link>
-            <Nav.Link href='#Studies'>Studies</Nav.Link>
-            <Nav.Link href='#Explore'>Explore</Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("Top", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Top
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("Intro", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Intro
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("FirstSteps", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              First Steps
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("FAQ", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              FAQ
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("Discover", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Discover
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("Footer", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              About
+            </Nav.Link>
           </Nav>
         </>
       );
