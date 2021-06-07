@@ -147,22 +147,27 @@
 
 #Discover.mobile {
   margin-left: 0;
-
+  #description-col {
+    height: 100vh;
+  }
   #map {
-    border-radius: 50px;
+    border-radius: 50px 0 0 50px;
     width: 100%;
     height: 80vh;
     margin-top: 0px !important;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
+    -webkit-border-radius: 50px 0 0 50px;
+    -moz-border-radius: 50px 0 0 50px;
+    -ms-border-radius: 50px 0 0 50px;
+    -o-border-radius: 50px 0 0 50px;
   }
   #map-container {
+    padding-right: 0;
+    height: 100vh;
     transform: translateX(0);
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
   }
+  height: 200vh !important;
 }

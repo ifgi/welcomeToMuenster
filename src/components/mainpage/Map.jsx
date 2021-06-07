@@ -15,6 +15,7 @@ import sights from "../../data/sights.json";
 import googleMaps from "../../img/icons/google.png";
 import copy from "../../img/copy.svg";
 import globeIco from "../../img/icons/iconmonstr-globe-white.svg";
+import { Collapse } from "bootstrap";
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   shadowUrl:
@@ -27,7 +28,7 @@ const stadtCenter = [51.961563, 7.628202];
 function Map() {
   const [showTooltip, setShowTooltip] = useState(false);
   const targetTooltip = useRef(null);
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1150px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const [currentStepIndex, setCurrentStepIndex] = useState(null);
   const points = useSelector((state) => state.points);
   const currentSight = useSelector((state) => state.currentSight);
@@ -58,7 +59,7 @@ function Map() {
     <>
       <Container id='Discover' className={isTabletOrMobile ? "mobile" : ""}>
         <Row>
-          <Col xs='12' md='4'>
+          <Col xs='12' md='4' id='desciption-col'>
             <h2>
               {currentSight === 0 ||
               points.features.find((element) => element.id === currentSight) ===

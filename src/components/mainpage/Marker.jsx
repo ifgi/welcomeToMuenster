@@ -4,6 +4,7 @@ import { Popup } from "react-leaflet";
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentSight } from "../../actions";
 
+import { useMediaQuery } from "react-responsive";
 import L from "leaflet";
 
 //load picture placeholders for popups
@@ -31,6 +32,7 @@ import natureIcoMaster from "../../img/marker/nature_primary_master.svg";
 const OwnMarker = (point) => {
   const dispatch = useDispatch();
 
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const language = useSelector((state) => state.language);
   const currentSight = useSelector((state) => state.currentSight);
   const currentIco = () => {
@@ -162,6 +164,19 @@ const OwnMarker = (point) => {
           key={"keyPopup" + point.point.geometry.coordinates + point.point.id}
           className='request-popup'>
           <div className='picture-div'>
+            {isTabletOrMobile ? (
+              <h3>
+                {language === "german" ? (
+                  point.point.properties.NAME_D
+                ) : language === "englisch" ? (
+                  point.point.properties.NAME
+                ) : (
+                  <></>
+                )}
+              </h3>
+            ) : (
+              <></>
+            )}
             {point.point.properties.IMG_LINK === null ? (
               language === "german" ? (
                 <>

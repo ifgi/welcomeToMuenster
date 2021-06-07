@@ -1,7 +1,7 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { scroller, Link, animateScroll as scroll } from "react-scroll";
+import { scroller } from "react-scroll";
 import { useSelector, useDispatch } from "react-redux";
 import { setLanguage } from "../../actions";
 function Navigation() {
