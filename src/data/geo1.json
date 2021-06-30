@@ -1,0 +1,28 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.5956302231944202, 51.969258878570471]
+      },
+      "properties": {
+        "OBJECTID": 1,
+        "NAME": "GEO 1",
+        "CATEGORY": "uni-buildings",
+        "DESCRIPTION": "The GEO is our base and home to Geoinformatiks, Geography and landscape ecology, the ZDM, Geo-library and open computer-workspaces.",
+        "LINK": "https://www.uni-muenster.de/Geoinformatics/",
+        "HINT": "Beside all the studies there are many appointments after work you shoud not miss. In order to be well informed, it is best to keep in touch with the student council.",
+        "ADDITIONAL": null,
+        "NAME_D": "GEO 1",
+        "HINT_D": "Neben den ganzen Studien, die hier stattfinden, gibt es auch die ein oder andere Veranstaltung nach Feierabend. Um hier am Laufenden zu bleiben, bleibst du am besten im Kontakt mit der Fachschaft.",
+        "ADDITIONAL_D": null,
+        "DESCRIPTION_D": "Das GEO, unser Zuhause und der Ort, an dem die Magie passiert. Neben der Geoinformatik ist hier außerdem die Geographie und Landschaftsökologie beheimatet. Auch die Fachschaft, das ZDM und der Geo-Bibliothek. In den StudLabs findest du weiter PC-Plätze.",
+        "FLICKR_REF": null,
+        "IMG_LINK": "https://www.uni-muenster.de/imperia/md/images/geographiedidaktik2/geo1_2015_730x431.jpg"
+      }
+    }
+  ]
+}

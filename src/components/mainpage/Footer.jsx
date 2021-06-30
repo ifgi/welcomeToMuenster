@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import ifgiLogo from "../../img/20-05-12_logo_ifgi_redesing.png";
+import ifgiLogo from "../../img/ifgiLogoWhite.svg";
 import { useSelector } from "react-redux";
 function Footer() {
   const language = useSelector((state) => state.language);

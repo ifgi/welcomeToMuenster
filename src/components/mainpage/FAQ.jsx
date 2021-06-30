@@ -35,10 +35,10 @@ function FAQ() {
         className={
           language === "englisch"
             ? isTabletOrMobile
-              ? "master-backgroundcolor master-links mobile"
+              ? "master-backgroundcolor master-links mobile overflow-x"
               : "master-backgroundcolor master-links"
             : isTabletOrMobile
-            ? "mobile"
+            ? "mobile overflow-x"
             : ""
         }>
         <Row id='faq-row'>

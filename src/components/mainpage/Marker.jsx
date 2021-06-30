@@ -3,7 +3,7 @@ import { Popup } from "react-leaflet";
 
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentSight } from "../../actions";
-
+import Button from "react-bootstrap/Button";
 import { useMediaQuery } from "react-responsive";
 import L from "leaflet";
 
@@ -29,18 +29,22 @@ import cultureIcoMaster from "../../img/marker/culture_primary_master.svg";
 import soccerIcoMaster from "../../img/marker/soccer_primary_master.svg";
 import foodIcoMaster from "../../img/marker/food_primary_master.svg";
 import natureIcoMaster from "../../img/marker/nature_primary_master.svg";
-const OwnMarker = (point) => {
+function OwnMarker(props) {
   const dispatch = useDispatch();
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const language = useSelector((state) => state.language);
   const currentSight = useSelector((state) => state.currentSight);
+
+  const openModal = () => {
+    props.handleShow();
+  };
   const currentIco = () => {
-    if (currentSight === point.point.id) {
+    if (currentSight === props.point.id) {
       if (
-        point.point.properties.CATEGORY === "canteen" ||
-        point.point.properties.CATEGORY === "food" ||
-        point.point.properties.CATEGORY === "coffee-shop"
+        props.point.properties.CATEGORY === "canteen" ||
+        props.point.properties.CATEGORY === "food" ||
+        props.point.properties.CATEGORY === "coffee-shop"
       ) {
         return language === "german"
           ? foodIco
@@ -49,9 +53,9 @@ const OwnMarker = (point) => {
           : foodIco;
       }
       if (
-        point.point.properties.CATEGORY === "bike" ||
-        point.point.properties.CATEGORY === "nature" ||
-        point.point.properties.CATEGORY === "hiking"
+        props.point.properties.CATEGORY === "bike" ||
+        props.point.properties.CATEGORY === "nature" ||
+        props.point.properties.CATEGORY === "hiking"
       ) {
         return language === "german"
           ? natureIco
@@ -60,9 +64,9 @@ const OwnMarker = (point) => {
           : natureIco;
       }
       if (
-        point.point.properties.CATEGORY === "contact-points" ||
-        point.point.properties.CATEGORY === "library" ||
-        point.point.properties.CATEGORY === "uni-buildings"
+        props.point.properties.CATEGORY === "contact-points" ||
+        props.point.properties.CATEGORY === "library" ||
+        props.point.properties.CATEGORY === "uni-buildings"
       ) {
         return language === "german"
           ? infoIco
@@ -70,14 +74,14 @@ const OwnMarker = (point) => {
           ? infoIcoMaster
           : infoIco;
       }
-      if (point.point.properties.CATEGORY === "culture") {
+      if (props.point.properties.CATEGORY === "culture") {
         return language === "german"
           ? cultureIco
           : language === "englisch"
           ? cultureIcoMaster
           : cultureIco;
       }
-      if (point.point.properties.CATEGORY === "sights") {
+      if (props.point.properties.CATEGORY === "sights") {
         return language === "german"
           ? sightsIco
           : language === "englisch"
@@ -85,8 +89,8 @@ const OwnMarker = (point) => {
           : sightsIco;
       }
       if (
-        point.point.properties.CATEGORY === "sports" ||
-        point.point.properties.CATEGORY === "fun"
+        props.point.properties.CATEGORY === "sports" ||
+        props.point.properties.CATEGORY === "fun"
       ) {
         return language === "german"
           ? soccerIco
@@ -102,35 +106,35 @@ const OwnMarker = (point) => {
       }
     } else {
       if (
-        point.point.properties.CATEGORY === "canteen" ||
-        point.point.properties.CATEGORY === "food" ||
-        point.point.properties.CATEGORY === "coffee-shop"
+        props.point.properties.CATEGORY === "canteen" ||
+        props.point.properties.CATEGORY === "food" ||
+        props.point.properties.CATEGORY === "coffee-shop"
       ) {
         return foodIcoGrey;
       }
       if (
-        point.point.properties.CATEGORY === "bike" ||
-        point.point.properties.CATEGORY === "nature" ||
-        point.point.properties.CATEGORY === "hiking"
+        props.point.properties.CATEGORY === "bike" ||
+        props.point.properties.CATEGORY === "nature" ||
+        props.point.properties.CATEGORY === "hiking"
       ) {
         return natureIcoGrey;
       }
       if (
-        point.point.properties.CATEGORY === "contatct-points" ||
-        point.point.properties.CATEGORY === "library" ||
-        point.point.properties.CATEGORY === "uni-buildings"
+        props.point.properties.CATEGORY === "contatct-points" ||
+        props.point.properties.CATEGORY === "library" ||
+        props.point.properties.CATEGORY === "uni-buildings"
       ) {
         return infoIcoGrey;
       }
-      if (point.point.properties.CATEGORY === "culture") {
+      if (props.point.properties.CATEGORY === "culture") {
         return cultureIcoGrey;
       }
-      if (point.point.properties.CATEGORY === "sights") {
+      if (props.point.properties.CATEGORY === "sights") {
         return sightsIcoGrey;
       }
       if (
-        point.point.properties.CATEGORY === "sports" ||
-        point.point.properties.CATEGORY === "fun"
+        props.point.properties.CATEGORY === "sports" ||
+        props.point.properties.CATEGORY === "fun"
       ) {
         return soccerIcoGrey;
       } else {
@@ -149,96 +153,117 @@ const OwnMarker = (point) => {
     <>
       <Marker
         icon={ownIcon}
-        key={"sightNo" + point.point.id + point.point.geometry.coordinates[1]}
+        key={"sightNo" + props.point.id + props.point.geometry.coordinates[1]}
         position={[
-          point.point.geometry.coordinates[1],
-          point.point.geometry.coordinates[0],
+          props.point.geometry.coordinates[1],
+          props.point.geometry.coordinates[0],
         ]}
         eventHandlers={{
           click: (e) => {
-            dispatch(setCurrentSight(point.point.id));
+            dispatch(setCurrentSight(props.point.id));
           },
         }}>
-        <Popup
-          autoPan={false}
-          key={"keyPopup" + point.point.geometry.coordinates + point.point.id}
-          className='request-popup'>
-          <div className='picture-div'>
-            {isTabletOrMobile ? (
+        {isTabletOrMobile ? (
+          <Popup
+            autoPan={true}
+            key={"keyPopup" + props.point.geometry.coordinates + props.point.id}
+            className='request-popup mobile overflow-x'>
+            <div className='picture-div'>
               <h3>
                 {language === "german" ? (
-                  point.point.properties.NAME_D
+                  props.point.properties.NAME_D
                 ) : language === "englisch" ? (
-                  point.point.properties.NAME
+                  props.point.properties.NAME
                 ) : (
                   <></>
                 )}
               </h3>
-            ) : (
-              <></>
-            )}
-            {point.point.properties.IMG_LINK === null ? (
-              language === "german" ? (
-                <>
-                  <img
-                    src={noPicturePrimary}
-                    width='90%'
-                    height='auto'
-                    alt='Platzhalter'
-                  />
-                  <p>Für dieses Highlight gibt es aktuell leider kein Bild.</p>
-                </>
-              ) : (
-                <>
-                  <img
-                    src={noPictureBlue}
-                    width='90%'
-                    height='auto'
-                    alt='placeholder'
-                  />
-                  <p>There is currently no picture for this highlight.</p>
-                </>
-              )
-            ) : point.point.properties.FLICKR_REF === null ? (
-              <img
-                src={point.point.properties.IMG_LINK}
-                width='100%'
-                height='auto'
-                alt={
-                  language === "german"
-                    ? point.point.properties.NAME_D
-                    : point.point.properties.NAME
-                }
-              />
-            ) : (
-              <a
-                className='flickr-picture'
-                data-flickr-embed='true'
-                data-header='true'
-                target='_blank'
-                rel='noreferrer'
-                href={point.point.properties.FLICKR_REF}
-                title={
-                  language === "german"
-                    ? point.point.properties.NAME_D
-                    : point.point.properties.NAME
-                }>
+              <Button
+                variant={language === "englisch" ? "info" : "primary"}
+                onClick={() => {
+                  openModal();
+                }}>
+                {language === "german" ? (
+                  <>mehr Information</>
+                ) : language === "englisch" ? (
+                  <>more information</>
+                ) : (
+                  ""
+                )}
+              </Button>
+            </div>
+          </Popup>
+        ) : (
+          <Popup
+            autoPan={true}
+            key={"keyPopup" + props.point.geometry.coordinates + props.point.id}
+            className={"request-popup"}>
+            <div className='picture-div'>
+              {props.point.properties.IMG_LINK === null ? (
+                language === "german" ? (
+                  <>
+                    <img
+                      src={noPicturePrimary}
+                      width='90%'
+                      height='auto'
+                      alt='Platzhalter'
+                    />
+                    <p>
+                      Für dieses Highlight gibt es aktuell leider kein Bild.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <img
+                      src={noPictureBlue}
+                      width='90%'
+                      height='auto'
+                      alt='placeholder'
+                    />
+                    <p>There is currently no picture for this highlight.</p>
+                  </>
+                )
+              ) : props.point.properties.FLICKR_REF === null ? (
                 <img
-                  src={point.point.properties.IMG_LINK}
+                  src={props.point.properties.IMG_LINK}
                   width='100%'
                   height='auto'
                   alt={
                     language === "german"
-                      ? point.point.properties.NAME_D
-                      : point.point.properties.NAME
+                      ? props.point.properties.NAME_D
+                      : props.point.properties.NAME
                   }
                 />
-              </a>
-            )}
-          </div>
-        </Popup>
+              ) : (
+                <a
+                  className='flickr-picture'
+                  data-flickr-embed='true'
+                  data-header='true'
+                  target='_blank'
+                  rel='noreferrer'
+                  href={props.point.properties.FLICKR_REF}
+                  title={
+                    language === "german"
+                      ? props.point.properties.NAME_D
+                      : props.point.properties.NAME
+                  }>
+                  <img
+                    src={props.point.properties.IMG_LINK}
+                    width='100%'
+                    height='auto'
+                    alt={
+                      language === "german"
+                        ? props.point.properties.NAME_D
+                        : props.point.properties.NAME
+                    }
+                  />
+                </a>
+              )}
+            </div>
+          </Popup>
+        )}
       </Marker>
     </>
   );
-};
+}
 export default OwnMarker;

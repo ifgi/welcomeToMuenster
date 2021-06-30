@@ -23,11 +23,22 @@ function Selection() {
   return (
     <>
       <div
-        id='selection-container'
-        className={isTabletOrMobile ? "mobile" : ""}>
+        className={
+          isTabletOrMobile
+            ? "selection-container mobile"
+            : "selection-container"
+        }>
         <div
           id='selection-button'
-          className={language === "englisch" ? "master-backgroundcolor" : ""}
+          className={
+            language === "englisch"
+              ? collapse === true
+                ? "master-backgroundcolor selection-collapsed"
+                : "master-backgroundcolor"
+              : collapse === true
+              ? "selection-collapsed"
+              : ""
+          }
           onClick={() => {
             setCollapse(!collapse);
           }}>
@@ -43,10 +54,25 @@ function Selection() {
         </div>
         <div
           id='selection-banner'
-          className={language === "englisch" ? "master-backgroundcolor" : ""}
+          className={
+            language === "englisch"
+              ? collapse === true
+                ? "master-backgroundcolor selection-collapsed"
+                : "master-backgroundcolor"
+              : collapse === true
+              ? "selection-collapsed"
+              : ""
+          }
           onClick={() => {
             setCollapse(!collapse);
           }}></div>
+      </div>
+      <div
+        className={
+          isTabletOrMobile
+            ? "selection-container mobile"
+            : "selection-container"
+        }>
         <div
           id='selection-content'
           className={

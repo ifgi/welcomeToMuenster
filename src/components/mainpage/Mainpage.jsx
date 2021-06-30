@@ -3,6 +3,7 @@ import Intro from "./Intro";
 import Map from "./Map";
 import Navigation from "./Navigation";
 import FAQ from "./FAQ";
+import Discover from "./MapDescription";
 import Footer from "./Footer";
 function Mainpage() {
   return (
@@ -11,6 +12,7 @@ function Mainpage() {
       <Landing />
       <Intro />
       <FAQ />
+      <Discover />
       <Map />
       <Footer />
     </>

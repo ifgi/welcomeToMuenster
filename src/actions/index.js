@@ -25,19 +25,6 @@ export const setCategory = (category) => {
     payload: { category: category },
   };
 };
-/*
-export const setCategory = (category) => {
-  return function (dispatch) {
-    return new Promise((resolve, reject) => {
-      dispatch({
-        type: "SET_CATEGORY",
-        payload: { category: category },
-      });
-      resolve();
-    });
-  };
-};
-*/
 //action for activating or disabeling a category
 export const setCurrentSight = (sightId) => {
   return {

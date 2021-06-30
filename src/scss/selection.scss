@@ -1,16 +1,11 @@
 @import "./corporate-design.scss";
 
-#selection-container {
+.selection-container {
   display: flex;
   position: absolute;
-  right: 0;
+  right: 45px;
   top: 0;
   z-index: 500;
-  transform: translateX(-50px);
-  -webkit-transform: translateX(-50px);
-  -moz-transform: translateX(-50px);
-  -ms-transform: translateX(-50px);
-  -o-transform: translateX(-50px);
 }
 #selection-button {
   .collapse-icon {
@@ -29,7 +24,10 @@
     -ms-transition: transform 0.5s;
     -o-transition: transform 0.5s;
   }
-  margin-top: 60px;
+  z-index: 490;
+  position: absolute;
+  right: 40px;
+  top: 60px;
   height: 65px;
   width: 65px;
   background-color: $primary;
@@ -38,15 +36,30 @@
   -moz-border-radius: 10px 0 0 10px;
   -ms-border-radius: 10px 0 0 10px;
   -o-border-radius: 10px 0 0 10px;
+  transition: right 0.5s;
+  -webkit-transition: right 0.5s;
+  -moz-transition: right 0.5s;
+  -ms-transition: right 0.5s;
+  -o-transition: right 0.5s;
 }
 
 #selection-banner {
-  margin-top: 60px;
+  position: absolute;
+  z-index: 480;
+  right: 0;
+  top: 60px;
   height: 65px;
   width: 40px;
   background-color: $primary;
+  transition: right 0.5s;
+  -webkit-transition: right 0.5s;
+  -moz-transition: right 0.5s;
+  -ms-transition: right 0.5s;
+  -o-transition: right 0.5s;
 }
 #selection-content {
+  position: absolute;
+  right: 0;
   height: 80vh;
   background-color: $primary;
   width: 0px;
@@ -168,11 +181,22 @@
   -ms-transition: transform 0.5s;
   -o-transition: transform 0.5s;
 }
-
-#selection-container.mobile {
-  transform: translateX(0px);
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  -o-transform: translateX(0px);
+#selection-button.selection-collapsed {
+  right: 220px !important;
+  transition: right 0.5s;
+  -webkit-transition: right 0.5s;
+  -moz-transition: right 0.5s;
+  -ms-transition: right 0.5s;
+  -o-transition: right 0.5s;
+}
+#selection-banner.selection-collapsed {
+  right: 180px !important;
+  transition: right 0.5s;
+  -webkit-transition: right 0.5s;
+  -moz-transition: right 0.5s;
+  -ms-transition: right 0.5s;
+  -o-transition: right 0.5s;
+}
+.selection-container.mobile {
+  right: 0;
 }

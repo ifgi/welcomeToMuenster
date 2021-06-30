@@ -68,6 +68,15 @@ function Navigation() {
             </Nav.Link>
             <Nav.Link
               onClick={() =>
+                scroller.scrollTo("Map", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Karte
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
                 scroller.scrollTo("Footer", {
                   smooth: true,
                   duration: 500,
@@ -131,6 +140,15 @@ function Navigation() {
             </Nav.Link>
             <Nav.Link
               onClick={() =>
+                scroller.scrollTo("Map", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Map
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
                 scroller.scrollTo("Footer", {
                   smooth: true,
                   duration: 500,
@@ -145,7 +163,7 @@ function Navigation() {
   };
   return (
     <>
-      <Navbar expand='lg' fixed='top' collapseOnSelect>
+      <Navbar expand='xl' fixed='top' collapseOnSelect>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <NavDropdown title={whatLanguage()} id='basic-nav-dropdown'>

@@ -50,5 +50,7 @@
 }
 .mobile {
   word-break: break-word;
-  overflow-y: hidden;
+}
+.mobile.overflow-x {
+  overflow-x: hidden;
 }

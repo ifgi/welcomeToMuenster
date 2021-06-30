@@ -8,11 +8,12 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { useMediaQuery } from "react-responsive";
 import L from "leaflet";
 import ChangeView from "./ChangeView.jsx";
+import MarkerGeo from "./MarkerGeo.jsx";
 import germany from "../../data/germany.json";
 import nrw from "../../data/nrw.json";
 import muensterland from "../../data/muensterland.json";
 import muenster from "../../data/muenster.json";
-
+import geoOneJSON from "../../data/geo1.json";
 import mensaCardIcon from "../../img/icons/iconmonstr-mensa-card.svg";
 import globeIcon from "../../img/icons/iconmonstr-globe.svg";
 import speechBubbleIcon from "../../img/icons/iconmonstr-speech-bubble.svg";
@@ -42,6 +43,7 @@ const muensterCenterMobile = [51.961869, 7.383207];
 const stadtCenterMobile = [51.960667, 7.626135];
 
 function Intro() {
+  const geoOne = geoOneJSON.features[0];
   const language = useSelector((state) => state.language);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const [currentStepIndex, setCurrentStepIndex] = useState(null);
@@ -119,6 +121,7 @@ function Intro() {
               //onEachFeature={onEachPolygon}
               style={style}
             />
+            <MarkerGeo point={geoOne} key={geoOne.id} />
           </MapContainer>
         </div>
         <Scrollama onStepEnter={onStepEnter}>
@@ -126,7 +129,7 @@ function Intro() {
             <div
               className={
                 isTabletOrMobile
-                  ? "storymap-description mobile first"
+                  ? "storymap-description mobile first overflow-x"
                   : "storymap-description first"
               }>
               {language === "german" ? (
@@ -163,18 +166,6 @@ function Intro() {
                     <b style={{ color: "#06aa6e" }}>“waste”</b> contributes
                     countless elements in our everyday routine.
                   </p>
-                  <p>
-                    The waste statistics displays the household waste in tonnes
-                    for Europe as of 2018, of which the top ranked country is
-                    Turkey <b>(32.3 million)</b>, followed by the United Kingdom{" "}
-                    <b>(31.9 million)</b>, France <b>(21 million)</b> and{" "}
-                    <b style={{ color: "#00441b" }}>Germany (20.6 million)</b>.
-                  </p>
-                  <p>
-                    <b style={{ color: "red" }}>
-                      Click on any country on the map to compare them.
-                    </b>
-                  </p>
                 </>
               ) : (
                 <></>
@@ -185,7 +176,7 @@ function Intro() {
             <div
               className={
                 isTabletOrMobile
-                  ? "storymap-description mobile"
+                  ? "storymap-description mobile overflow-x"
                   : "storymap-description"
               }>
               {language === "german" ? (
@@ -213,7 +204,7 @@ function Intro() {
             <div
               className={
                 isTabletOrMobile
-                  ? "storymap-description mobile"
+                  ? "storymap-description mobile overflow-x"
                   : "storymap-description"
               }>
               {language === "german" ? (
@@ -243,7 +234,7 @@ function Intro() {
             <div
               className={
                 isTabletOrMobile
-                  ? "storymap-description mobile"
+                  ? "storymap-description mobile overflow-x"
                   : "storymap-description"
               }>
               {language === "german" ? (
@@ -284,14 +275,14 @@ function Intro() {
           </Step>
         </Scrollama>
         <Container
-          id="FirstSteps"
+          id='FirstSteps'
           className={
             language === "englisch"
               ? isTabletOrMobile
-                ? "master-links mobile"
+                ? "master-links mobile overflow-x"
                 : "master-links"
               : isTabletOrMobile
-              ? "mobile"
+              ? "mobile overflow-x"
               : ""
           }>
           <Row>
@@ -377,7 +368,6 @@ function Intro() {
             <Col
               xs='12'
               md='6'
-
               className={
                 language === "englisch"
                   ? "firststeps-col englisch"
