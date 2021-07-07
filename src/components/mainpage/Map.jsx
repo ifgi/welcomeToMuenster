@@ -79,7 +79,7 @@ function Map() {
                   (element) => element.id === currentSight
                 ) === undefined ? (
                   language === "german" ? (
-                    "Wähle einen Punkt"
+                    "Wähle einen Punkt,"
                   ) : (
                     "Choose a Points"
                   )
@@ -100,15 +100,19 @@ function Map() {
                 ) === undefined ? (
                   language === "german" ? (
                     <p>
-                      {" "}
-                      "oder navigiere zum Mittelpunkt von Münster oder kopiere
-                      die Koordinaten in deine Zwischenablage."{" "}
+                      ... damit hier eine kurze Beschreibung zu deiner Auswahl
+                      erscheint und du über die unten stehenden Buttons die
+                      entsprechende Hompage aufrufen, die Route zum Standort mit
+                      Google Maps starten oder die Position in die
+                      Zwischenablage kopieren kannst.
                     </p>
                   ) : (
                     <p>
-                      {" "}
-                      "or use one of the buttons below to navigate to Münster's
-                      city Center or copy it's position to clipboard."{" "}
+                      ... so that a short description of your selection appears
+                      right here and you are able to use the buttons below to
+                      get redirected to the corresponding homepage, start the
+                      route to the location with Google Maps or copy the
+                      position to your clipboard.
                     </p>
                   )
                 ) : language === "german" ? (

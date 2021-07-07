@@ -10,7 +10,6 @@ const sightPoints = require("../data/sights.json");
 const getPoints = (cat) => {
   let array = [];
   for (var prop in cat) {
-    console.log("test" + prop + cat[prop]);
     if (cat[prop] === true) {
       let current = [];
       if (prop === "food") {

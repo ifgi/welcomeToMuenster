@@ -12,58 +12,68 @@ function Landing() {
   const language = useSelector((state) => state.language);
 
   return (
-    <Container id='Top'>
-      <div id='heading'>
-        <h1>Moin Münster</h1>
-        <div id='p-container'>
-          {language === "german" ? (
-            <p>
-              Du startest den Bachelor Geoinformatik in Münster? Hier bekommst
-              du die wichtigsten Infos und erste Freizeittipps für deinen Start
-              in den Studierendenalltag.
-            </p>
-          ) : language === "englisch" ? (
-            <p>
-              {" "}
-              You are starting Geoinformatic studies at ifgi in Münster? Also,
-              you are going to live in Münster and want to have the time of your
-              life?Than this page could be the perfect starting-point for your
-              adventure. Powered by ifgi and the student council of
-              Geoinformatics, Moin Münster will guid your first steps in
-              Münster.
-            </p>
-          ) : (
-            <></>
-          )}
-        </div>
-      </div>{" "}
-      <Link
-        activeClass='active'
-        to='Intro'
-        spy={true}
-        smooth={true}
-        duration={500}>
+    <>
+      <Container id='Top' className={isTabletOrMobile ? "mobile-landing" : ""}>
+        <div id='heading'>
+          <h1>Moin Münster</h1>
+          <div id='p-container'>
+            {language === "german" ? (
+              isTabletOrMobile ? (
+                <p>
+                  Alles, was du für deinen Studienstart benötigst auf einer
+                  Seite.
+                </p>
+              ) : (
+                <p>
+                  Du startest den Bachelor Geoinformatik in Münster? Hier
+                  bekommst du die wichtigsten Infos und erste Freizeittipps für
+                  deinen Start in den Studierendenalltag.
+                </p>
+              )
+            ) : language === "englisch" ? (
+              <p>Everything you need to start your studies on a single page.</p>
+            ) : (
+              <></>
+            )}
+          </div>
+        </div>{" "}
+        <Link
+          activeClass='active'
+          to='Intro'
+          spy={true}
+          smooth={true}
+          duration={500}>
+          <div
+            id='start-journey-container'
+            className={
+              language === "englisch"
+                ? isTabletOrMobile
+                  ? "master-backgroundcolor mobile overflow-x"
+                  : "master-backgroundcolor"
+                : isTabletOrMobile
+                ? "mobile overflow-x"
+                : ""
+            }>
+            {language === "german" ? (
+              <p>starte deinen Rundgang</p>
+            ) : language === "englisch" ? (
+              <p>start the journey</p>
+            ) : (
+              <></>
+            )}
+          </div>
+        </Link>
         <div
-          id='start-journey-container'
-          className={
-            language === "englisch"
-              ? isTabletOrMobile
-                ? "master-backgroundcolor mobile overflow-x"
-                : "master-backgroundcolor"
-              : isTabletOrMobile
-              ? "mobile overflow-x"
-              : ""
-          }>
-          {language === "german" ? (
-            <p>starte deinen Rundgang</p>
-          ) : language === "englisch" ? (
-            <p>start the journey</p>
-          ) : (
-            <></>
-          )}
-          <p></p>
+          className='landing-img-col'
+          xs={{ span: 12, order: 2 }}
+          md={{ span: 6, order: 2 }}>
+          <img
+            src={schlossImage}
+            className='landing-img'
+            alt='Münsters Schloss'
+          />
         </div>
-      </Link>
+      </Container>
       <div id='powered-paragraph'>
         <p>
           powered by
@@ -75,17 +85,7 @@ function Landing() {
           </a>
         </p>
       </div>
-      <div
-        className='landing-img-col'
-        xs={{ span: 12, order: 2 }}
-        md={{ span: 6, order: 2 }}>
-        <img
-          src={schlossImage}
-          className='landing-img'
-          alt='Münsters Schloss'
-        />
-      </div>
-    </Container>
+    </>
   );
 }
 

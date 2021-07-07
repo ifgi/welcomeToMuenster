@@ -8,7 +8,7 @@ import compassFilledWhiteIco from "../../img/icons/iconmonstr-compass-filled-whi
 import infoWhiteIco from "../../img/icons/iconmonstr-info-white.svg";
 import treeWhiteIco from "../../img/icons/iconmonstr-tree-white.svg";
 import soccerWhiteIcon from "../../img/icons/iconmonstr-soccer-white.svg";
-import { setCategory, setPoints } from "../../actions";
+import { setCategory, setCurrentSight, setPoints } from "../../actions";
 function Selection() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const [collapse, setCollapse] = useState(false);
@@ -92,6 +92,7 @@ function Selection() {
                   : "category-button"
               }
               onClick={() => {
+                dispatch(setCurrentSight(0));
                 dispatch(setCategory("info"));
               }}>
               <img
@@ -107,6 +108,7 @@ function Selection() {
                   : "category-button"
               }
               onClick={() => {
+                dispatch(setCurrentSight(0));
                 dispatch(setCategory("sights"));
               }}>
               <img
@@ -122,6 +124,7 @@ function Selection() {
                   : "category-button"
               }
               onClick={() => {
+                dispatch(setCurrentSight(0));
                 dispatch(setCategory("culture"));
               }}>
               <img
@@ -137,6 +140,7 @@ function Selection() {
                   : "category-button"
               }
               onClick={() => {
+                dispatch(setCurrentSight(0));
                 dispatch(setCategory("fun"));
               }}>
               <img
@@ -152,6 +156,7 @@ function Selection() {
                   : "category-button"
               }
               onClick={() => {
+                dispatch(setCurrentSight(0));
                 dispatch(setCategory("food"));
               }}>
               <img
@@ -167,6 +172,7 @@ function Selection() {
                   : "category-button"
               }
               onClick={() => {
+                dispatch(setCurrentSight(0));
                 dispatch(setCategory("nature"));
               }}>
               <img

@@ -5,7 +5,7 @@ import configureStore from "./configurateStore.js";
 import "./scss/index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
+import windowSize from "./windowSize.js";
 const store = configureStore();
 
 ReactDOM.render(

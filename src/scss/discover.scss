@@ -22,6 +22,7 @@
   padding-right: 0 !important;
   img.icon {
     width: 100%;
+    max-width: 100px;
     height: auto;
     margin-top: 50%;
     transform: translateY(-50%);
@@ -74,7 +75,9 @@
 }
 .leaflet-popup {
   min-width: 300px;
-  max-width: 35vw;
+  max-width: 60vw;
+  height: auto;
+  overflow-x: visible !important;
 }
 .leaflet-popup-tip,
 .leaflet-popup-content-wrapper {

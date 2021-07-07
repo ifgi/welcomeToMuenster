@@ -8,7 +8,7 @@
   margin-right: 0px;
   padding-top: 100px;
   z-index: 5;
-
+  height: calc(100vh - 50px);
   .row {
     padding-left: 5vh;
   }
@@ -17,7 +17,7 @@
   }
   h1,
   .h1 {
-    font-size: 3.5rem !important;
+    font-size: 3.5rem;
   }
 }
 .logo {
@@ -32,17 +32,15 @@
 .landing-img {
   height: calc(100vh - 105px);
   width: 100vw;
-
   object-fit: cover;
 }
 .landing-img-col {
   z-index: -10;
   left: 0;
   top: 56px;
-  height: calc(100vh - 105px) !important;
+  height: calc(100vh - 105px);
   position: absolute;
   width: 100vw;
-  height: auto;
 }
 .landing-img-col,
 .landing-image-carousel {
@@ -73,9 +71,12 @@
 }
 
 #powered-paragraph {
-  position: absolute;
-  left: 2vw;
-  bottom: 0;
+  position: relative;
+  width: 100vw;
+  height: 44px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-left: 10px;
   text-align: left;
 
   p {
@@ -136,4 +137,31 @@
 }
 #start-journey-container.mobile {
   width: 90vw !important;
+}
+
+.mobile-landing {
+  height: calc(var(--vh, 1vh) * 100 - 50px) !important;
+
+  .landing-img-col {
+    height: calc(var(--vh, 1vh) * 100 - 105px) !important;
+  }
+  .landing-img {
+    height: calc(100vh - 105px);
+  }
+  #heading {
+    height: calc(100% - 50px);
+
+    #p-container {
+      height: calc(100% - 49px - 4rem - 50px - 50px);
+    }
+  }
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  #start-journey-container {
+    p {
+      font-size: 1.3rem;
+    }
+  }
 }

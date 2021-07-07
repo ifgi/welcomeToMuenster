@@ -7,7 +7,9 @@ function Footer() {
   const language = useSelector((state) => state.language);
   return (
     <>
-      <Container id='Footer'>
+      <Container
+        id='Footer'
+        className={language === "englisch" ? "master-links" : ""}>
         <Row>
           <Col xs='12' md='6'>
             {" "}

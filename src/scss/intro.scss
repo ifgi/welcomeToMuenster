@@ -130,11 +130,29 @@
 }
 .dropdown-icon {
   margin-left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
+  margin-top: 10px;
+  transform: rotateX(0deg) translateX(-50%);
+  -webkit-transform: rotateX(0deg) translateX(-50%);
+  -moz-transform: rotateX(0deg) translateX(-50%);
+  -ms-transform: rotateX(0deg) translateX(-50%);
+  -o-transform: rotateX(0deg) translateX(-50%);
+  transition: transform 0.75s;
+  -webkit-transition: transform 0.75s;
+  -moz-transition: transform 0.75s;
+  -ms-transition: transform 0.75s;
+  -o-transition: transform 0.75s;
+}
+.dropdown-icon.dropdown-opened {
+  transform: rotateX(180deg) translateX(-50%) !important;
+  -webkit-transform: rotateX(180deg) translateX(-50%) !important;
+  -moz-transform: rotateX(180deg) translateX(-50%) !important;
+  -ms-transform: rotateX(180deg) translateX(-50%) !important;
+  -o-transform: rotateX(180deg) translateX(-50%) !important;
+  transition: transform 0.75s;
+  -webkit-transition: transform 0.75s;
+  -moz-transition: transform 0.75s;
+  -ms-transition: transform 0.75s;
+  -o-transition: transform 0.75s;
 }
 
 .storymap-description.mobile {

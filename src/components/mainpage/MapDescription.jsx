@@ -48,14 +48,27 @@ function MapDescription() {
             </h2>
           </Col>
           <Col xs='12' md='12'>
-            <p>
-              In der nachfolgenden Karte habe wir die wichtigsten Anlaufstellen
-              und die schönsten Orte in Münster für dich zusammengetragen. Damit
-              du den Überblick behälst, sind die Standorte in Gruppen
-              eingeteilt. Am rechten Rand der Karte ist ein Menü, in dem du die
-              einzelnen Gruppen über ihre Symbole ab- und wieder anschalten
-              kannst. Die einzelnen Kategorien sind:
-            </p>
+            {language === "german" ? (
+              <p>
+                In der nachfolgenden Karte habe wir die wichtigsten
+                Anlaufstellen und die schönsten Orte in Münster für dich
+                zusammengetragen. Damit du den Überblick behälst, sind die
+                Standorte in Gruppen eingeteilt. Am rechten Rand der Karte ist
+                ein Menü, in dem du die einzelnen Gruppen über ihre Symbole ab-
+                und wieder anschalten kannst. Die einzelnen Kategorien sind:
+              </p>
+            ) : language === "englisch" ? (
+              <p>
+                In the following map are the most important locations of Münster
+                shown. You can find contact points for your studies and also
+                interesting and fun places. To have a good overview, all
+                locations are split into categories. These categories can be
+                deactivated or activated in the extendable sidebar on the right
+                hand side of the map. The categories are:
+              </p>
+            ) : (
+              <></>
+            )}
           </Col>
         </Row>
         <Row className='description-row'>
@@ -67,10 +80,19 @@ function MapDescription() {
             />
           </Col>
           <Col xs='10' md='3' className='description-explain'>
-            <p>
-              Unter den Info-Punkten sind alle Orte zu finden, die wichtig für
-              dein Studium sind.
-            </p>
+            {language === "german" ? (
+              <p>
+                Unter den Info-Punkten sind alle Orte zu finden, die wichtig für
+                dein Studium sind.
+              </p>
+            ) : language === "englisch" ? (
+              <p>
+                The information-locations are places, that are important for
+                your studies and your stay in Münster.
+              </p>
+            ) : (
+              <></>
+            )}
           </Col>
           <Col xs='2' md='1' className='description-icons'>
             <img
@@ -84,10 +106,16 @@ function MapDescription() {
             />
           </Col>
           <Col xs='10' md='3' className='description-explain'>
-            <p>
-              Unter den Info-Punkten sind alle Orte zu finden, die wichtig für
-              dein Studium sind.
-            </p>
+            {language === "german" ? (
+              <p>Der Kompass zeigt dir Sehenswürdigkeiten in Münster.</p>
+            ) : language === "englisch" ? (
+              <p>
+                The compass shows you some of the most important sightseeing
+                locations in Münster.
+              </p>
+            ) : (
+              <></>
+            )}
           </Col>
 
           <Col xs='2' md='1' className='description-icons'>
@@ -100,10 +128,19 @@ function MapDescription() {
             />
           </Col>
           <Col xs='10' md='3' className='description-explain'>
-            <p>
-              Unter den Info-Punkten sind alle Orte zu finden, die wichtig für
-              dein Studium sind.
-            </p>
+            {language === "german" ? (
+              <p>
+                Hinter diesem monumentalen Gebäude verbergen sich Museen und
+                kulturelle Einrichtungen in deiner neuen Stadt.
+              </p>
+            ) : language === "englisch" ? (
+              <p>
+                This building shows you museums and cultural institutions in
+                your new hometown.
+              </p>
+            ) : (
+              <></>
+            )}
           </Col>
           <Col xs='2' md='1' className='description-icons'>
             <img
@@ -115,10 +152,19 @@ function MapDescription() {
             />
           </Col>
           <Col xs='10' md='3' className='description-explain'>
-            <p>
-              Unter den Info-Punkten sind alle Orte zu finden, die wichtig für
-              dein Studium sind.
-            </p>
+            {language === "german" ? (
+              <p>
+                Der Fußball steht symbolisch für alles was Spaß macht und deine
+                Freizeit mit kurzweiligen Aktivitäten füllt.
+              </p>
+            ) : language === "englisch" ? (
+              <p>
+                The football stands for all the things that may lighten up your
+                day with fun activities.
+              </p>
+            ) : (
+              <></>
+            )}
           </Col>
 
           <Col xs='2' md='1' className='description-icons'>
@@ -129,10 +175,19 @@ function MapDescription() {
             />
           </Col>
           <Col xs='10' md='3' className='description-explain'>
-            <p>
-              Unter den Info-Punkten sind alle Orte zu finden, die wichtig für
-              dein Studium sind.
-            </p>
+            {language === "german" ? (
+              <p>
+                Unter diesem Stück Pizza finden sich alle Mensen der
+                Universität, sowie der ein oder andere kulinarische Tipp.
+              </p>
+            ) : language === "englisch" ? (
+              <p>
+                The pizza shows you all the canteens of the university and some
+                good food tips.
+              </p>
+            ) : (
+              <></>
+            )}
           </Col>
           <Col xs='2' md='1' className='description-icons'>
             <img
@@ -142,10 +197,19 @@ function MapDescription() {
             />
           </Col>
           <Col xs='10' md='3' className='description-explain'>
-            <p>
-              Unter den Info-Punkten sind alle Orte zu finden, die wichtig für
-              dein Studium sind.
-            </p>
+            {language === "german" ? (
+              <p>
+                Jeder, der gerne in der Natur unterwegs ist, ob auf dem Fahrrad
+                oder zu Fuß sollte Ausschau nach Bäumen auf der Karte halten.
+              </p>
+            ) : language === "englisch" ? (
+              <p>
+                For those who enjoys being out in nature, whether on a bike or
+                on foot, should keep an eye out for the tree symbol on our map.
+              </p>
+            ) : (
+              <></>
+            )}
           </Col>
         </Row>
       </Container>

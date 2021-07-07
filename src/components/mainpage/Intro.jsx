@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import Collapse from "react-bootstrap/Collapse";
 import { Scrollama, Step } from "react-scrollama";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { useMediaQuery } from "react-responsive";
@@ -53,6 +55,13 @@ function Intro() {
   const [currentZoom, setCurrentZoom] = useState(3);
   const [geoData, setGeoData] = useState(germany);
   const geoJsonLayer = useRef(null);
+  //collapse boxes for the first steps part
+  const [openInfo, setOpenInfo] = useState({
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+  });
 
   useEffect(() => {
     if (geoJsonLayer.current) {
@@ -137,16 +146,20 @@ function Intro() {
                   {" "}
                   <h2>Willkommen in deinem neuen Zuhause!</h2>
                   <p>
-                    Schön, dass du dich entschieden hast, nach Münster zu kommen
-                    und noch viel schöner, dass du ab sofort Geoinformatik
-                    studiert!
+                    Schön, dass du dich entschieden hast, nach Münster zu
+                    kommen. SChön aber vor allem, dass du ab sofort
+                    Geoinformatik studieren wirst!
                   </p>
                   <p>
-                    Aus diesem Grund wollen wir dir auf dieser Seite einerseits
-                    hilfreiche Tipps für deinen Start in Münster geben und
-                    außerdem schonmal einen kleinen Vorgeschmack geben, was mit
-                    Karten alles möglich ist und du im Studium lernst.
-                    Stadterkundung und Studienstart auf die Geoinformatiker-Art.
+                    Damit du einen guten Start in deinem Studierendenleben hast,
+                    wollen wir dir auf dieser Seite einerseits hilfreiche Tipps
+                    geben und dir die wichtigsten Orte in Münster zeigen. Ganz
+                    auf die Geoinformatiker-Art haben, wir dafür diese Website
+                    mit interaktiven Karten versehen. Diese erste Karte, welche
+                    sich aktuell im Hintergrund befindet, wirst du Schritt für
+                    Schritt nach Münster geführt und damit du nie die
+                    Orientierung verlierst ist das GEO-Gebäude stehts mit dem
+                    ifgi-Logo markiert.
                   </p>
                 </>
               ) : language === "englisch" ? (
@@ -154,17 +167,18 @@ function Intro() {
                   {" "}
                   <h2>Welcome to Your New Home!</h2>
                   <p>
-                    This is going to be very very awesome.
-                    <b style={{ color: "#06aa6e" }}>“Trust me”</b>
-                    The directive of this movement is to curtail the plastic
-                    litter and its associated impact through{" "}
-                    <b style={{ color: "#06aa6e" }}>
-                      “Transforming our world: the 2030 Agenda for Sustainable
-                      Development”
-                    </b>
-                    . In a broader picture, the term{" "}
-                    <b style={{ color: "#06aa6e" }}>“waste”</b> contributes
-                    countless elements in our everyday routine.
+                    Welcome to Münster and also welcome to the Institute of
+                    Geoinformatics.
+                  </p>
+                  <p>
+                    {" "}
+                    To help you starting your life in Münster, we want to give
+                    you some tips and basic information and show you the most
+                    important places in Münster. In true geoinformatics fashion,
+                    we provide you this website with interactive maps. On this
+                    first map which you can see in the background, you will be
+                    guided step by step to the city of Münster. The ifgi-logo
+                    marks the GEO-building to not get disorientated on the map.
                   </p>
                 </>
               ) : (
@@ -181,18 +195,21 @@ function Intro() {
               }>
               {language === "german" ? (
                 <>
-                  <h2>Im Herzen Nordrheinwestfalens</h2>
+                  <h2>Ein Teil Nordrhein-Westfalens</h2>
                   <p>
-                    Nordrheinwestfalen ist das befölkerungsreichste Bundesland
-                    Deutschlands.
+                    Nordrhein-Westfalen (NRW) ist das befölkerungsreichste
+                    Bundesland Deutschlands. Und mit über 300.000 Einwohnerinnen
+                    und Einwohnern ist Münster unter den Top-Ten Städten NRWs.
                   </p>
+                  <p>Deutsche Bahn Ticket</p>
                 </>
               ) : language === "englisch" ? (
                 <>
                   <h2>Part of Northrhine Westfalia</h2>
                   <p>
                     Northrhein Westfalie (NRW) is the most populated federal
-                    state of Germany.{" "}
+                    state of Germany. With over 300,000 inhabitants Münster is
+                    on of the top ten citys in NRW.
                   </p>
                 </>
               ) : (
@@ -211,17 +228,25 @@ function Intro() {
                 <>
                   <h2>Münsterland. Felder, Fahrräder und Schönheit.</h2>
                   <p>
-                    Mit X Metern Höhe ist der X der höchste Punkt des
-                    Münsterlandes und genau aus diesem Grund ist das Fahrrad der
-                    absolute Renner in Münster. ZAHLEN FAKTEN UNSW.
+                    Mit 188,7 Metern Höhe ist der Westerberg der höchste Punkt
+                    des Münsterlandes und genau aus diesem Grund ist das Fahrrad
+                    der absolute Renner in Münster. Jede Strecke lässt sich ohne
+                    große Anstrengung bewältigen, macht Spaß und schont
+                    Geldbeutel und Umwelt. Außerdem kann sich das Münsterland
+                    sehen lassen. Eine Vielzahl von Burgen und Schlössern, sowie
+                    viel Natur laden zu entspannten Ausflügen ein.
                   </p>
                 </>
               ) : language === "englisch" ? (
                 <>
                   <h2>Münsterland. Fields, Bicycles and Beauty.</h2>
                   <p>
-                    Northrhein Westfalie (NRW) is the most populated federal
-                    state of Germany.{" "}
+                    The Westerberg is the highest point of the Münsterland with
+                    188.7 meters. Therefore, it is allways the right decision to
+                    take the bike. It is easy to use because of the flat
+                    terrain, it is cheap and environmentally friendly and beside
+                    that it makes a lot of fun. With a huge number of castles
+                    and palaces and a lot of nature it is always worth a tour.
                   </p>
                 </>
               ) : (
@@ -244,6 +269,10 @@ function Intro() {
                     Münster ist seit jeher ein zentraler Handelknotenpunkt und
                     ist auch heute noch ein Zentrum für eine übergeordnete
                     Region.
+                  </p>
+                  <p>
+                    Am Ende der Seite findest du die schönsten Orte in einer
+                    Liste
                   </p>
                 </>
               ) : language === "englisch" ? (
@@ -288,9 +317,9 @@ function Intro() {
           <Row>
             <Col>
               {language === "german" ? (
-                <h1>Deine ersten Schritte:</h1>
+                <h2>Deine ersten Schritte:</h2>
               ) : language === "englisch" ? (
-                <h1>Your First Steps:</h1>
+                <h2>Your First Steps:</h2>
               ) : (
                 <></>
               )}
@@ -313,26 +342,52 @@ function Intro() {
                     alt='Icon of speechbubbles'
                   />
 
-                  <h3>Mensakarte beantragen!</h3>
-                  <p>
-                    Damit du von der ersten Woche an sofort in der Mensa essen
-                    gehen kannst, ohne ständig einen Aufpreis zahlen zu müssen,
-                    vergiss nicht, deinen Studierendenausweis zu beantragen.
-                    <br />
-                    <a
-                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                      target='_blank'
-                      rel='noreferrer'>
-                      Schau dafür auf dieser Seite
-                    </a>
-                    , was du tun musst und was der Studierendenausweis noch so
-                    alles kann.
-                  </p>
-                  <img
-                    src={dropdownIcon}
-                    className='dropdown-icon'
-                    alt='dropdownbutton'
-                  />
+                  <h3>Lerne Menschen kennen!</h3>
+
+                  <Collapse in={openInfo[1]}>
+                    <div id='example-collapse-text'>
+                      <p>
+                        Natürlich ist es möglich, das Studium im Alleingang
+                        durchzuziehen, aber gemeinsam macht das Ganze doch viel
+                        mehr Spaß. Die besten Möglichkeiten, deine
+                        Kommilitoninnen und Kommilitonen kennenzulernen, bieten
+                        die Angebote der Fachschaften.
+                        <br />
+                        Informiere dich daher über die Ersti-Woche auf der{" "}
+                        <a
+                          href='https://geofs.uni-muenster.de/wp/erstsemester/studienstart/'
+                          target='_blank'
+                          rel='noreferrer'>
+                          Homepage deiner Fachschaft
+                        </a>
+                        .
+                      </p>
+                      <p>
+                        Neben der Einführungswoche gibt es auch ein
+                        Ersti-Wochenende und verschiedene andere Veranstaltungen
+                        zum Connecten.
+                      </p>
+                    </div>
+                  </Collapse>
+                  <div
+                    onClick={() =>
+                      setOpenInfo({
+                        ...openInfo,
+                        [1]: !openInfo[1],
+                      })
+                    }
+                    aria-controls='example-collapse-text'
+                    aria-expanded={openInfo}>
+                    <img
+                      src={dropdownIcon}
+                      className={
+                        openInfo[1]
+                          ? "dropdown-opened dropdown-icon"
+                          : "dropdown-icon"
+                      }
+                      alt='dropdownbutton'
+                    />
+                  </div>
                 </>
               ) : language === "englisch" ? (
                 <>
@@ -343,23 +398,42 @@ function Intro() {
                   />
                   <h3>Course Enrolment</h3>
 
-                  <p>
-                    To don't get in trouble by don't having a ID card for the
-                    canteen or the library,{" "}
-                    <a
-                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                      target='_blank'
-                      rel='noreferrer'>
-                      check out this page
-                    </a>
-                    . Here you will get all the information you need for getting
-                    your ID card and all the things you can do with it.
-                  </p>
-                  <img
-                    src={dropdownIconMaster}
-                    className='dropdown-icon'
-                    alt='dropdownbutton'
-                  />
+                  <Collapse in={openInfo[1]}>
+                    <div id='example-collapse-text'>
+                      <p>
+                        To don't get in trouble by don't having a ID card for
+                        the canteen or the library,{" "}
+                        <a
+                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                          target='_blank'
+                          rel='noreferrer'>
+                          check out this page
+                        </a>
+                        . Here you will get all the information you need for
+                        getting your ID card and all the things you can do with
+                        it.
+                      </p>
+                    </div>
+                  </Collapse>
+                  <div
+                    onClick={() =>
+                      setOpenInfo({
+                        ...openInfo,
+                        [1]: !openInfo[1],
+                      })
+                    }
+                    aria-controls='example-collapse-text'
+                    aria-expanded={openInfo}>
+                    <img
+                      src={dropdownIconMaster}
+                      className={
+                        openInfo[1]
+                          ? "dropdown-opened dropdown-icon"
+                          : "dropdown-icon"
+                      }
+                      alt='dropdownbutton'
+                    />
+                  </div>
                 </>
               ) : (
                 <></>
@@ -381,25 +455,44 @@ function Intro() {
                     alt='Icon of a Card'
                   />
                   <h3>Mensakarte beantragen!</h3>
-                  <p>
-                    Damit du von der ersten Woche an sofort in der Mensa essen
-                    gehen kannst, ohne ständig einen Aufpreis zahlen zu müssen,
-                    vergiss nicht, deinen Studierendenausweis zu beantragen.
-                    <br />
-                    <a
-                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                      target='_blank'
-                      rel='noreferrer'>
-                      Schau dafür auf dieser Seite
-                    </a>
-                    , was du tun musst und was der Studierendenausweis noch so
-                    alles kann.
-                  </p>
-                  <img
-                    src={dropdownIcon}
-                    className='dropdown-icon'
-                    alt='dropdownbutton'
-                  />
+                  <Collapse in={openInfo[2]}>
+                    <div id='example-collapse-text'>
+                      <p>
+                        Damit du von der ersten Woche an sofort in der Mensa
+                        essen gehen kannst, ohne ständig einen Aufpreis zahlen
+                        zu müssen, vergiss nicht, deinen Studierendenausweis zu
+                        beantragen.
+                        <br />
+                        <a
+                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                          target='_blank'
+                          rel='noreferrer'>
+                          Schau dafür auf dieser Seite
+                        </a>
+                        , was du tun musst und was der Studierendenausweis noch
+                        so alles kann.
+                      </p>
+                    </div>
+                  </Collapse>
+                  <div
+                    onClick={() =>
+                      setOpenInfo({
+                        ...openInfo,
+                        [2]: !openInfo[2],
+                      })
+                    }
+                    aria-controls='example-collapse-text'
+                    aria-expanded={openInfo}>
+                    <img
+                      src={dropdownIcon}
+                      className={
+                        openInfo[2]
+                          ? "dropdown-opened dropdown-icon"
+                          : "dropdown-icon"
+                      }
+                      alt='dropdownbutton'
+                    />
+                  </div>
                 </>
               ) : language === "englisch" ? (
                 <>
@@ -409,24 +502,42 @@ function Intro() {
                     alt='Icon of a Card'
                   />
                   <h3>Apply for Student ID / Mensacard (Canteen Card)</h3>
-
-                  <p>
-                    To don't get in trouble by don't having a ID card for the
-                    canteen or the library,{" "}
-                    <a
-                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                      target='_blank'
-                      rel='noreferrer'>
-                      check out this page
-                    </a>
-                    . Here you will get all the information you need for getting
-                    your ID card and all the things you can do with it.
-                  </p>
-                  <img
-                    src={dropdownIconMaster}
-                    className='dropdown-icon'
-                    alt='dropdownbutton'
-                  />
+                  <Collapse in={openInfo[2]}>
+                    <div id='example-collapse-text'>
+                      <p>
+                        To don't get in trouble by don't having a ID card for
+                        the canteen or the library,{" "}
+                        <a
+                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                          target='_blank'
+                          rel='noreferrer'>
+                          check out this page
+                        </a>
+                        . Here you will get all the information you need for
+                        getting your ID card and all the things you can do with
+                        it.
+                      </p>
+                    </div>
+                  </Collapse>
+                  <div
+                    onClick={() =>
+                      setOpenInfo({
+                        ...openInfo,
+                        [2]: !openInfo[2],
+                      })
+                    }
+                    aria-controls='example-collapse-text'
+                    aria-expanded={openInfo}>
+                    <img
+                      src={dropdownIconMaster}
+                      className={
+                        openInfo[2]
+                          ? "dropdown-opened dropdown-icon"
+                          : "dropdown-icon"
+                      }
+                      alt='dropdownbutton'
+                    />
+                  </div>
                 </>
               ) : (
                 <></>
@@ -442,25 +553,44 @@ function Intro() {
                     alt='Icon of a LGlobe'
                   />
                   <h3>Informiere dich</h3>
-                  <p>
-                    Damit du von der ersten Woche an sofort in der Mensa essen
-                    gehen kannst, ohne ständig einen Aufpreis zahlen zu müssen,
-                    vergiss nicht, deinen Studierendenausweis zu beantragen.
-                    <br />
-                    <a
-                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                      target='_blank'
-                      rel='noreferrer'>
-                      Schau dafür auf dieser Seite
-                    </a>
-                    , was du tun musst und was der Studierendenausweis noch so
-                    alles kann.
-                  </p>
-                  <img
-                    src={dropdownIcon}
-                    className='dropdown-icon'
-                    alt='dropdownbutton'
-                  />
+                  <Collapse in={openInfo[3]}>
+                    <div id='example-collapse-text'>
+                      <p>
+                        Damit du von der ersten Woche an sofort in der Mensa
+                        essen gehen kannst, ohne ständig einen Aufpreis zahlen
+                        zu müssen, vergiss nicht, deinen Studierendenausweis zu
+                        beantragen.
+                        <br />
+                        <a
+                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                          target='_blank'
+                          rel='noreferrer'>
+                          Schau dafür auf dieser Seite
+                        </a>
+                        , was du tun musst und was der Studierendenausweis noch
+                        so alles kann.
+                      </p>
+                    </div>
+                  </Collapse>
+                  <div
+                    onClick={() =>
+                      setOpenInfo({
+                        ...openInfo,
+                        [3]: !openInfo[3],
+                      })
+                    }
+                    aria-controls='example-collapse-text'
+                    aria-expanded={openInfo}>
+                    <img
+                      src={dropdownIcon}
+                      className={
+                        openInfo[3]
+                          ? "dropdown-opened dropdown-icon"
+                          : "dropdown-icon"
+                      }
+                      alt='dropdownbutton'
+                    />
+                  </div>
                 </>
               ) : language === "englisch" ? (
                 <>
@@ -470,24 +600,42 @@ function Intro() {
                     alt='Icon of a LGlobe'
                   />
                   <h3>Get well informed</h3>
-
-                  <p>
-                    To don't get in trouble by don't having a ID card for the
-                    canteen or the library,{" "}
-                    <a
-                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                      target='_blank'
-                      rel='noreferrer'>
-                      check out this page
-                    </a>
-                    . Here you will get all the information you need for getting
-                    your ID card and all the things you can do with it.
-                  </p>
-                  <img
-                    src={dropdownIconMaster}
-                    className='dropdown-icon'
-                    alt='dropdownbutton'
-                  />
+                  <Collapse in={openInfo[3]}>
+                    <div id='example-collapse-text'>
+                      <p>
+                        To don't get in trouble by don't having a ID card for
+                        the canteen or the library,{" "}
+                        <a
+                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                          target='_blank'
+                          rel='noreferrer'>
+                          check out this page
+                        </a>
+                        . Here you will get all the information you need for
+                        getting your ID card and all the things you can do with
+                        it.
+                      </p>
+                    </div>
+                  </Collapse>
+                  <div
+                    onClick={() =>
+                      setOpenInfo({
+                        ...openInfo,
+                        [3]: !openInfo[3],
+                      })
+                    }
+                    aria-controls='example-collapse-text'
+                    aria-expanded={openInfo}>
+                    <img
+                      src={dropdownIconMaster}
+                      className={
+                        openInfo[3]
+                          ? "dropdown-opened dropdown-icon"
+                          : "dropdown-icon"
+                      }
+                      alt='dropdownbutton'
+                    />
+                  </div>
                 </>
               ) : (
                 <></>
@@ -502,25 +650,44 @@ function Intro() {
                     alt='Icon of a Card'
                   />
                   <h3>Finde ein neues Zuhause</h3>
-                  <p>
-                    Damit du von der ersten Woche an sofort in der Mensa essen
-                    gehen kannst, ohne ständig einen Aufpreis zahlen zu müssen,
-                    vergiss nicht, deinen Studierendenausweis zu beantragen.
-                    <br />
-                    <a
-                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                      target='_blank'
-                      rel='noreferrer'>
-                      Schau dafür auf dieser Seite
-                    </a>
-                    , was du tun musst und was der Studierendenausweis noch so
-                    alles kann.
-                  </p>
-                  <img
-                    src={dropdownIcon}
-                    className='dropdown-icon'
-                    alt='dropdownbutton'
-                  />
+                  <Collapse in={openInfo[4]}>
+                    <div id='example-collapse-text'>
+                      <p>
+                        Damit du von der ersten Woche an sofort in der Mensa
+                        essen gehen kannst, ohne ständig einen Aufpreis zahlen
+                        zu müssen, vergiss nicht, deinen Studierendenausweis zu
+                        beantragen.
+                        <br />
+                        <a
+                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                          target='_blank'
+                          rel='noreferrer'>
+                          Schau dafür auf dieser Seite
+                        </a>
+                        , was du tun musst und was der Studierendenausweis noch
+                        so alles kann.
+                      </p>
+                    </div>
+                  </Collapse>
+                  <div
+                    onClick={() =>
+                      setOpenInfo({
+                        ...openInfo,
+                        [4]: !openInfo[4],
+                      })
+                    }
+                    aria-controls='example-collapse-text'
+                    aria-expanded={openInfo}>
+                    <img
+                      src={dropdownIcon}
+                      className={
+                        openInfo[4]
+                          ? "dropdown-opened dropdown-icon"
+                          : "dropdown-icon"
+                      }
+                      alt='dropdownbutton'
+                    />
+                  </div>
                 </>
               ) : language === "englisch" ? (
                 <>
@@ -531,23 +698,42 @@ function Intro() {
                   />
                   <h3>Find a New Home</h3>
 
-                  <p>
-                    To don't get in trouble by don't having a ID card for the
-                    canteen or the library,{" "}
-                    <a
-                      href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                      target='_blank'
-                      rel='noreferrer'>
-                      check out this page
-                    </a>
-                    . Here you will get all the information you need for getting
-                    your ID card and all the things you can do with it.
-                  </p>
-                  <img
-                    src={dropdownIconMaster}
-                    className='dropdown-icon'
-                    alt='dropdownbutton'
-                  />
+                  <Collapse in={openInfo[4]}>
+                    <div id='example-collapse-text'>
+                      <p>
+                        To don't get in trouble by don't having a ID card for
+                        the canteen or the library,{" "}
+                        <a
+                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                          target='_blank'
+                          rel='noreferrer'>
+                          check out this page
+                        </a>
+                        . Here you will get all the information you need for
+                        getting your ID card and all the things you can do with
+                        it.
+                      </p>
+                    </div>
+                  </Collapse>
+                  <div
+                    onClick={() =>
+                      setOpenInfo({
+                        ...openInfo,
+                        [4]: !openInfo[4],
+                      })
+                    }
+                    aria-controls='example-collapse-text'
+                    aria-expanded={openInfo}>
+                    <img
+                      src={dropdownIconMaster}
+                      className={
+                        openInfo[4]
+                          ? "dropdown-opened dropdown-icon"
+                          : "dropdown-icon"
+                      }
+                      alt='dropdownbutton'
+                    />
+                  </div>
                 </>
               ) : (
                 <></>

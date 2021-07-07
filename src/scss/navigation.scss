@@ -7,6 +7,8 @@
   font-weight: 300;
   font-style: italic;
   width: 100vw;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .nav-link {
@@ -14,4 +16,17 @@
   text-decoration: underline;
   text-decoration-thickness: 1px;
   margin-left: 50px;
+}
+
+#basic-nav-dropdown {
+  border: 1px solid $secondary;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.navbar-collapse.collapse.show {
+  margin-top: 20px;
 }
