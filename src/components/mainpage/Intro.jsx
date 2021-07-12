@@ -146,21 +146,22 @@ function Intro() {
                   {" "}
                   <h2>Willkommen in deinem neuen Zuhause!</h2>
                   <p>
-                    Schön, dass du dich entschieden hast, nach Münster zu
-                    kommen. SChön aber vor allem, dass du ab sofort
-                    Geoinformatik studieren wirst!
+                    Schön, dass du dich entschieden hast, nach Münster zu kommen
+                    und umso schöner, dass du ab sofort Geoinformatik studieren
+                    wirst!
                   </p>
                   <p>
-                    Damit du einen guten Start in deinem Studierendenleben hast,
-                    wollen wir dir auf dieser Seite einerseits hilfreiche Tipps
-                    geben und dir die wichtigsten Orte in Münster zeigen. Ganz
-                    auf die Geoinformatiker-Art haben, wir dafür diese Website
-                    mit interaktiven Karten versehen. Diese erste Karte, welche
-                    sich aktuell im Hintergrund befindet, wirst du Schritt für
-                    Schritt nach Münster geführt und damit du nie die
-                    Orientierung verlierst ist das GEO-Gebäude stehts mit dem
-                    ifgi-Logo markiert.
+                    Damit du einen guten Start in dein Studierendenleben hast,
+                    wollen wir dir auf dieser Seite hilfreiche Tipps geben und
+                    dir die schönsten Orte in Münster zeigen. Ganz auf die
+                    Geoinformatiker-Art haben wir dafür diese Website mit
+                    interaktiven Karten versehen. Diese erste Karte, die du im
+                    Hintergrund sehe kannst, Wird dich Schritt für Schritt nach
+                    Münster bringen und damit du nie die Orientierung verlierst
+                    ist das GEO-Gebäude die ganze Zeit mit dem ifgi-Logo
+                    markiert.
                   </p>
+                  <p>Scrolle einfach nach unten, um fortzufahren.</p>
                 </>
               ) : language === "englisch" ? (
                 <>
@@ -180,6 +181,7 @@ function Intro() {
                     guided step by step to the city of Münster. The ifgi-logo
                     marks the GEO-building to not get disorientated on the map.
                   </p>
+                  <p>Just scroll down to go on.</p>
                 </>
               ) : (
                 <></>
@@ -201,15 +203,32 @@ function Intro() {
                     Bundesland Deutschlands. Und mit über 300.000 Einwohnerinnen
                     und Einwohnern ist Münster unter den Top-Ten Städten NRWs.
                   </p>
-                  <p>Deutsche Bahn Ticket</p>
+                  <p>
+                    Als Teil deines Studienbeitrags zahlst du jedes Semester ein
+                    Semesterticket, mit dem du kostenlos den Öffentlichen
+                    Personennahverkehr in ganz NRW nutzen kannst. Du kannst also
+                    ohne weitere Kosten von Bonn nach Köln, von Münster nach
+                    Düsseldorf, von Dortmund nach Aachen oder vom Domplatz in
+                    Münster zum Hauptbahnhof fahren, um nur einige Möglichkeiten
+                    zu nennen.
+                  </p>
                 </>
               ) : language === "englisch" ? (
                 <>
                   <h2>Part of Northrhine Westfalia</h2>
                   <p>
-                    Northrhein Westfalie (NRW) is the most populated federal
+                    Northrhine Westfalie (NRW) is the most populated federal
                     state of Germany. With over 300,000 inhabitants Münster is
                     on of the top ten citys in NRW.
+                  </p>
+                  <p>
+                    As part of your tuition fee, you pay for a semester ticket
+                    every semester, which allows you to use public transport
+                    throughout NRW free of charge. This means that you can
+                    travel from Bonn to Cologne, from Münster to Düsseldorf,
+                    from Dortmund to Aachen or from Domplatz in Münster to the
+                    main train station, to name just a few possibilities, at no
+                    additional cost.
                   </p>
                 </>
               ) : (
@@ -236,6 +255,17 @@ function Intro() {
                     sehen lassen. Eine Vielzahl von Burgen und Schlössern, sowie
                     viel Natur laden zu entspannten Ausflügen ein.
                   </p>
+                  <p>
+                    Um mehr über das Münsterland zu erfahren, besuche gerne die{" "}
+                    {""}{" "}
+                    <a
+                      href='https://www.muensterland.com/'
+                      target='_blank'
+                      rel='noreferrer'>
+                      offizielle Homepage
+                    </a>
+                    .
+                  </p>
                 </>
               ) : language === "englisch" ? (
                 <>
@@ -243,10 +273,21 @@ function Intro() {
                   <p>
                     The Westerberg is the highest point of the Münsterland with
                     188.7 meters. Therefore, it is allways the right decision to
-                    take the bike. It is easy to use because of the flat
+                    jump on your bicycle. It is easy to use because of the flat
                     terrain, it is cheap and environmentally friendly and beside
                     that it makes a lot of fun. With a huge number of castles
-                    and palaces and a lot of nature it is always worth a tour.
+                    and palaces and a lot of nature the Münsterland is always
+                    worth a tour.
+                  </p>
+                  <p>
+                    To learn more about the Münsterland, check out the{" "}
+                    <a
+                      href='https://www.muensterland.com/en/'
+                      target='_blank'
+                      rel='noreferrer'>
+                      official homepage
+                    </a>
+                    .
                   </p>
                 </>
               ) : (

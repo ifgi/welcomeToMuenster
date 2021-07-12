@@ -84,7 +84,7 @@ function FAQ() {
                       <p>
                         Zunächsteinmal kann diese Seite hier vielleicht schon
                         ein paar deiner Fragen beantworten und alle
-                        weiterführenden Links erledigen den Rest
+                        weiterführenden Links erledigen den Rest.
                       </p>
                       <p>
                         Falls das dennoch nicht reichen sollte, hast du
@@ -104,8 +104,8 @@ function FAQ() {
                           target='_blank'>
                           Fachschaft
                         </a>{" "}
-                        um Rat bitten. Hier wird von engagierten Studis immer
-                        geholfen, egal welches Anliegen du hast.
+                        um Rat bitten. Hier wird dir von engagierten Studis
+                        immer geholfen, egal welches Anliegen du hast.
                       </p>
                     </>
                   ) : language === "englisch" ? (
@@ -164,32 +164,62 @@ function FAQ() {
             <Collapse in={open[2]}>
               <div>
                 <div id='faq-2' className='faq-text'>
-                  <>
-                    <p>
-                      Um die Anmeldung von Kursen musst du dir erstmal keine
-                      Sorgen machen. In der{" "}
-                      <a
-                        href='https://geofs.uni-muenster.de/wp/erstsemester/erstiwoche/'
-                        rel='noreferrer'
-                        target='_blank'>
-                        Einführungswoche
-                      </a>{" "}
-                      wird dir alles zu deinem Stundenplan und dem
-                      Buchungssystem für deine Kurse an der Uni erklärt.
-                      Natürlich steht es dir immer offen, von dem empfohlenen
-                      Kursen für das entsprechende Semester abzuweichen und
-                      Kurse vorzuziehen oder in einem höheren Semester erst
-                      durchzuführen.
-                    </p>
-                    <p>
-                      {" "}
-                      Dennoch ist es empfehlenswert gerade am Anfang des
-                      Bachelors die Grundlagenkurse mitzumachen, da diese
-                      wichtig für alle darauf aufbauenden Kurse sind. Fürs Erste
-                      musst du dich also um nichts kümmern und kannst dich
-                      entspannt auf die Ersti-Woche freuen.
-                    </p>
-                  </>
+                  {language === "german" ? (
+                    <>
+                      <p>
+                        Um die Anmeldung von Kursen musst du dir erstmal keine
+                        Sorgen machen. In der{" "}
+                        <a
+                          href='https://geofs.uni-muenster.de/wp/erstsemester/erstiwoche/'
+                          rel='noreferrer'
+                          target='_blank'>
+                          Einführungswoche
+                        </a>{" "}
+                        wird dir alles zu deinem Stundenplan und dem
+                        Buchungssystem für deine Kurse an der Uni erklärt.
+                        Natürlich steht es dir immer offen, von dem empfohlenen
+                        Kursen für das entsprechende Semester abzuweichen und
+                        Kurse vorzuziehen oder in einem höheren Semester erst
+                        durchzuführen.
+                      </p>
+                      <p>
+                        {" "}
+                        Dennoch ist es empfehlenswert gerade am Anfang des
+                        Bachelors die Grundlagenkurse mitzumachen, da diese
+                        wichtig für alle darauf aufbauenden Kurse sind. Fürs
+                        Erste musst du dich also um nichts kümmern und kannst
+                        dich entspannt auf die Ersti-Woche freuen.
+                      </p>
+                    </>
+                  ) : language === "englisch" ? (
+                    <>
+                      <p>
+                        You will receive a mail from our front-office with all
+                        the information about the course enrollment. If you are
+                        interested in how your studies are structured you might
+                        check out this{" "}
+                        <a
+                          href='https://www.uni-muenster.de/Geoinformatics/Studies/study_programs/index.html'
+                          rel='noreferrer'
+                          target='_blank'>
+                          ifgi webpage
+                        </a>
+                        .{" "}
+                      </p>
+                      <p>
+                        For further information on enrollment check out the{" "}
+                        <a
+                          href='https://www.uni-muenster.de/studium/pruefungen/qispos.html'
+                          rel='noreferrer'
+                          target='_blank'>
+                          QISPOS
+                        </a>
+                        .
+                      </p>
+                    </>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </div>
             </Collapse>
@@ -314,14 +344,14 @@ function FAQ() {
                       <ul>
                         <li>
                           {" "}
-                          BAföG ist eine gute Möglichkeit ein wenig finanzielle
-                          Unterstützung zu kommen. Zwar muss man einen Teil des
-                          Geldes, das man hier erhält am Ende zurückzahlen, aber
+                          BAföG ist eine gute Möglichkeit, ein wenig finanzielle
+                          Unterstützung zu erhalten. Zwar muss man einen Teil
+                          des Geldes, das man erhält am Ende zurückzahlen, aber
                           dennoch lohnt es sich. Die kleine bürokratische Hürde,
                           die durch ein mehrseitiges Formular überwunden werden
                           muss, mag einige abschrecken, daher gibt es online
                           einige Rechner, mit denen sich der erwartbare
-                          BAföG-Credit abschätzen lässen, aber unabhängig davon,
+                          BAföG-Kredit abschätzen lässen, aber unabhängig davon,
                           sollte man eine Beantragung zumindest einmal versucht
                           haben. Für die aktuellen Regelungen und alle wichtigen
                           Formulare lies{" "}
@@ -339,9 +369,9 @@ function FAQ() {
                           Stipendien sollen besonders erfolgreiche und
                           engagierte Studierende unterstützen. Mit einer
                           monatlichen Auszahlung von häufigerweise 300€ können
-                          sich Stipendant_Innen glücklich schätze. Wer der
-                          Gefühl hat, die Chance auf ein Stipendium zu erhalten
-                          kann sich{" "}
+                          sich Stipendant_Innen glücklich schätze. Wer das
+                          Gefühl hat, die Chance auf ein Stipendium haben zu
+                          können, kann sich{" "}
                           <a
                             href='https://www.uni-muenster.de/studium/kosten/stipendien.html'
                             rel='noreferrer'
@@ -356,11 +386,11 @@ function FAQ() {
                           zu Hauf. Ob an der Universität oder dem Institut
                           selbst, bei einer der ansässigen geoinformatischen
                           Unternehmen oder als Minijobber in allen Bereichen,
-                          jeder der Arbeit sucht, wird sie hier finden. Stellen
-                          an der Uni werden oft an schwarzen Brettern, den
-                          Newsletter der Fachschaft oder im Insitut verbreitet.
-                          Beispielsweise wurde diese Homepage von einen
-                          Studenten neben seinem Studium erstellt. Auch
+                          jede_R die/der Arbeit sucht, wird sie hier finden.
+                          Stellen an der Uni werden oft an schwarzen Brettern,
+                          den Newsletter der Fachschaft oder im Institut
+                          verbreitet. Beispielsweise wurde diese Homepage von
+                          einem Studenten neben seinem Studium erstellt. Auch
                           Stellenangebote der örtlichen Firmen werden über die
                           gerade genannten Kanäle veröffentlicht. Schau hierfür
                           gerne auf das schwarze Brett im Geo Gebäude. Für
@@ -402,16 +432,13 @@ function FAQ() {
                           </a>{" "}
                           who may help you in this matter.
                         </li>
-                        <br />
 
                         <br />
                         <li>
                           <p>
                             If your are interested in working alongside your
                             studies then you have many options in Münster.
-                          </p>
-                          <p>
-                            First you may check if the ifgi has got vacancies.
+                            First, you may check if the ifgi has got vacancies.
                             For example this homepage was build by a student
                             alongside his studies. There is a noticeboard at the
                             GEO building displaying jobs like this or vacancies
@@ -480,13 +507,13 @@ function FAQ() {
                       </p>
                       <p>
                         Wer das Studierendenleben voll auskosten möchte, sollte
-                        sich überlegen in eine WG zu ziehen oder sogar eine
+                        sich überlegen in eine WG zu ziehen oder sogar in eine
                         Verbindung einzutreten. Hier knüpfst du sofort Kontakte,
                         bist nicht alleine zuhause und sparst außerdem noch
                         Kosten. Wer also mit dem Gedanken spielt, sich aber noch
                         nicht sicher ist, sollte dem gemeinschaftlichen Wohnen
                         eine Chance geben. In 99 Prozent der Fälle lohnt es
-                        sich. Die besten Möglichkeit eine WG zu finden hast du
+                        sich. Die beste Möglichkeit eine WG zu finden hast du
                         bei{" "}
                         <a
                           href='https://www.wg-gesucht.de/'
@@ -497,7 +524,7 @@ function FAQ() {
                         . Hier inserieren auch einige Verbindungen. Schreibe den
                         WGs die dir gefallen eine offene und lockere Anfrage und
                         denke daran, dass du es hier nicht mit Vermietern,
-                        sondern künftigen Mitbewohnern deines Alters zu tun
+                        sondern künftigen Mitbewohner_Innen deines Alters zu tun
                         hast. Erzähl ein bisschen was von dir und sei ganz zu
                         selbst. Außerdem solltest du dich nicht aus der Ruhe
                         bringen lassen, wenn es nicht nach der ersten Anfrage
@@ -522,7 +549,7 @@ function FAQ() {
                           href='https://www.uni-muenster.de/leben/wohnen.html'
                           target='__blank'
                           rel='noreferrer'>
-                          hier
+                          auf der offiziellen Seite der WWU.
                         </a>
                         .
                       </p>
@@ -556,8 +583,8 @@ function FAQ() {
                         not forget that you are talking to your future roommates
                         and not to your landlord so loosen up and text as you
                         would chat with them. If your message is convincing they
-                        will invite you to a talk or a videocall and still then
-                        they normale got not only you to choose from as their
+                        will invite you to a talk or a videocall but still then
+                        they normally got not only you to choose from as their
                         new roomy. Keep that in mind, be kind and hopefuly you
                         will find your new flat-sharing family.
                       </p>
@@ -620,8 +647,8 @@ function FAQ() {
                         nicht die Regel sein, aber wer die Möglichkeit hat, ein
                         Fahrrad mitzubringen oder woanders einen Preisvergleich
                         durchzuführen, sollte dies tun. Weiter gibt es die
-                        Möglichkeit ein Fahrrad zu leihen. Der wohl größte
-                        Anbieter in Münster ist{" "}
+                        Möglichkeit ein Fahrrad zu leihen oder zu mieten. Der
+                        wohl größte Anbieter in Münster ist{" "}
                         <a
                           href='https://swapfiets.de/offer/munster'
                           target='_blank'
@@ -662,6 +689,7 @@ function FAQ() {
                           rel='noreferrer'>
                           Swapfiets
                         </a>
+                        .
                       </p>
                     </>
                   ) : (
@@ -884,7 +912,7 @@ function FAQ() {
                         .
                       </p>
                       <p>
-                        Darüber hinaus gibt es ein Ersti-Wochenende geben,
+                        Darüber hinaus findet ein Ersti-Wochenende statt,
                         welches ebenfalls in Kooperation der Fachschaften
                         Geoinformatik und GeoLök durchgeführt wird. Die
                         Anmeldung für dieses findet während der O-Woche statt.

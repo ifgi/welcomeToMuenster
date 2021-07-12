@@ -53,13 +53,13 @@ function MapDescription() {
                 In der nachfolgenden Karte habe wir die wichtigsten
                 Anlaufstellen und die schönsten Orte in Münster für dich
                 zusammengetragen. Damit du den Überblick behälst, sind die
-                Standorte in Gruppen eingeteilt. Am rechten Rand der Karte ist
-                ein Menü, in dem du die einzelnen Gruppen über ihre Symbole ab-
-                und wieder anschalten kannst. Die einzelnen Kategorien sind:
+                Standorte in Kategorien eingeteilt. Am rechten Rand der Karte
+                ist ein Menü, in dem du die einzelnen Gruppen über ihre Symbole
+                ab- und wieder anschalten kannst. Die einzelnen Kategorien sind:
               </p>
             ) : language === "englisch" ? (
               <p>
-                In the following map are the most important locations of Münster
+                In the following map the most important locations of Münster are
                 shown. You can find contact points for your studies and also
                 interesting and fun places. To have a good overview, all
                 locations are split into categories. These categories can be
@@ -199,13 +199,14 @@ function MapDescription() {
           <Col xs='10' md='3' className='description-explain'>
             {language === "german" ? (
               <p>
-                Jeder, der gerne in der Natur unterwegs ist, ob auf dem Fahrrad
-                oder zu Fuß sollte Ausschau nach Bäumen auf der Karte halten.
+                Jede_R, die/der gerne in der Natur unterwegs ist, ob auf dem
+                Fahrrad oder zu Fuß sollte Ausschau nach Bäumen auf der Karte
+                halten.
               </p>
             ) : language === "englisch" ? (
               <p>
-                For those who enjoys being out in nature, whether on a bike or
-                on foot, should keep an eye out for the tree symbol on our map.
+                For those who enjoy being out in nature, whether on a bike or on
+                foot, should keep an eye out for the tree symbol on our map.
               </p>
             ) : (
               <></>

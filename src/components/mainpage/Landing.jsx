@@ -18,18 +18,9 @@ function Landing() {
           <h1>Moin Münster</h1>
           <div id='p-container'>
             {language === "german" ? (
-              isTabletOrMobile ? (
-                <p>
-                  Alles, was du für deinen Studienstart benötigst auf einer
-                  Seite.
-                </p>
-              ) : (
-                <p>
-                  Du startest den Bachelor Geoinformatik in Münster? Hier
-                  bekommst du die wichtigsten Infos und erste Freizeittipps für
-                  deinen Start in den Studierendenalltag.
-                </p>
-              )
+              <p>
+                Alles, was du für deinen Studienstart benötigst auf einer Seite.
+              </p>
             ) : language === "englisch" ? (
               <p>Everything you need to start your studies on a single page.</p>
             ) : (
@@ -57,7 +48,7 @@ function Landing() {
             {language === "german" ? (
               <p>starte deinen Rundgang</p>
             ) : language === "englisch" ? (
-              <p>start the journey</p>
+              <p>start your journey</p>
             ) : (
               <></>
             )}
