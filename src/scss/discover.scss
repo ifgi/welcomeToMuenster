@@ -223,34 +223,39 @@
 .modal {
   padding-left: 1vw !important;
 }
-.modal-dialog {
-  margin: 3vw !important;
-}
-.modal-content {
-  width: 94vw !important;
-}
+#point-description-modal {
+  .modal-dialog {
+    margin: 3vw !important;
+  }
+  .modal-content {
+    width: 94vw !important;
+    background: transparent !important;
+    background-color: #ffffff55 !important;
+    backdrop-filter: blur(20px) !important;
+  }
 
-.modal-body {
-  max-height: 60vh;
-  overflow-y: scroll;
-  img,
-  iframe {
-    max-width: 400px;
-    height: auto;
-    margin-bottom: 10px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
+  .modal-body {
+    max-height: 60vh;
+    overflow-y: scroll;
+    img,
+    iframe {
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 10px;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+    }
+    p {
+      text-align: justify;
+    }
   }
-  p {
-    text-align: justify;
+  .modal-footer {
+    display: block !important;
   }
-}
-.modal-footer {
-  display: block !important;
 }
 #marker-information-col.mobile {
   width: 100% !important;

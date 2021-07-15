@@ -346,7 +346,7 @@ function Map() {
           </Col>
         </Row>
       </Container>
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} id='point-description-modal'>
         <Modal.Header closeButton>
           <Modal.Title>
             {" "}

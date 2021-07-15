@@ -709,34 +709,34 @@ function Intro() {
                       <p>
                         Wenn du dich schon im Vorhinein informieren möchtest
                         gibt es viele wichtige Seiten, auf die du dich stützen
-                        kannst. Eine kleine Auswahl der wichtigsten Webseiten:
-                        <ul>
-                          <li>
-                            <a
-                              href='https://www.uni-muenster.de/Geoinformatics/'
-                              target='_blank'
-                              rel='noreferrer'>
-                              die Seite deines Institutes
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href='https://geofs.uni-muenster.de/wp/'
-                              target='_blank'
-                              rel='noreferrer'>
-                              alles über die Fachschaft
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href='https://www.asta.ms/'
-                              target='_blank'
-                              rel='noreferrer'>
-                              asta.ms
-                            </a>
-                          </li>
-                        </ul>
+                        kannst. Eine kleine Auswahl der wichtigsten Webseiten:{" "}
                       </p>
+                      <ul>
+                        <li>
+                          <a
+                            href='https://www.uni-muenster.de/Geoinformatics/'
+                            target='_blank'
+                            rel='noreferrer'>
+                            die Seite deines Institutes
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href='https://geofs.uni-muenster.de/wp/'
+                            target='_blank'
+                            rel='noreferrer'>
+                            alles über die Fachschaft
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href='https://www.asta.ms/'
+                            target='_blank'
+                            rel='noreferrer'>
+                            asta.ms
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                   </Collapse>
                   <div
@@ -862,46 +862,8 @@ function Intro() {
                         bist nicht alleine zuhause und sparst außerdem noch
                         Kosten. Wer also mit dem Gedanken spielt, sich aber noch
                         nicht sicher ist, sollte dem gemeinschaftlichen Wohnen
-                        eine Chance geben. In 99 Prozent der Fälle lohnt es
-                        sich. Die beste Möglichkeit eine WG zu finden hast du
-                        bei{" "}
-                        <a
-                          href='https://www.wg-gesucht.de/'
-                          target='_blank'
-                          rel='noreferrer'>
-                          wg-gesucht.de
-                        </a>
-                        . Hier inserieren auch einige Verbindungen. Schreibe den
-                        WGs die dir gefallen eine offene und lockere Anfrage und
-                        denke daran, dass du es hier nicht mit Vermietern,
-                        sondern künftigen Mitbewohner_Innen deines Alters zu tun
-                        hast. Erzähl ein bisschen was von dir und sei ganz zu
-                        selbst. Außerdem solltest du dich nicht aus der Ruhe
-                        bringen lassen, wenn es nicht nach der ersten Anfrage
-                        klappen sollte, oder du nach dem üblichen Casting (ein
-                        kleines Kennenlerngespräch) nicht die erste Wahl der WG
-                        bist. Irgendwo in Münster ist garantiert deinen neue
-                        WG-Familie.
-                      </p>
-                      <p>
-                        Bei Wikipedia findet sich eine{" "}
-                        <a
-                          href='https://de.wikipedia.org/wiki/Liste_der_Studentenverbindungen_in_M%C3%BCnster'
-                          targer='_blank'
-                          rel='noreferrer'>
-                          Liste der Verbindungen in Münster
-                        </a>
-                        . Die Angaben hier sind ohne Gewähr.
-                      </p>
-                      <p>
-                        Weitere Informationen findest du{" "}
-                        <a
-                          href='https://www.uni-muenster.de/leben/wohnen.html'
-                          target='__blank'
-                          rel='noreferrer'>
-                          auf der offiziellen Seite der WWU.
-                        </a>
-                        .
+                        eine Chance geben. Für mehr Informationen schau in
+                        unsere häufig gestellten Fragen, im nächsten Abschnitt.
                       </p>
                     </div>
                   </Collapse>
@@ -953,20 +915,8 @@ function Intro() {
                           rel='noreferrer'>
                           wg-gesucht.de
                         </a>
-                        . Flat-sharing is always worth it because you are not
-                        home alone and automatically find some people to hang
-                        out with. If you found a pleasant flat-sharing just
-                        contact them via wg-gesucht and do not just say that you
-                        are interested. It is usual to further tell them who you
-                        are what you are doing and why you think this
-                        flat-sharing would be a nice place to live for you. Do
-                        not forget that you are talking to your future roommates
-                        and not to your landlord so loosen up and text as you
-                        would chat with them. If your message is convincing they
-                        will invite you to a talk or a videocall but still then
-                        they normally got not only you to choose from as their
-                        new roomy. Keep that in mind, be kind and hopefully you
-                        will find your new flat-sharing family.
+                        . For more information scroll to the frequency asked
+                        questions, the next section of this webpage.
                       </p>
                     </div>
                   </Collapse>

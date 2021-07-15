@@ -1,7 +1,12 @@
-import { useSelector } from "react-redux";
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setLanguage } from "../../actions";
 import { Link } from "react-scroll";
 import Container from "react-bootstrap/Container";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 import { useMediaQuery } from "react-responsive";
+import { useCookies } from "react-cookie";
 //loading images
 import schlossImage from "../../img/muenster_schloss.jpg";
 import ifgiLogo from "../../img/ifgiLogo.svg";
@@ -9,10 +14,73 @@ import ifgiLogo from "../../img/ifgiLogo.svg";
 function Landing() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const language = useSelector((state) => state.language);
+  const dispatch = useDispatch();
+  const [cookies, setCookie] = useCookies(["language", "welcomeModal"]);
+  let modalSeen = cookies.welcomeModal === "hide" ? false : true;
+  console.log("modalseen: ", modalSeen);
+  const [show, setShow] = useState(modalSeen);
+  const handleClose = () => setShow(false);
 
+  const handleStudies = (studieprogramm) => {
+    if (studieprogramm === "bachelor") {
+      dispatch(setLanguage("german"));
+      setCookie("language", "german", { path: "/" });
+    }
+    if (studieprogramm === "master") {
+      dispatch(setLanguage("englisch"));
+      setCookie("language", "englisch", { path: "/" });
+    }
+    //make the modal hide for 30 days (in seconds). Save this information as a cookie
+    let expire = 30 * 24 * 60 * 60 * 1000;
+    setCookie("welcomeModal", "hide", { maxAge: expire });
+  };
   return (
     <>
       <Container id='Top' className={isTabletOrMobile ? "mobile-landing" : ""}>
+        <Modal show={show} onHide={handleClose} id='welcome-modal'>
+          <Modal.Header>
+            <Modal.Title>
+              Bist du Bachelor oder Masterstudent_In? / <br />
+              Are You a Bachelor- or Masterstudent?
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>
+              Du kannst die Einstellung jederzeit im Navigationsmenü am oberen
+              Rand ändern. / <br />
+              You can change the setting at any time using the navigation menu
+              at the top.
+            </p>
+            <div className='choose-studies'>
+              <Button
+                variant='primary'
+                onClick={() => {
+                  handleStudies("bachelor");
+                  handleClose();
+                }}
+                className={
+                  isTabletOrMobile
+                    ? "mobile-studies studies-button"
+                    : "studies-button"
+                }>
+                Bachelor
+              </Button>
+              <Button
+                variant='info '
+                onClick={() => {
+                  handleStudies("master");
+                  handleClose();
+                }}
+                className={
+                  isTabletOrMobile
+                    ? "mobile-studies studies-button"
+                    : "studies-button"
+                }>
+                Master
+              </Button>
+            </div>
+          </Modal.Body>
+        </Modal>
         <div id='heading'>
           <h1>Moin Münster</h1>
           <div id='p-container'>

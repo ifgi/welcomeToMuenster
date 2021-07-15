@@ -2,4 +2,15 @@
 .CookieConsent {
   background: $secondary !important;
   opacity: 0.95;
+  backdrop-filter: blur(6px) !important;
+}
+#rcc-confirm-button {
+  background: white !important;
+  backdrop-filter: blur(6px) !important;
+  color: black !important;
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
 }

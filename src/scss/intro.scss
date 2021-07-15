@@ -57,13 +57,11 @@
   margin-top: 100vh;
   margin-left: 5vw;
   margin-right: 50vw;
-  border: 20px solid rgb(255, 255, 255);
-  border: 20px solid rgba(255, 255, 255, 0.3);
   -webkit-background-clip: padding-box; /* for Safari */
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
-  background-color: white;
-  backdrop-filter: blur(6px);
-  opacity: 0.99;
+  background: transparent !important;
+  background-color: #ffffff55 !important;
+  backdrop-filter: blur(50px) !important;
   padding: 50px;
   text-align: justify;
 
@@ -103,14 +101,19 @@
   -o-transform: translateY(-10vh);
   z-index: 14;
   padding: 50px;
-  border: 20px solid rgba(255, 255, 255, 0.3);
+
   -webkit-background-clip: padding-box;
   /*forSafari*/
   background-clip: padding-box;
   /*forIE9+,Firefox4+,Opera,Chrome*/
-  background-color: white;
-  backdrop-filter: blur(6px);
-  opacity: 0.99;
+  background: transparent !important;
+  background-color: #ffffff55 !important;
+  backdrop-filter: blur(50px) !important;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 .firststeps-col {
   p {

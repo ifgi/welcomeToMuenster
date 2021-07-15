@@ -1,8 +1,33 @@
 @import "./corporate-design.scss";
-
+.modal {
+  max-height: 100vh;
+}
+#welcome-modal {
+  margin-left: 0 !important;
+  margin-bottom: 0 !important;
+  .modal-content {
+    height: calc(var(--vh, 1vh) * 94) !important;
+    width: 98vw !important;
+    background: transparent !important;
+    background-color: #ffffff55 !important;
+    backdrop-filter: blur(20px) !important;
+  }
+  .choose-studies {
+    width: 100%;
+    margin-top: 10%;
+    height: 50%;
+    .studies-button {
+      margin-left: 10%;
+      height: 100%;
+      width: 35%;
+      font-size: 3rem;
+    }
+    .mobile-studies {
+      font-size: 1rem;
+    }
+  }
+}
 #Top {
-  //background-image: url("../img/bgimage.png");
-  //background-size: cover;
   position: relativ;
   margin-left: 0px;
   margin-right: 0px;

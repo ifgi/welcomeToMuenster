@@ -173,7 +173,6 @@ function Navigation() {
               onClick={() => {
                 dispatch(setLanguage("german"));
                 setCookie("language", "german", { path: "/" });
-                // console.log(cookies.language);
               }}>
               Bachelor (German)
             </NavDropdown.Item>
