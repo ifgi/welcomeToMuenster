@@ -6,13 +6,17 @@ import "./scss/index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import windowSize from "./windowSize.js";
+import { CookiesProvider } from "react-cookie";
+
 const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <CookiesProvider>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </CookiesProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

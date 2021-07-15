@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import { Scrollama, Step } from "react-scrollama";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
@@ -26,7 +25,7 @@ import courseIconMaster from "../../img/icons/iconmonstr-courses-master.svg";
 import globeIconMaster from "../../img/icons/iconmonstr-globe-master.svg";
 import homeIconMaster from "../../img/icons/iconmonstr-home-master.svg";
 import dropdownIconMaster from "../../img/icons/iconmonstr-dropdown-master.svg";
-
+import lichthofGeo from "../../img/geo_1_lichthof.jpg";
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   shadowUrl:
@@ -98,12 +97,6 @@ function Intro() {
     return null;
   };
 
-  const onEachPolygon = (polygon, layer) => {
-    layer.options.fillColor = language === "german" ? "#7ab629" : "#009DD2";
-    layer.options.fillOpacity = 0.6;
-    layer.options.color = language === "german" ? "#7ab629" : "#009DD2";
-  };
-
   const style = { fillColor: " #4C4C4A", color: "#4C4C4A", fillOpacity: 0.6 };
 
   return (
@@ -157,11 +150,25 @@ function Intro() {
                     Geoinformatiker-Art haben wir dafür diese Website mit
                     interaktiven Karten versehen. Diese erste Karte, die du im
                     Hintergrund sehe kannst, Wird dich Schritt für Schritt nach
-                    Münster bringen und damit du nie die Orientierung verlierst
+                    Münster bringen und damit du nie die Orientierung verlierst,
                     ist das GEO-Gebäude die ganze Zeit mit dem ifgi-Logo
                     markiert.
                   </p>
-                  <p>Scrolle einfach nach unten, um fortzufahren.</p>
+                  <img
+                    src={lichthofGeo}
+                    width='100%'
+                    height='auto'
+                    alt={
+                      language === "german"
+                        ? "Lichthof des GEO-Gebäudes"
+                        : "Hall of the GEO-building"
+                    }
+                  />
+                  <p>
+                    Münster liegt weit im Westen Deutschlands, nahe der
+                    Niederländischen Grenze, wie du auf der Karte sehen kannst.
+                    Scrolle jetzt nach unten, um fortzufahren.
+                  </p>
                 </>
               ) : language === "englisch" ? (
                 <>
@@ -172,7 +179,6 @@ function Intro() {
                     Geoinformatics.
                   </p>
                   <p>
-                    {" "}
                     To help you starting your life in Münster, we want to give
                     you some tips and basic information and show you the most
                     important places in Münster. In true geoinformatics fashion,
@@ -181,7 +187,21 @@ function Intro() {
                     guided step by step to the city of Münster. The ifgi-logo
                     marks the GEO-building to not get disorientated on the map.
                   </p>
-                  <p>Just scroll down to go on.</p>
+                  <img
+                    src={lichthofGeo}
+                    width='100%'
+                    height='auto'
+                    alt={
+                      language === "german"
+                        ? "Lichthof des GEO-Gebäudes"
+                        : "Hall of the GEO-building"
+                    }
+                  />
+                  <p>
+                    Münster is far in the west of Germany near the border to the
+                    Netherlands as you can see on the map. Now, scroll down to
+                    go on.
+                  </p>
                 </>
               ) : (
                 <></>
@@ -199,10 +219,37 @@ function Intro() {
                 <>
                   <h2>Ein Teil Nordrhein-Westfalens</h2>
                   <p>
-                    Nordrhein-Westfalen (NRW) ist das befölkerungsreichste
+                    Nordrhein-Westfalen (NRW) ist das bevölkerungsreichste
                     Bundesland Deutschlands. Und mit über 300.000 Einwohnerinnen
                     und Einwohnern ist Münster unter den Top-Ten Städten NRWs.
                   </p>
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  <h2>Part of North Rhine-Westphalia</h2>
+                  <p>
+                    North Rhine-Westphalia (NRW) is the most populated federal
+                    state of Germany. With over 300,000 inhabitants Münster is
+                    on of the top ten citys in NRW.
+                  </p>
+                </>
+              ) : (
+                <></>
+              )}
+              <a
+                data-flickr-embed='true'
+                data-header='true'
+                href='https://www.flickr.com/photos/132810489@N02/41935417150/in/photolist-26TFYvC-fARTxu-fABBdR-fABR96-fAS98u-68TqNH-fABQnP-fABKP4-fABCX6-fAS6Th-fAS7iC-fABRVR-fAS341-fABD3i-fABQHt-fABDiR-2jqPVHw-MmAkxj-fABB3z-fARVoy-fARTmf-fABCaH-RvUoFZ-fAS3V5-fARUh9-fARTM3-fAS8wj-2jYQSxF-6FLeSk-fAS65u-2jnkCgD-fAS3oN-fAS9gm-fARZuu-fARUrq-fABMLv-fABSo2-23ZHyN1-2fdQ8QC-fABKUt-fAS2yf-fAS2qC-fABKEV-fABCPe-fAS7VU-fAS2hE-fAS7Aj-fABCFZ-fAS3vC-fAS8Ho'
+                title='Köln'>
+                <img
+                  src='https://live.staticflickr.com/941/41935417150_cffb157d6c_c.jpg'
+                  width='100%'
+                  height='auto'
+                  alt='Köln'
+                />
+              </a>
+              {language === "german" ? (
+                <>
                   <p>
                     Als Teil deines Studienbeitrags zahlst du jedes Semester ein
                     Semesterticket, mit dem du kostenlos den Öffentlichen
@@ -210,17 +257,12 @@ function Intro() {
                     ohne weitere Kosten von Bonn nach Köln, von Münster nach
                     Düsseldorf, von Dortmund nach Aachen oder vom Domplatz in
                     Münster zum Hauptbahnhof fahren, um nur einige Möglichkeiten
-                    zu nennen.
+                    zu nennen. Dein Ticket reicht sogar etwas über die Grenzen
+                    NRWs, das auf der Karte eingefärbt ist, hinaus.
                   </p>
                 </>
               ) : language === "englisch" ? (
                 <>
-                  <h2>Part of Northrhine Westfalia</h2>
-                  <p>
-                    Northrhine Westfalie (NRW) is the most populated federal
-                    state of Germany. With over 300,000 inhabitants Münster is
-                    on of the top ten citys in NRW.
-                  </p>
                   <p>
                     As part of your tuition fee, you pay for a semester ticket
                     every semester, which allows you to use public transport
@@ -228,7 +270,8 @@ function Intro() {
                     travel from Bonn to Cologne, from Münster to Düsseldorf,
                     from Dortmund to Aachen or from Domplatz in Münster to the
                     main train station, to name just a few possibilities, at no
-                    additional cost.
+                    additional cost. Partly, the ticket can bring you further
+                    then the borders of NRW, which is displayed on the map.
                   </p>
                 </>
               ) : (
@@ -245,19 +288,17 @@ function Intro() {
               }>
               {language === "german" ? (
                 <>
-                  <h2>Münsterland. Felder, Fahrräder und Schönheit.</h2>
+                  <h2>Münsterland: Felder, Fahrräder und Freiheit.</h2>
                   <p>
                     Mit 188,7 Metern Höhe ist der Westerberg der höchste Punkt
                     des Münsterlandes und genau aus diesem Grund ist das Fahrrad
-                    der absolute Renner in Münster. Jede Strecke lässt sich ohne
-                    große Anstrengung bewältigen, macht Spaß und schont
-                    Geldbeutel und Umwelt. Außerdem kann sich das Münsterland
-                    sehen lassen. Eine Vielzahl von Burgen und Schlössern, sowie
-                    viel Natur laden zu entspannten Ausflügen ein.
-                  </p>
-                  <p>
-                    Um mehr über das Münsterland zu erfahren, besuche gerne die{" "}
-                    {""}{" "}
+                    der absolute Renner in Münster und Umgebung. Jede Strecke
+                    lässt sich ohne große Anstrengung bewältigen, macht Spaß und
+                    schont Geldbeutel und Umwelt. Außerdem kann sich das
+                    Münsterland sehen lassen. Eine Vielzahl von Burgen und
+                    Schlössern, sowie viel Natur laden zu entspannten Ausflügen
+                    ein. Um mehr über das Münsterland zu erfahren, besuche gerne
+                    die{" "}
                     <a
                       href='https://www.muensterland.com/'
                       target='_blank'
@@ -277,10 +318,8 @@ function Intro() {
                     terrain, it is cheap and environmentally friendly and beside
                     that it makes a lot of fun. With a huge number of castles
                     and palaces and a lot of nature the Münsterland is always
-                    worth a tour.
-                  </p>
-                  <p>
-                    To learn more about the Münsterland, check out the{" "}
+                    worth a tour. To learn more about the Münsterland, check out
+                    the{" "}
                     <a
                       href='https://www.muensterland.com/en/'
                       target='_blank'
@@ -288,6 +327,39 @@ function Intro() {
                       official homepage
                     </a>
                     .
+                  </p>
+                </>
+              ) : (
+                <></>
+              )}
+
+              <a
+                data-flickr-embed='true'
+                data-header='true'
+                href='https://www.flickr.com/photos/nstening/31218741111/in/photolist-PyGd66-2cdrW6M-no8QTm-yKg4HR-5Wfvt7-nZs8RW-p7RNu-Mkjdp1-2jfZcDi-2jibth3-2kDmh36-2h9qr1W-2hCKbZE-LTYMcL-2jaU9NG-MNLT9J-Kbo3MT-2j2fhsu-29fnmWj-MsZUDn-2ma6Fw8-2m9cX4W-2bq3Y9U-2kQ3rjf-2eWFnGZ-2j8ijRX-2jg38TK-4JEg4M-2kWRaDa-LYnGvH-2gW5Vs6-wM7pbm-f66WwC-23TE3he-QP5WBZ-XmXhak-NLVYbT-NrKk6N-HLHSeq-2iXT5JR-2e9VquU-Byqs6Y-2ki4Q35-Pm6AXC-NsGjyf-G4dJz7-2hffvW7-HukrjX-Qf4KMF-2g1ZFwP'
+                title='Schloss Nordkirchen on the 1. Advent close to Münster Germany'>
+                <img
+                  src='https://live.staticflickr.com/5716/31218741111_dd517d7bc7_c.jpg'
+                  width='100%'
+                  height='auto'
+                  alt='Schloss Nordkirchen on the 1. Advent close to Münster Germany'
+                />
+              </a>
+
+              {language === "german" ? (
+                <>
+                  <p>
+                    Neben Münster sind auch die Kreise Borken, Coesfeld,
+                    Steinfurt und Warendorf auf unserer Karte zu erkennen, die
+                    im Gesamten als das Münsterland bezeichnet werden.
+                  </p>
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  <p>
+                    In addition to Münster, the districts of Borken, Coesfeld,
+                    Steinfurt and Warendorf can also be seen on our map, which
+                    are collectively referred to as the Münsterland.
                   </p>
                 </>
               ) : (
@@ -305,23 +377,61 @@ function Intro() {
               }>
               {language === "german" ? (
                 <>
-                  <h2>Eine Hansestadt mit bewegter Geschichte</h2>
+                  <h2>Eine Hansestadt mit bewegter Vergangenheit</h2>
                   <p>
-                    Münster ist seit jeher ein zentraler Handelknotenpunkt und
-                    ist auch heute noch ein Zentrum für eine übergeordnete
-                    Region.
-                  </p>
-                  <p>
-                    Am Ende der Seite findest du die schönsten Orte in einer
-                    Liste
+                    Münster ist eine Stadt mit viel Historie und entsprechend
+                    viel gibt es hier zu erleben. Zwischen einer Vielzahl von
+                    Sehenswürdigkeiten und kulturellen Einrichtungen bleibt
+                    Platz für eine abwechslungsreiche Freizeit, denn Münster ist
+                    lebendig und hat immer etwas zu bieten. Um einen kleinen
+                    Überblick zu bekommen, haben wir ganz am Ende dieser Seite
+                    eine interaktive Karte mit den schönsten Orten in Münster
+                    für die vorbereitet. Sei also gespannt.
                   </p>
                 </>
               ) : language === "englisch" ? (
                 <>
                   <h2>Hanseatic City With an Eventful History</h2>
                   <p>
-                    Münster has always been an important trading hub and so it
-                    is still a central city .{" "}
+                    Münster is a city with a lot of history and correspondingly
+                    there is much to experience here. Between a multitude of
+                    sights and cultural institutions, there is also plenty of
+                    room for a varied leisure time, because Münster is a lively
+                    city and always has something to offer. To give you a brief
+                    overview, we have an interactive map at the very end of this
+                    page with the most beautiful places in Münster for you. So
+                    stay curious.
+                  </p>
+                </>
+              ) : (
+                <></>
+              )}
+              <a
+                data-flickr-embed='true'
+                data-header='true'
+                href='https://www.flickr.com/photos/155090883@N08/32597005718/in/photolist-REub8Y-2iDzH91-J6ZmqL-2m2vYyY-CNgHHE-b3D8L6-CNoVY6-DHtChE-DBwpyt-CNh5km-DHtty7-DBwDNk-CNp7Z4-DHsVzC-DchEvT-DKMptK-DiEDwE-DKMuHc-DHtEmj-DBw4XK-DBwJK4-DBvVht-DznAb1-CNgvxN-DKMGo6-DiEyef-DKMawM-CNhcij-DKMY5X-DiENk1-CNgBh3-CNgV5s-DKMCpz-DBwEGV-DciCRt-DiF4vS-DBvPbv-CNgVXE-DHtpzA-DBwhGc-Dzo6J9-DiFa5N-DKMQ2x-CNh7EG-pHteJg-24xd2P5-Hb3nXx-RTZHFt-2kkAfYx-2k8cQYy'
+                title='Münster'>
+                <img
+                  src='https://live.staticflickr.com/4907/32597005718_761ed5a845_c.jpg'
+                  width='100%'
+                  height='auto'
+                  alt='Münster'
+                />
+              </a>
+              {language === "german" ? (
+                <>
+                  <p>
+                    Auf der Karte kannst du nun die einzelnen Stadtteile
+                    Münsters erkennen. Das Geo befindet sich, wie du siehst,
+                    sehr nahe der Altstadt und somit in bester Lage.
+                  </p>
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  <p>
+                    On the map you can see the outlines of the city of Münster
+                    and its individual districts. The GEO is quite centrally
+                    located and near the historic city center.
                   </p>
                 </>
               ) : (
@@ -340,7 +450,7 @@ function Intro() {
                 opacity: "0.0",
                 padding: "30px",
               }}>
-              This is the End
+              End of storymap
             </div>
           </Step>
         </Scrollama>
@@ -414,7 +524,7 @@ function Intro() {
                     onClick={() =>
                       setOpenInfo({
                         ...openInfo,
-                        [1]: !openInfo[1],
+                        1: !openInfo[1],
                       })
                     }
                     aria-controls='example-collapse-text'
@@ -442,17 +552,17 @@ function Intro() {
                   <Collapse in={openInfo[1]}>
                     <div id='example-collapse-text'>
                       <p>
-                        To don't get in trouble by don't having a ID card for
-                        the canteen or the library,{" "}
+                        If you are not already informed by our frontoffice you
+                        can check out{" "}
                         <a
-                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                          target='_blank'
-                          rel='noreferrer'>
-                          check out this page
+                          href='https://www.uni-muenster.de/Geoinformatics/en/Studies/study_programs/master/practical-information-for-msc-gi-students.html'
+                          rel='noreferrer'
+                          target='_blank'>
+                          this page for all the practical information
                         </a>
-                        . Here you will get all the information you need for
-                        getting your ID card and all the things you can do with
-                        it.
+                        . Here you will find explanations about the university's
+                        enrolment system and everything else regarding your
+                        course enrolment.
                       </p>
                     </div>
                   </Collapse>
@@ -460,7 +570,7 @@ function Intro() {
                     onClick={() =>
                       setOpenInfo({
                         ...openInfo,
-                        [1]: !openInfo[1],
+                        1: !openInfo[1],
                       })
                     }
                     aria-controls='example-collapse-text'
@@ -519,7 +629,7 @@ function Intro() {
                     onClick={() =>
                       setOpenInfo({
                         ...openInfo,
-                        [2]: !openInfo[2],
+                        2: !openInfo[2],
                       })
                     }
                     aria-controls='example-collapse-text'
@@ -564,7 +674,7 @@ function Intro() {
                     onClick={() =>
                       setOpenInfo({
                         ...openInfo,
-                        [2]: !openInfo[2],
+                        2: !openInfo[2],
                       })
                     }
                     aria-controls='example-collapse-text'
@@ -597,19 +707,35 @@ function Intro() {
                   <Collapse in={openInfo[3]}>
                     <div id='example-collapse-text'>
                       <p>
-                        Damit du von der ersten Woche an sofort in der Mensa
-                        essen gehen kannst, ohne ständig einen Aufpreis zahlen
-                        zu müssen, vergiss nicht, deinen Studierendenausweis zu
-                        beantragen.
-                        <br />
-                        <a
-                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                          target='_blank'
-                          rel='noreferrer'>
-                          Schau dafür auf dieser Seite
-                        </a>
-                        , was du tun musst und was der Studierendenausweis noch
-                        so alles kann.
+                        Wenn du dich schon im Vorhinein informieren möchtest
+                        gibt es viele wichtige Seiten, auf die du dich stützen
+                        kannst. Eine kleine Auswahl der wichtigsten Webseiten:
+                        <ul>
+                          <li>
+                            <a
+                              href='https://www.uni-muenster.de/Geoinformatics/'
+                              target='_blank'
+                              rel='noreferrer'>
+                              die Seite deines Institutes
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href='https://geofs.uni-muenster.de/wp/'
+                              target='_blank'
+                              rel='noreferrer'>
+                              alles über die Fachschaft
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href='https://www.asta.ms/'
+                              target='_blank'
+                              rel='noreferrer'>
+                              asta.ms
+                            </a>
+                          </li>
+                        </ul>
                       </p>
                     </div>
                   </Collapse>
@@ -617,7 +743,7 @@ function Intro() {
                     onClick={() =>
                       setOpenInfo({
                         ...openInfo,
-                        [3]: !openInfo[3],
+                        3: !openInfo[3],
                       })
                     }
                     aria-controls='example-collapse-text'
@@ -644,17 +770,35 @@ function Intro() {
                   <Collapse in={openInfo[3]}>
                     <div id='example-collapse-text'>
                       <p>
-                        To don't get in trouble by don't having a ID card for
-                        the canteen or the library,{" "}
-                        <a
-                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
-                          target='_blank'
-                          rel='noreferrer'>
-                          check out this page
-                        </a>
-                        . Here you will get all the information you need for
-                        getting your ID card and all the things you can do with
-                        it.
+                        If you would like to get informed there are many
+                        important websites you can rely on. A small selection of
+                        the most important websites:
+                        <ul>
+                          <li>
+                            <a
+                              href='https://www.uni-muenster.de/Geoinformatics/'
+                              target='_blank'
+                              rel='noreferrer'>
+                              the website of your new institute
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href='https://geofs.uni-muenster.de/wp/'
+                              target='_blank'
+                              rel='noreferrer'>
+                              everything you need to know about the Fachschaft
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href='https://www.asta.ms/'
+                              target='_blank'
+                              rel='noreferrer'>
+                              check out the asta.ms
+                            </a>
+                          </li>
+                        </ul>
                       </p>
                     </div>
                   </Collapse>
@@ -662,7 +806,7 @@ function Intro() {
                     onClick={() =>
                       setOpenInfo({
                         ...openInfo,
-                        [3]: !openInfo[3],
+                        3: !openInfo[3],
                       })
                     }
                     aria-controls='example-collapse-text'
@@ -694,19 +838,70 @@ function Intro() {
                   <Collapse in={openInfo[4]}>
                     <div id='example-collapse-text'>
                       <p>
-                        Damit du von der ersten Woche an sofort in der Mensa
-                        essen gehen kannst, ohne ständig einen Aufpreis zahlen
-                        zu müssen, vergiss nicht, deinen Studierendenausweis zu
-                        beantragen.
-                        <br />
+                        Der Wohnungsmarkt in Münster ist sehr angespannt und
+                        gerade für diejenigen, die neu hierherkommen und nicht
+                        das üppigste Portmonee besitzen, ist es manchmal schwer
+                        eine Unterkunft zu finden. Wohnungen werden auf
+                        bekannten Immobilien-Webseiten angeboten, liegen aber
+                        häufig außerhalb des Budget von Studierenden.
+                      </p>
+                      <p>
+                        Eine bessere Möglichkeit ist es, sich um{" "}
                         <a
-                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                          href='https://www.stw-muenster.de/studentisches-wohnen/wohnanlagen/'
                           target='_blank'
                           rel='noreferrer'>
-                          Schau dafür auf dieser Seite
+                          Wohnungen des Studierendenwerkes
+                        </a>{" "}
+                        zu bewerben.{" "}
+                      </p>
+                      <p>
+                        Wer das Studierendenleben voll auskosten möchte, sollte
+                        sich überlegen in eine WG zu ziehen oder sogar in eine
+                        Verbindung einzutreten. Hier knüpfst du sofort Kontakte,
+                        bist nicht alleine zuhause und sparst außerdem noch
+                        Kosten. Wer also mit dem Gedanken spielt, sich aber noch
+                        nicht sicher ist, sollte dem gemeinschaftlichen Wohnen
+                        eine Chance geben. In 99 Prozent der Fälle lohnt es
+                        sich. Die beste Möglichkeit eine WG zu finden hast du
+                        bei{" "}
+                        <a
+                          href='https://www.wg-gesucht.de/'
+                          target='_blank'
+                          rel='noreferrer'>
+                          wg-gesucht.de
                         </a>
-                        , was du tun musst und was der Studierendenausweis noch
-                        so alles kann.
+                        . Hier inserieren auch einige Verbindungen. Schreibe den
+                        WGs die dir gefallen eine offene und lockere Anfrage und
+                        denke daran, dass du es hier nicht mit Vermietern,
+                        sondern künftigen Mitbewohner_Innen deines Alters zu tun
+                        hast. Erzähl ein bisschen was von dir und sei ganz zu
+                        selbst. Außerdem solltest du dich nicht aus der Ruhe
+                        bringen lassen, wenn es nicht nach der ersten Anfrage
+                        klappen sollte, oder du nach dem üblichen Casting (ein
+                        kleines Kennenlerngespräch) nicht die erste Wahl der WG
+                        bist. Irgendwo in Münster ist garantiert deinen neue
+                        WG-Familie.
+                      </p>
+                      <p>
+                        Bei Wikipedia findet sich eine{" "}
+                        <a
+                          href='https://de.wikipedia.org/wiki/Liste_der_Studentenverbindungen_in_M%C3%BCnster'
+                          targer='_blank'
+                          rel='noreferrer'>
+                          Liste der Verbindungen in Münster
+                        </a>
+                        . Die Angaben hier sind ohne Gewähr.
+                      </p>
+                      <p>
+                        Weitere Informationen findest du{" "}
+                        <a
+                          href='https://www.uni-muenster.de/leben/wohnen.html'
+                          target='__blank'
+                          rel='noreferrer'>
+                          auf der offiziellen Seite der WWU.
+                        </a>
+                        .
                       </p>
                     </div>
                   </Collapse>
@@ -714,7 +909,7 @@ function Intro() {
                     onClick={() =>
                       setOpenInfo({
                         ...openInfo,
-                        [4]: !openInfo[4],
+                        4: !openInfo[4],
                       })
                     }
                     aria-controls='example-collapse-text'
@@ -742,17 +937,36 @@ function Intro() {
                   <Collapse in={openInfo[4]}>
                     <div id='example-collapse-text'>
                       <p>
-                        To don't get in trouble by don't having a ID card for
-                        the canteen or the library,{" "}
+                        It is not the easiest task to find a good and
+                        inexpensive flat in Münster so don't despair. The best
+                        opportunities to find a flat is to register for the{" "}
                         <a
-                          href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                          href='https://www.stw-muenster.de/studentisches-wohnen/wohnanlagen/'
                           target='_blank'
                           rel='noreferrer'>
-                          check out this page
+                          official student residence
+                        </a>{" "}
+                        or to search for flat-sharing at{" "}
+                        <a
+                          href='https://www.wg-gesucht.de/'
+                          target='_blank'
+                          rel='noreferrer'>
+                          wg-gesucht.de
                         </a>
-                        . Here you will get all the information you need for
-                        getting your ID card and all the things you can do with
-                        it.
+                        . Flat-sharing is always worth it because you are not
+                        home alone and automatically find some people to hang
+                        out with. If you found a pleasant flat-sharing just
+                        contact them via wg-gesucht and do not just say that you
+                        are interested. It is usual to further tell them who you
+                        are what you are doing and why you think this
+                        flat-sharing would be a nice place to live for you. Do
+                        not forget that you are talking to your future roommates
+                        and not to your landlord so loosen up and text as you
+                        would chat with them. If your message is convincing they
+                        will invite you to a talk or a videocall but still then
+                        they normally got not only you to choose from as their
+                        new roomy. Keep that in mind, be kind and hopefully you
+                        will find your new flat-sharing family.
                       </p>
                     </div>
                   </Collapse>
@@ -760,7 +974,7 @@ function Intro() {
                     onClick={() =>
                       setOpenInfo({
                         ...openInfo,
-                        [4]: !openInfo[4],
+                        4: !openInfo[4],
                       })
                     }
                     aria-controls='example-collapse-text'

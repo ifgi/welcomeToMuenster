@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setModalOpen, setModalClose } from "../../actions";
+import { useSelector } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Selection from "./Selection";
 import Row from "react-bootstrap/Row";
@@ -30,15 +29,12 @@ L.Icon.Default.mergeOptions({
 const stadtCenter = [51.961563, 7.628202];
 
 function Map() {
-  const dispatch = useDispatch();
   const [showTooltip, setShowTooltip] = useState(false);
   const targetTooltip = useRef(null);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  const [currentStepIndex, setCurrentStepIndex] = useState(null);
   const points = useSelector((state) => state.points);
   const currentSight = useSelector((state) => state.currentSight);
   const language = useSelector((state) => state.language);
-  const [currentZoom, setCurrentZoom] = useState(3);
   const [geoData, setGeoData] = useState(sights);
   const geoJsonLayer = useRef(null);
   //states for the information modal in mobile version

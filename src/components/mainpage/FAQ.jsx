@@ -20,13 +20,6 @@ function FAQ() {
     7: false,
     8: false,
     9: false,
-    10: false,
-    11: false,
-    12: false,
-    13: false,
-    14: false,
-    15: false,
-    16: false,
   });
   return (
     <>
@@ -60,7 +53,7 @@ function FAQ() {
               onClick={() =>
                 setOpen({
                   ...open,
-                  [1]: !open[1],
+                  1: !open[1],
                 })
               }
               aria-controls='example-collapse-text'
@@ -69,8 +62,8 @@ function FAQ() {
                 <>Ich habe Fragen zum Studium. Wo bekommen ich Antworten?</>
               ) : language === "englisch" ? (
                 <>
-                  I have got some questions regarding the studies. Where can I
-                  get answers?
+                  I have got a question regarding the studies. Where can I get
+                  an answer?
                 </>
               ) : (
                 <></>
@@ -131,8 +124,8 @@ function FAQ() {
                           target='_blank'>
                           Fachschaft (student association)
                         </a>
-                        . The engaged students will help you in any case, no
-                        matter where you are stucked or what your problems are.
+                        . The dedicated students will help you in any case, no
+                        matter where you are stuck or what your problems are.
                       </p>
                     </>
                   ) : (
@@ -148,13 +141,13 @@ function FAQ() {
               onClick={() =>
                 setOpen({
                   ...open,
-                  [2]: !open[2],
+                  2: !open[2],
                 })
               }
               aria-controls='example-collapse-text'
               aria-expanded={open}>
               {language === "german" ? (
-                <>Muss ich mich schon um Kursanmeldungen kümmmern?</>
+                <>Muss ich mich schon um Kursanmeldungen kümmern?</>
               ) : language === "englisch" ? (
                 <>Do I have to enroll for courses already?</>
               ) : (
@@ -195,7 +188,7 @@ function FAQ() {
                     <>
                       <p>
                         You will receive a mail from our front-office with all
-                        the information about the course enrollment. If you are
+                        the information about the course enrolment. If you are
                         interested in how your studies are structured you might
                         check out this{" "}
                         <a
@@ -207,12 +200,12 @@ function FAQ() {
                         .{" "}
                       </p>
                       <p>
-                        For further information on enrollment check out the{" "}
+                        For further information on enrolment check out{" "}
                         <a
-                          href='https://www.uni-muenster.de/studium/pruefungen/qispos.html'
+                          href='https://www.uni-muenster.de/Geoinformatics/en/Studies/study_programs/master/practical-information-for-msc-gi-students.html'
                           rel='noreferrer'
                           target='_blank'>
-                          QISPOS
+                          this information page
                         </a>
                         .
                       </p>
@@ -230,7 +223,7 @@ function FAQ() {
               onClick={() =>
                 setOpen({
                   ...open,
-                  [3]: !open[3],
+                  3: !open[3],
                 })
               }
               aria-controls='example-collapse-text'
@@ -260,10 +253,10 @@ function FAQ() {
                         Da Geoinformatik ein vergleichsweise kleiner Studiengang
                         ist, ist es relativ unkompliziert, Teil der Fachschaft
                         zu werden. Wer Interesse hat mitzuwirken, sollte am
-                        besten direkten Kontakt aufnehemen. Neben der
-                        Möglichkeit sich selbst an aktuellen Themen zu
-                        beteiligen, lernt man Studierende aus allen Fachsemester
-                        kennen und ist so optimal vernezt. Mehr Infos gibt es{" "}
+                        besten direkten Kontakt aufnehmen. Neben der Möglichkeit
+                        sich selbst an aktuellen Themen zu beteiligen, lernt man
+                        Studierende aus allen Fachsemester kennen und ist so
+                        optimal vernetzt. Mehr Infos gibt es{" "}
                         <a
                           href='https://geofs.uni-muenster.de/wp/'
                           rel='noreferrer'
@@ -277,7 +270,7 @@ function FAQ() {
                     <>
                       <p>
                         The Geoinformatics Fachschaft (student council or
-                        student association) is made up of voluntary students of
+                        student association) is made up of student volunteers of
                         geoinformatics, who represent your interests in your
                         studies, actively participate in various committees of
                         the university and are also your contact for problems
@@ -314,7 +307,7 @@ function FAQ() {
               onClick={() =>
                 setOpen({
                   ...open,
-                  [4]: !open[4],
+                  4: !open[4],
                 })
               }
               aria-controls='example-collapse-text'
@@ -416,7 +409,7 @@ function FAQ() {
                         others receive a scholarship or ERASMUS, and others work
                         alongside their studies. Here is a short overview and
                         further links on this topic if you still do not know how
-                        to financiate your time in Münster:
+                        to finance your time in Münster:
                       </p>
                       <ul>
                         <li>
@@ -469,7 +462,7 @@ function FAQ() {
               onClick={() =>
                 setOpen({
                   ...open,
-                  [5]: !open[5],
+                  5: !open[5],
                 })
               }
               aria-controls='example-collapse-text'
@@ -490,7 +483,7 @@ function FAQ() {
                       <p>
                         Der Wohnungsmarkt in Münster ist sehr angespannt und
                         gerade für diejenigen, die neu hierherkommen und nicht
-                        das üppigste Portmonaie besitzen, ist es manchmal schwer
+                        das üppigste Portmonee besitzen, ist es manchmal schwer
                         eine Unterkunft zu finden. Wohnungen werden auf
                         bekannten Immobilien-Webseiten angeboten, liegen aber
                         häufig außerhalb des Budget von Studierenden.
@@ -585,7 +578,7 @@ function FAQ() {
                         would chat with them. If your message is convincing they
                         will invite you to a talk or a videocall but still then
                         they normally got not only you to choose from as their
-                        new roomy. Keep that in mind, be kind and hopefuly you
+                        new roomy. Keep that in mind, be kind and hopefully you
                         will find your new flat-sharing family.
                       </p>
                     </>
@@ -602,7 +595,7 @@ function FAQ() {
               onClick={() =>
                 setOpen({
                   ...open,
-                  [8]: !open[8],
+                  6: !open[6],
                 })
               }
               aria-controls='example-collapse-text'
@@ -618,7 +611,7 @@ function FAQ() {
                 <></>
               )}
             </Button>
-            <Collapse in={open[8]}>
+            <Collapse in={open[6]}>
               <div>
                 <div id='faq-2' className='faq-text'>
                   {language === "german" ? (
@@ -641,8 +634,8 @@ function FAQ() {
                         das Fahrrad als Teil des Lebens in Münster wahrzunehmen.
                       </p>
                       <p>
-                        Entsprechend der hohen Nachfrage sind Fährrader,
-                        zumindest gerbauchte in anderen Gemeinden und Kreisen
+                        Entsprechend der hohen Nachfrage sind Fahrräder,
+                        zumindest gebrauchte in anderen Gemeinden und Kreisen
                         preiswerter zu bekommen, als hier in Münster. Das muss
                         nicht die Regel sein, aber wer die Möglichkeit hat, ein
                         Fahrrad mitzubringen oder woanders einen Preisvergleich
@@ -673,7 +666,7 @@ function FAQ() {
                         numerous and yet it would be possible to live in Münster
                         without a bike. The semester ticket, which can be
                         downloaded onto your smartphone or be printed, you can
-                        use public transport all over Northrhine Westfalia for
+                        use public transport all over North Rhine-Westphalia for
                         free of charge. Nevertheless, we recommend to perceive
                         the bicycle as part of life in Münster.
                       </p>
@@ -705,7 +698,7 @@ function FAQ() {
               onClick={() =>
                 setOpen({
                   ...open,
-                  [11]: !open[11],
+                  7: !open[7],
                 })
               }
               aria-controls='example-collapse-text'
@@ -720,7 +713,7 @@ function FAQ() {
                 <></>
               )}
             </Button>
-            <Collapse in={open[11]}>
+            <Collapse in={open[7]}>
               <div>
                 <div id='faq-1' className='faq-text'>
                   {language === "german" ? (
@@ -748,7 +741,7 @@ function FAQ() {
                           href='https://www.asta.ms/kultursemesterticket'
                           target='_blank'
                           rel='noreferrer'>
-                          Kuktursemsterticket (cultural semester ticket)
+                          Kultursemesterticket (cultural semester ticket)
                         </a>{" "}
                         is part of your tuition fee and gives you discounts at a
                         total of currently 15 institutions in Müster and
@@ -769,7 +762,7 @@ function FAQ() {
               onClick={() =>
                 setOpen({
                   ...open,
-                  [12]: !open[12],
+                  8: !open[8],
                 })
               }
               aria-controls='example-collapse-text'
@@ -782,7 +775,7 @@ function FAQ() {
                 <></>
               )}
             </Button>
-            <Collapse in={open[12]}>
+            <Collapse in={open[8]}>
               <div>
                 <div id='faq-2' className='faq-text'>
                   {language === "german" ? (
@@ -792,7 +785,7 @@ function FAQ() {
                         einmal auszuprobieren. Neben einer neuen Sportart können
                         hier auch neue Leute kennengelernt werden. Die Kurse
                         werden immer für ein Semester angeboten und von
-                        Ausdauer-Inlineskaten über Quidditch bis hin zu Zumba
+                        Ausdauer-Inline Skating über Quidditch bis hin zu Zumba
                         ist alles vertreten. Das gesamte Kursangebot wird{" "}
                         <a
                           href='https://www.hochschulsport-muenster.de/angebote/aktueller_zeitraum/index.html'
@@ -871,7 +864,7 @@ function FAQ() {
               onClick={() =>
                 setOpen({
                   ...open,
-                  [13]: !open[13],
+                  9: !open[9],
                 })
               }
               aria-controls='example-collapse-text'
@@ -887,12 +880,12 @@ function FAQ() {
                 <></>
               )}
             </Button>
-            <Collapse in={open[13]}>
+            <Collapse in={open[9]}>
               <div>
                 <div id='faq-2' className='faq-text'>
                   {language === "german" ? (
                     <>
-                      <p>Defitniv: JA!</p>
+                      <p>Definitiv: JA!</p>
                       <p>
                         Zusammen mit der Fachschaft GeoLök (Geographie und
                         Landschaftsökologie) organisiert die Fachschaft
@@ -900,14 +893,14 @@ function FAQ() {
                         eine Einführungswoche, die O-Woche, in der du die
                         Möglichkeit haben wirst, deine Kommilitoninnen und
                         Kommilitonen kennenzulernen, Infos über das Studium und
-                        Münster zu bekommst und eine Mege Spaß zu haben. Weitere
-                        Informationen und einen groben Ablaufplan gibt es auf
-                        der{" "}
+                        Münster zu bekommst und eine Menge Spaß zu haben.
+                        Weitere Informationen und einen groben Ablaufplan gibt
+                        es auf der{" "}
                         <a
                           href='https://geofs.uni-muenster.de/wp/erstsemester/erstiwoche/'
                           target='_blank'
                           rel='noreferrer'>
-                          Interenetseite der Fachschaft Geoinformatik
+                          Internetseite der Fachschaft Geoinformatik
                         </a>
                         .
                       </p>
@@ -921,7 +914,7 @@ function FAQ() {
                           href='https://geofs.uni-muenster.de/wp/erstsemester/ersti-we/'
                           target='_blank'
                           rel='noreferrer'>
-                          Interenetseite der Fachschaft Geoinformatik
+                          Internetseite der Fachschaft Geoinformatik
                         </a>
                         .
                       </p>
@@ -932,7 +925,7 @@ function FAQ() {
                         Due to the fact that the demand of a Masters orientation
                         week was to low in the last years there is currently not
                         a special one for Masters. But there is the orientation
-                        week for Bachlor students and if you have interest in
+                        week for Bachelor students and if you have interest in
                         participating or if you would like to have a week to get
                         to know the other Master students please contact the
                         Fachschaft.{" "}

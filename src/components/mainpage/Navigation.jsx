@@ -1,4 +1,5 @@
 import Navbar from "react-bootstrap/Navbar";
+import { useCookies } from "react-cookie";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { scroller } from "react-scroll";
@@ -7,6 +8,7 @@ import { setLanguage } from "../../actions";
 function Navigation() {
   const language = useSelector((state) => state.language);
   const dispatch = useDispatch();
+  const [cookies, setCookie] = useCookies(["language"]);
   const whatLanguage = () => {
     if (language === "german") {
       return "Bachelor (German)";
@@ -170,14 +172,17 @@ function Navigation() {
             <NavDropdown.Item
               onClick={() => {
                 dispatch(setLanguage("german"));
+                setCookie("language", "german", { path: "/" });
+                // console.log(cookies.language);
               }}>
               Bachelor (German)
             </NavDropdown.Item>
             <NavDropdown.Item
               onClick={() => {
                 dispatch(setLanguage("englisch"));
+                setCookie("language", "englisch", { path: "/" });
               }}>
-              Master (Englisch)
+              Master (English)
             </NavDropdown.Item>
           </NavDropdown>
           {navigators()}

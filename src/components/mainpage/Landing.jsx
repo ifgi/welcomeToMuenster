@@ -1,8 +1,7 @@
 import { useSelector } from "react-redux";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import Container from "react-bootstrap/Container";
 import { useMediaQuery } from "react-responsive";
-import { InView } from "react-intersection-observer";
 //loading images
 import schlossImage from "../../img/muenster_schloss.jpg";
 import ifgiLogo from "../../img/ifgiLogo.svg";
