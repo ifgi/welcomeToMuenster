@@ -1,5 +1,5 @@
 import React from "react";
-import Mainpage from "./components/mainpage/Mainpage";
+import Mainpage from "./components/Mainpage";
 import Error from "./components/Error";
 import CookieConsent from "react-cookie-consent";
 

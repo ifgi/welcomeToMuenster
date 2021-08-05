@@ -59,9 +59,7 @@
   margin-right: 50vw;
   -webkit-background-clip: padding-box; /* for Safari */
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
-  background: transparent !important;
-  background-color: #ffffff55 !important;
-  backdrop-filter: blur(50px) !important;
+  background: white !important;
   padding: 50px;
   text-align: justify;
 
@@ -89,96 +87,9 @@
   margin: 50vh 0;
   border: 2px dashed skyblue;
 }
-#FirstSteps {
-  width: 80vw !important;
-  height: auto !important;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  transform: translateY(-10vh);
-  -webkit-transform: translateY(-10vh);
-  -moz-transform: translateY(-10vh);
-  -ms-transform: translateY(-10vh);
-  -o-transform: translateY(-10vh);
-  z-index: 14;
-  padding: 50px;
-
-  -webkit-background-clip: padding-box;
-  /*forSafari*/
-  background-clip: padding-box;
-  /*forIE9+,Firefox4+,Opera,Chrome*/
-  background: transparent !important;
-  background-color: #ffffff55 !important;
-  backdrop-filter: blur(50px) !important;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-.firststeps-col {
-  p {
-    text-align: justify;
-  }
-  h3 {
-    margin-top: 15px;
-  }
-  // border: 2px solid black;
-  padding: 25px !important;
-}
-.englisch {
-  h3 {
-    min-height: calc(1.75rem * 4);
-  }
-}
-.firststeps-icon {
-  width: 30%;
-  height: auto;
-}
-.dropdown-icon {
-  margin-left: 50%;
-  margin-top: 10px;
-  transform: rotateX(0deg) translateX(-50%);
-  -webkit-transform: rotateX(0deg) translateX(-50%);
-  -moz-transform: rotateX(0deg) translateX(-50%);
-  -ms-transform: rotateX(0deg) translateX(-50%);
-  -o-transform: rotateX(0deg) translateX(-50%);
-  transition: transform 0.75s;
-  -webkit-transition: transform 0.75s;
-  -moz-transition: transform 0.75s;
-  -ms-transition: transform 0.75s;
-  -o-transition: transform 0.75s;
-}
-.dropdown-icon.dropdown-opened {
-  transform: rotateX(180deg) translateX(-50%) !important;
-  -webkit-transform: rotateX(180deg) translateX(-50%) !important;
-  -moz-transform: rotateX(180deg) translateX(-50%) !important;
-  -ms-transform: rotateX(180deg) translateX(-50%) !important;
-  -o-transform: rotateX(180deg) translateX(-50%) !important;
-  transition: transform 0.75s;
-  -webkit-transition: transform 0.75s;
-  -moz-transition: transform 0.75s;
-  -ms-transition: transform 0.75s;
-  -o-transition: transform 0.75s;
-}
 
 .storymap-description.mobile {
   margin-left: 0;
   width: 100vw;
   padding: 30px;
-}
-#FirstSteps.mobile {
-  margin-left: 0 !important;
-  width: 100vw !important;
-  padding: 30px;
-
-  .firststeps-icon {
-    width: 30vw;
-    height: auto;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-  }
 }

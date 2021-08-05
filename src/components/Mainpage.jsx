@@ -1,13 +1,16 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setLanguage } from "../../actions";
-import Landing from "./Landing";
-import Intro from "./Intro";
-import Map from "./Map";
-import Navigation from "./Navigation";
-import FAQ from "./FAQ";
-import Discover from "./MapDescription";
-import Footer from "./Footer";
+import { setLanguage } from "../actions";
+import Landing from "./mainpage/Landing";
+import Intro from "./mainpage/Intro";
+import Map from "./mainpage/Map";
+import Navigation from "./mainpage/Navigation";
+import Studies from "./mainpage/Studies";
+import FirstSteps from "./mainpage/FirstSteps";
+import ContactPoints from "./mainpage/ContactPoints";
+import FAQ from "./mainpage/FAQ";
+import Discover from "./mainpage/MapDescription";
+import Footer from "./mainpage/Footer";
 import { useCookies } from "react-cookie";
 
 function Mainpage() {
@@ -28,6 +31,9 @@ function Mainpage() {
       <Navigation />
       <Landing />
       <Intro />
+      <Studies />
+      <FirstSteps />
+      <ContactPoints />
       <FAQ />
       <Discover />
       <Map />

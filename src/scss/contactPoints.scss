@@ -1,0 +1,31 @@
+#ContactPoints {
+  height: auto !important;
+  position: relative;
+  padding: 0;
+  margin-top: -40px;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  padding-left: 8vw;
+  p {
+    text-align: justify;
+  }
+}
+.contactPoints-heading-row {
+  padding-top: 5vw;
+  padding-right: calc(5vw + 17px);
+}
+.contactPoints-row {
+  padding-left: 5vw;
+  padding-bottom: 5vw;
+  padding-right: calc(5vw + 17px);
+}
+.contactPoints-col {
+  p {
+    text-align: justify;
+  }
+  h3 {
+    margin-top: 15px;
+  }
+  // border: 2px solid black;
+  padding: 25px !important;
+}
