@@ -35,7 +35,7 @@ function FAQ() {
             : ""
         }>
         <Row id='faq-row'>
-          <Col xs='12' md='12'>
+          <Col xs='12' md='12' id='heading-faq'>
             <h2>
               {" "}
               {language === "german" ? (
@@ -187,10 +187,17 @@ function FAQ() {
                   ) : language === "englisch" ? (
                     <>
                       <p>
-                        You will receive a mail from our front-office with all
-                        the information about the course enrolment. If you are
-                        interested in how your studies are structured you might
-                        check out this{" "}
+                        You will receive a mail that will inform you about the
+                        deadline for the course enrollment, then you have to
+                        enroll using{" "}
+                        <a
+                          href='https://studium.uni-muenster.de/qisserver/rds?state=user&type=0'
+                          rel='noreferrer'
+                          target='_blank'>
+                          the universitys course booking system
+                        </a>{" "}
+                        . If you are interested in how your studies are
+                        structured you might check out this{" "}
                         <a
                           href='https://www.uni-muenster.de/Geoinformatics/Studies/study_programs/index.html'
                           rel='noreferrer'
@@ -206,6 +213,14 @@ function FAQ() {
                           rel='noreferrer'
                           target='_blank'>
                           this information page
+                        </a>{" "}
+                        and also{" "}
+                        <a
+                          href='https://dachro.github.io/study_program_intro/study_program_intro.html'
+                          rel='noreferrer'
+                          target='_blank'>
+                          this information page for Geoinforamtics Master
+                          students
                         </a>
                         .
                       </p>
@@ -468,7 +483,7 @@ function FAQ() {
               aria-controls='example-collapse-text'
               aria-expanded={open}>
               {language === "german" ? (
-                <>Wie finde ich eine Wohung oder eine WG?</>
+                <>Wie finde ich eine Wohnung oder eine WG?</>
               ) : language === "englisch" ? (
                 <>How do I find a nice flat or flat-sharing?</>
               ) : (
@@ -922,13 +937,12 @@ function FAQ() {
                   ) : language === "englisch" ? (
                     <>
                       <p>
-                        Due to the fact that the demand of a Masters orientation
-                        week was to low in the last years there is currently not
-                        a special one for Masters. But there is the orientation
-                        week for Bachelor students and if you have interest in
-                        participating or if you would like to have a week to get
-                        to know the other Master students please contact the
-                        Fachschaft.{" "}
+                        In the first lecture of the semester a informative
+                        presentation about your studies will take place. You
+                        will be informed about this via e-mail. In addition
+                        there will be a cosy evening for all Master's first-year
+                        students where you get to know your fellow students in
+                        person.
                       </p>
                     </>
                   ) : (

@@ -10,7 +10,8 @@ import lichthofGeo from "../../img/geo_2_lichthof.jpg";
 
 function Studies() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  const isOverflow = useMediaQuery({ query: "(max-width: 1499px)" });
+  const isOverflowBachelor = useMediaQuery({ query: "(max-width: 1499px)" });
+  const isOverflowMaster = useMediaQuery({ query: "(max-width: 951px)" });
   const language = useSelector((state) => state.language);
 
   const germanTable = (
@@ -251,23 +252,37 @@ function Studies() {
                   computergestützten Anwendungen.
                 </p>
                 <p>
-                  Die Universität Münster bietet einen konsekutiven Bachelor-
-                  und Masterstudiengang in Geoinformatik an. Es handelt sich um
-                  einen integrierten Studiengang ohne Haupt- und Nebenfächer,
-                  der vom Fachbereich Informatik/Mathematik (Institut für
-                  Informatik) und vom Fachbereich Geowissenschaften (Institut
-                  für Geoinformatik) gemeinsam durchgeführt wird. Nach einer
-                  Regelstudienzeit von 6 Semestern erlangen Studierende den
-                  Universitätsgrad ‚Bachelor of Science in Geoinformatik‘
-                  erworben. Darauf aufbauend kann ebenfalls am Institut für
-                  Geoinformatik ein Master-Studiengang besucht werden, mit dem
-                  der Universitätsgrad ‚Master of Science in Geoinformatics‘
-                  erworben wird.
+                  Dein Bachelorstudium in Geoinformatik ist ein integrierter
+                  Studiengang ohne Haupt- und Nebenfächer, der vom Fachbereich
+                  Informatik/Mathematik (Institut für Informatik) und vom
+                  Fachbereich Geowissenschaften (Institut für Geoinformatik)
+                  gemeinsam durchgeführt wird. Nach einer Regelstudienzeit von 6
+                  Semestern erlangst du den Universitätsgrad ‚Bachelor of
+                  Science in Geoinformatik‘. Darauf aufbauend kannst du
+                  ebenfalls am Institut für Geoinformatik ein Master-Studiengang
+                  besuchen, mit dem der Universitätsgrad ‚Master of Science in
+                  Geoinformatics‘ erworben wird.
                 </p>
                 <p>
-                  Der Studienverlaufsplan unten gibt dir eine vereinfachte
-                  Übersicht über den deinen Studiengang. Für mehr Informationen
-                  zum Studium{" "}
+                  Zunächst musst du dich weder um Kurswahlen noch um
+                  Prüfungsanmeldungen kümmern. In der Einführungswoche für
+                  Erstsemester, die von den Fachschaften Geoinformatik und
+                  Geographie/ Landschaftsökologie organisiert wird, wirst du
+                  alle weiteren Informationen zu diesen Themen erhalten. Mehr
+                  dazu findest du auf dieser Seite unter den meist gestellten
+                  Fragen und{" "}
+                  <a
+                    href='https://geofs.uni-muenster.de/wp/erstsemester/erstiwoche/'
+                    target='_blank'
+                    rel='noreferrer'>
+                    auf der entsprechenden Internetseite der Fachschaft
+                  </a>
+                  . Wenn du dich bereits jetzt schon etwas schlau machen
+                  möchtest, hilft dir der vereinfachte Studienverlaufsplan
+                  unten. Der Bachelorstudiengang umfasst formal insgesamt 180
+                  Leistungspunkte (LP) was auf sechs Semester verteilt im
+                  Schnitt 30 LP pro Semester ergibt, abhängig von deinen
+                  Kurswahlen. Für mehr Informationen zum Studium{" "}
                   <a
                     href='https://bachelor-geoinformatik.de/'
                     target='_blank'
@@ -288,25 +303,25 @@ function Studies() {
             ) : (
               <>
                 <p>
-                  Our goal is to educate students in the most advanced
-                  techniques in geographic information processing. Building on a
-                  Bachelor of Science in Geoinformatics or a related discipline,
-                  the Master of Science in Geoinformatics and Spatial Data
-                  Science program will further develop the student’s
+                  Building on a Bachelor of Science in Geoinformatics or a
+                  related discipline, the Master of Science in Geoinformatics
+                  and Spatial Data Science program will further develop your
                   problem-solving skills, analytic capabilities, and teach
-                  innovative and creative scientific research methods. As one of
-                  the leading places for exploring new frontiers in geospatial
-                  information science, the Institute for Geoinformatics Münster
-                  provides Master students a chance to get personally involved
-                  in cutting-edge research projects. This opens opportunities to
-                  conduct Master theses on new and emerging technologies.
-                  Obtaining a Master’s degree from the Institute for
-                  Geoinformatics will prepare you for a leading position in
-                  industry and academics. Medium of instruction is English.
+                  innovative and creative scientific research methods. Obtaining
+                  a Master’s degree from the Institute for Geoinformatics will
+                  prepare you for a leading position in industry and academics.
+                  Medium of instruction is English.
                 </p>
                 <p>
-                  The study plan gives a rough overview of the studies. For more
-                  information about the studies and course enrollment{" "}
+                  There will be a formal information presentation in one of the
+                  first lectures of the semester and you will receive an e-mail
+                  to be informed when this will take place. There is a deadline
+                  for course enrollment and exam registration. You will be
+                  informed by e-mail about the respective deadline. The
+                  Studieplan gives a rough overview of the studies. The total
+                  workload of the study program is 120 credit points (ECTS)
+                  distributed over 8 modules (out of 10) and 4 semesters. For
+                  more information about the studies and course enrollment{" "}
                   <a
                     href='https://dachro.github.io/study_program_intro/study_program_intro.html'
                     target='_blank'
@@ -369,7 +384,21 @@ function Studies() {
             ) : (
               <h2>Study Plan</h2>
             )}
-            {isOverflow ? (
+            {language === "german" ? (
+              isOverflowBachelor ? (
+                <div
+                  id='table-div'
+                  onWheel={onWheel}
+                  onMouseEnter={changeScroll}
+                  onMouseLeave={showScroll}>
+                  {language === "german" ? germanTable : englischTable}
+                </div>
+              ) : (
+                <div id='table-div' onWheel={onWheel}>
+                  {language === "german" ? germanTable : englischTable}
+                </div>
+              )
+            ) : isOverflowMaster ? (
               <div
                 id='table-div'
                 onWheel={onWheel}

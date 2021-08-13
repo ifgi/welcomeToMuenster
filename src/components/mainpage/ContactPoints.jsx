@@ -25,7 +25,7 @@ function ContactPoints() {
             {language === "german" ? (
               <h2>Wichtige Kontakte</h2>
             ) : language === "englisch" ? (
-              <h2>Important Contact Points</h2>
+              <h2>Important Contacts</h2>
             ) : (
               <></>
             )}
@@ -39,7 +39,76 @@ function ContactPoints() {
               language === "englisch"
                 ? "contactPoints-col englisch"
                 : "contactPoints-col"
-            }></Col>
+            }>
+            <div className='contact-div'>
+              {language === "german" ? (
+                <>
+                  {" "}
+                  <h3>Technische Betreuung / Organisatorisches / Kurswahlen</h3>
+                  <p>
+                    <br />
+                    <b>Karsten Höwelhans</b>
+                    <br />
+                    <b>Telefon:</b> +49 (251) 83-33 083
+                    <br />
+                    <b>E-Mail:</b> khoew_01@uni-muenster.de
+                  </p>
+                </>
+              ) : (
+                <>
+                  {" "}
+                  <h3>
+                    Technical support / Organizational matters / Course
+                    selection matters
+                  </h3>
+                  <p>
+                    <br />
+                    <b>Karsten Höwelhans</b>
+                    <br />
+                    <b>Phone:</b> +49 (251) 83-33 083
+                    <br />
+                    <b>Mail:</b> khoew_01@uni-muenster.de
+                  </p>
+                </>
+              )}
+            </div>
+          </Col>
+          <Col
+            xs='12'
+            md='6'
+            className={
+              language === "englisch"
+                ? "contactPoints-col englisch"
+                : "contactPoints-col"
+            }>
+            <div className='contact-div'>
+              {language === "german" ? (
+                <>
+                  <h3>Fragen zur Studienplanung</h3>
+                  <p>
+                    <br />
+                    <b>Christian Knoth</b>
+                    <br />
+                    <b>Telefon:</b> +49 (251) 83-33 056
+                    <br />
+                    <b>E-Mail:</b> christianknoth@uni-muenster.de
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h3>Questions Regarding Study Planning</h3>
+                  <p>
+                    <br />
+                    <b>Christian Knoth</b>
+                    <br />
+                    <b>Phone:</b> +49 (251) 83-33 056
+                    <br />
+                    <b>Mail:</b> christianknoth@uni-muenster.de
+                  </p>
+                </>
+              )}
+            </div>
+          </Col>
         </Row>
       </Container>
     </>

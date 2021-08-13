@@ -39,7 +39,16 @@ function Navigation() {
                   duration: 500,
                 })
               }>
-              Intro
+              Rundgang
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("Studies", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Studium
             </Nav.Link>
             <Nav.Link
               onClick={() =>
@@ -52,6 +61,15 @@ function Navigation() {
             </Nav.Link>
             <Nav.Link
               onClick={() =>
+                scroller.scrollTo("ContactPoints", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Kontakte
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
                 scroller.scrollTo("FAQ", {
                   smooth: true,
                   duration: 500,
@@ -66,25 +84,7 @@ function Navigation() {
                   duration: 500,
                 })
               }>
-              Erkundung
-            </Nav.Link>
-            <Nav.Link
-              onClick={() =>
-                scroller.scrollTo("Map", {
-                  smooth: true,
-                  duration: 500,
-                })
-              }>
               Karte
-            </Nav.Link>
-            <Nav.Link
-              onClick={() =>
-                scroller.scrollTo("Footer", {
-                  smooth: true,
-                  duration: 500,
-                })
-              }>
-              About
             </Nav.Link>
           </Nav>
         </>
@@ -93,12 +93,12 @@ function Navigation() {
     if (language === "englisch") {
       return (
         <>
-          {" "}
           <Nav className='m-auto'>
             <Nav.Link
               onClick={() =>
                 scroller.scrollTo("Top", {
                   smooth: true,
+                  offset: -56,
                   duration: 500,
                 })
               }>
@@ -111,7 +111,16 @@ function Navigation() {
                   duration: 500,
                 })
               }>
-              Intro
+              Tour
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("Studies", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Studies
             </Nav.Link>
             <Nav.Link
               onClick={() =>
@@ -121,6 +130,15 @@ function Navigation() {
                 })
               }>
               First Steps
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("ContactPoints", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Contacts
             </Nav.Link>
             <Nav.Link
               onClick={() =>
@@ -138,25 +156,7 @@ function Navigation() {
                   duration: 500,
                 })
               }>
-              Discover
-            </Nav.Link>
-            <Nav.Link
-              onClick={() =>
-                scroller.scrollTo("Map", {
-                  smooth: true,
-                  duration: 500,
-                })
-              }>
               Map
-            </Nav.Link>
-            <Nav.Link
-              onClick={() =>
-                scroller.scrollTo("Footer", {
-                  smooth: true,
-                  duration: 500,
-                })
-              }>
-              About
             </Nav.Link>
           </Nav>
         </>

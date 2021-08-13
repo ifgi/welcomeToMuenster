@@ -3,8 +3,9 @@
   height: auto !important;
   position: relative;
   padding: 0;
-  margin-bottom: 40px;
+  padding-bottom: 5vh;
   padding-top: 40px;
+  padding-left: 8vw;
   p {
     text-align: justify;
     color: white;
@@ -18,13 +19,11 @@
   }
 }
 .firststeps-heading-row {
-  padding-left: 8vw;
   padding-top: 5vw;
   padding-right: calc(8vw + 17px);
   margin-bottom: 50px;
 }
 .firststeps-row {
-  padding-left: 8vw;
   padding-bottom: 5vw;
   padding-right: calc(8vw + 17px);
 }
@@ -92,5 +91,8 @@
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
+  }
+  .firststeps-row {
+    padding-right: 0;
   }
 }

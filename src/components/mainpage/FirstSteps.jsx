@@ -102,13 +102,13 @@ function FAQ() {
               </>
             ) : language === "englisch" ? (
               <>
-                <h3>Course Enrolment</h3>
+                <h3>Course Enrollment</h3>
 
                 <Collapse in={openInfo[1]}>
                   <div id='example-collapse-text'>
                     <p>
-                      If you are not already informed by our frontoffice you can
-                      check out{" "}
+                      If you are not already informed by our secretary's office
+                      you can check out{" "}
                       <a
                         href='https://www.uni-muenster.de/Geoinformatics/en/Studies/study_programs/master/practical-information-for-msc-gi-students.html'
                         rel='noreferrer'
@@ -116,8 +116,15 @@ function FAQ() {
                         this page for all the practical information
                       </a>
                       . Here you will find explanations about the university's
-                      enrolment system and everything else regarding your course
-                      enrolment.
+                      enrollment system and everything else regarding your
+                      course enrollment. Also, you can check out{" "}
+                      <a
+                        href='https://dachro.github.io/study_program_intro/study_program_intro.html'
+                        rel='noreferrer'
+                        target='_blank'>
+                        this page for having specific descriptions for
+                        Geoinformatics Master students
+                      </a>
                     </p>
                   </div>
                 </Collapse>

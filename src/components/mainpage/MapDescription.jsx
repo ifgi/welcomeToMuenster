@@ -35,7 +35,7 @@ function MapDescription() {
             : ""
         }>
         <Row className='description-row'>
-          <Col xs='12' md='12'>
+          <Col xs='12' md='12' id='discover-heading'>
             <h2>
               {" "}
               {language === "german" ? (
@@ -71,7 +71,7 @@ function MapDescription() {
             )}
           </Col>
         </Row>
-        <Row className='description-row'>
+        <Row className='description-row icon-description-row'>
           <Col xs='2' md='1' className='description-icons'>
             <img
               src={language === "englisch" ? infoMasterIco : infoPrimaryIco}
