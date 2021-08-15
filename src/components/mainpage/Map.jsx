@@ -77,7 +77,7 @@ function Map() {
                   language === "german" ? (
                     "Wähle einen Punkt,"
                   ) : (
-                    "Choose a Points"
+                    "Choose a Point"
                   )
                 ) : language === "german" ? (
                   points.features.find((element) => element.id === currentSight)
@@ -356,7 +356,7 @@ function Map() {
               language === "german" ? (
                 "Wähle einen Punkt"
               ) : (
-                "Choose a Points"
+                "Choose a Point"
               )
             ) : language === "german" ? (
               points.features.find((element) => element.id === currentSight)

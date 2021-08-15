@@ -199,7 +199,7 @@ function MapDescription() {
           <Col xs='10' md='3' className='description-explain'>
             {language === "german" ? (
               <p>
-                Jede_R, die/der gerne in der Natur unterwegs ist, ob auf dem
+                Jede_r, die/der gerne in der Natur unterwegs ist, ob auf dem
                 Fahrrad oder zu Fuß sollte Ausschau nach Bäumen auf der Karte
                 halten.
               </p>

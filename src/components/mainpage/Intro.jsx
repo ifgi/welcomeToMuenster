@@ -133,7 +133,7 @@ function Intro() {
                     dir die schönsten Orte in Münster zeigen. Ganz auf die
                     Geoinformatiker-Art haben wir dafür diese Website mit
                     interaktiven Karten versehen. Diese erste Karte, die du im
-                    Hintergrund sehe kannst, Wird dich Schritt für Schritt nach
+                    Hintergrund sehe kannst, wird dich Schritt für Schritt nach
                     Münster bringen und damit du nie die Orientierung verlierst,
                     ist das GEO-Gebäude die ganze Zeit mit dem ifgi-Logo
                     markiert.
@@ -250,12 +250,12 @@ function Intro() {
                   <p>
                     As part of your tuition fee, you pay for a semester ticket
                     every semester, which allows you to use public transport
-                    throughout NRW free of charge. This means that you can
-                    travel from Bonn to Cologne, from Münster to Düsseldorf,
+                    throughout NRW at no additional cost. This means that you
+                    can travel from Bonn to Cologne, from Münster to Düsseldorf,
                     from Dortmund to Aachen or from Domplatz in Münster to the
-                    main train station, to name just a few possibilities, at no
-                    additional cost. Partly, the ticket can bring you further
-                    then the borders of NRW, which is displayed on the map.
+                    main train station, to name just a few possibilities.
+                    Partly, the ticket can bring you further then the borders of
+                    NRW, which is displayed on the map.
                   </p>
                 </>
               ) : (
@@ -297,8 +297,8 @@ function Intro() {
                   <h2>Münsterland. Fields, Bicycles and Beauty.</h2>
                   <p>
                     The Westerberg is the highest point of the Münsterland with
-                    188.7 meters. Therefore, it is allways the right decision to
-                    jump on your bicycle. It is easy to use because of the flat
+                    188.7 meters. Therefore, it is always the right decision to
+                    ride your bicycle. It is easy to use because of the flat
                     terrain, it is cheap and environmentally friendly and beside
                     that it makes a lot of fun. With a huge number of castles
                     and palaces and a lot of nature the Münsterland is always
@@ -343,7 +343,7 @@ function Intro() {
                   <p>
                     In addition to Münster, the districts of Borken, Coesfeld,
                     Steinfurt and Warendorf can also be seen on our map, which
-                    are collectively referred to as the Münsterland.
+                    are collectively called Münsterland.
                   </p>
                 </>
               ) : (
@@ -370,7 +370,7 @@ function Intro() {
                     lebendig und hat immer etwas zu bieten. Um einen kleinen
                     Überblick zu bekommen, haben wir ganz am Ende dieser Seite
                     eine interaktive Karte mit den schönsten Orten in Münster
-                    für die vorbereitet. Sei also gespannt.
+                    für dich vorbereitet. Sei also gespannt.
                   </p>
                 </>
               ) : language === "englisch" ? (
@@ -381,10 +381,9 @@ function Intro() {
                     there is much to experience here. Between a multitude of
                     sights and cultural institutions, there is also plenty of
                     room for a varied leisure time, because Münster is a lively
-                    city and always has something to offer. To give you a brief
-                    overview, we have an interactive map at the very end of this
-                    page with the most beautiful places in Münster for you. So
-                    stay curious.
+                    city with much to offer. To give you a brief overview, we
+                    have an interactive map at the very end of this page with
+                    the most beautiful places in Münster. So stay curious.
                   </p>
                 </>
               ) : (

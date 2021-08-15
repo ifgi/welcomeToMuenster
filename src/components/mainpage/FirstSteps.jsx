@@ -125,6 +125,7 @@ function FAQ() {
                         this page for having specific descriptions for
                         Geoinformatics Master students
                       </a>
+                      .
                     </p>
                   </div>
                 </Collapse>
@@ -244,7 +245,7 @@ function FAQ() {
                 <Collapse in={openInfo[3]}>
                   <div id='example-collapse-text'>
                     <p>
-                      Wenn du dich schon im Vorhinein informieren möchtest gibt
+                      Wenn du dich schon im Vorhinein informieren möchtest, gibt
                       es viele wichtige Seiten, auf die du dich stützen kannst.
                       Eine kleine Auswahl der wichtigsten Webseiten:{" "}
                     </p>
@@ -273,6 +274,14 @@ function FAQ() {
                           asta.ms
                         </a>
                       </li>
+                      <li>
+                        <a
+                          href='https://www.uni-muenster.de/studium/studienangebot/index.html'
+                          target='_blank'
+                          rel='noreferrer'>
+                          über Studienveranstaltungen
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </Collapse>
@@ -292,7 +301,7 @@ function FAQ() {
                             href='https://www.uni-muenster.de/Geoinformatics/'
                             target='_blank'
                             rel='noreferrer'>
-                            the website of your new institute
+                            the website of your institute
                           </a>
                         </li>
                         <li>
@@ -309,6 +318,14 @@ function FAQ() {
                             target='_blank'
                             rel='noreferrer'>
                             check out the asta.ms
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href='https://dachro.github.io/study_program_intro/study_program_intro.html'
+                            target='_blank'
+                            rel='noreferrer'>
+                            about course program
                           </a>
                         </li>
                       </ul>
@@ -359,7 +376,7 @@ function FAQ() {
                       außerhalb des Budget von Studierenden.
                     </p>
                     <p>
-                      Eine bessere Möglichkeit ist es, sich um{" "}
+                      Eine bessere Möglichkeit ist es, sich auf{" "}
                       <a
                         href='https://www.stw-muenster.de/studentisches-wohnen/wohnanlagen/'
                         target='_blank'
@@ -375,8 +392,11 @@ function FAQ() {
                       bist nicht alleine zuhause und sparst außerdem noch
                       Kosten. Wer also mit dem Gedanken spielt, sich aber noch
                       nicht sicher ist, sollte dem gemeinschaftlichen Wohnen
-                      eine Chance geben. Für mehr Informationen schau in unsere
-                      häufig gestellten Fragen, im nächsten Abschnitt.
+                      eine Chance geben.{" "}
+                    </p>
+                    <p>
+                      Für mehr Informationen schaue in unsere häufig gestellten
+                      Fragen, im nächsten Abschnitt.
                     </p>
                   </div>
                 </Collapse>

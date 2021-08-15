@@ -222,7 +222,7 @@ function Studies() {
             {language === "german" ? (
               <h2>Dein Studiengang</h2>
             ) : language === "englisch" ? (
-              <h2>Your Study Programm</h2>
+              <h2>Your Study Program</h2>
             ) : (
               <></>
             )}
@@ -317,11 +317,11 @@ function Studies() {
                   first lectures of the semester and you will receive an e-mail
                   to be informed when this will take place. There is a deadline
                   for course enrollment and exam registration. You will be
-                  informed by e-mail about the respective deadline. The
-                  Studieplan gives a rough overview of the studies. The total
-                  workload of the study program is 120 credit points (ECTS)
-                  distributed over 8 modules (out of 10) and 4 semesters. For
-                  more information about the studies and course enrollment{" "}
+                  informed by e-mail about the respective deadline. The study
+                  plan gives a rough overview of the studies. The total workload
+                  of the study program is 120 credit points (ECTS) distributed
+                  over 8 modules (out of 10) and 4 semesters. For more
+                  information about the studies and course enrollment{" "}
                   <a
                     href='https://dachro.github.io/study_program_intro/study_program_intro.html'
                     target='_blank'

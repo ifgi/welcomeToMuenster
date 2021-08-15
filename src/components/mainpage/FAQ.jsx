@@ -207,7 +207,7 @@ function FAQ() {
                         .{" "}
                       </p>
                       <p>
-                        For further information on enrolment check out{" "}
+                        For further information on enrollment check out{" "}
                         <a
                           href='https://www.uni-muenster.de/Geoinformatics/en/Studies/study_programs/master/practical-information-for-msc-gi-students.html'
                           rel='noreferrer'
@@ -219,7 +219,7 @@ function FAQ() {
                           href='https://dachro.github.io/study_program_intro/study_program_intro.html'
                           rel='noreferrer'
                           target='_blank'>
-                          this information page for Geoinforamtics Master
+                          this information page for Geoinformatics Master
                           students
                         </a>
                         .
@@ -271,12 +271,12 @@ function FAQ() {
                         besten direkten Kontakt aufnehmen. Neben der Möglichkeit
                         sich selbst an aktuellen Themen zu beteiligen, lernt man
                         Studierende aus allen Fachsemester kennen und ist so
-                        optimal vernetzt. Mehr Infos gibt es{" "}
+                        optimal vernetzt.{" "}
                         <a
                           href='https://geofs.uni-muenster.de/wp/'
                           rel='noreferrer'
                           target='_blank'>
-                          hier
+                          Mehr Infos gibt es hier
                         </a>
                         .
                       </p>
@@ -293,7 +293,7 @@ function FAQ() {
                       </p>
                       <p>
                         Since geoinformatics is a comparatively small degree
-                        programme, it is relatively uncomplicated to become part
+                        program, it is relatively uncomplicated to become part
                         of the student association. If you are interested in
                         joining, it would be best to contact the student council
                         directly. In addition to the opportunity to participate
@@ -359,17 +359,17 @@ function FAQ() {
                           die durch ein mehrseitiges Formular überwunden werden
                           muss, mag einige abschrecken, daher gibt es online
                           einige Rechner, mit denen sich der erwartbare
-                          BAföG-Kredit abschätzen lässen, aber unabhängig davon,
+                          BAföG-Kredit abschätzen lässen. Unabhängig davon
                           sollte man eine Beantragung zumindest einmal versucht
                           haben. Für die aktuellen Regelungen und alle wichtigen
-                          Formulare lies{" "}
+                          Formulare{" "}
                           <a
                             href='https://www.uni-muenster.de/studium/kosten/bafoeg.html'
                             rel='noreferrer'
                             target='_blank'>
-                            hier
-                          </a>{" "}
-                          weiter.
+                            lies hier weiter
+                          </a>
+                          .
                         </li>
 
                         <br />
@@ -384,9 +384,9 @@ function FAQ() {
                             href='https://www.uni-muenster.de/studium/kosten/stipendien.html'
                             rel='noreferrer'
                             target='_blank'>
-                            hier
-                          </a>{" "}
-                          über die verschiedenen Angebote informieren.
+                            hier über die verschiedenen Angebote informieren
+                          </a>
+                          .
                         </li>
                         <br />
                         <li>
@@ -394,7 +394,7 @@ function FAQ() {
                           zu Hauf. Ob an der Universität oder dem Institut
                           selbst, bei einer der ansässigen geoinformatischen
                           Unternehmen oder als Minijobber in allen Bereichen,
-                          jede_R die/der Arbeit sucht, wird sie hier finden.
+                          jede_r die/der Arbeit sucht, wird sie hier finden.
                           Stellen an der Uni werden oft an schwarzen Brettern,
                           den Newsletter der Fachschaft oder im Institut
                           verbreitet. Beispielsweise wurde diese Homepage von
@@ -504,7 +504,7 @@ function FAQ() {
                         häufig außerhalb des Budget von Studierenden.
                       </p>
                       <p>
-                        Eine bessere Möglichkeit ist es, sich um{" "}
+                        Eine bessere Möglichkeit ist es, sich auf{" "}
                         <a
                           href='https://www.stw-muenster.de/studentisches-wohnen/wohnanlagen/'
                           target='_blank'
@@ -538,7 +538,7 @@ function FAQ() {
                         bringen lassen, wenn es nicht nach der ersten Anfrage
                         klappen sollte, oder du nach dem üblichen Casting (ein
                         kleines Kennenlerngespräch) nicht die erste Wahl der WG
-                        bist. Irgendwo in Münster ist garantiert deinen neue
+                        bist. Irgendwo in Münster ist garantiert deine neue
                         WG-Familie.
                       </p>
                       <p>
@@ -621,7 +621,7 @@ function FAQ() {
                   eins?
                 </>
               ) : language === "englisch" ? (
-                <>Do I really need a bicycle and where can i get one?</>
+                <>Do I really need a bicycle and where can I get one?</>
               ) : (
                 <></>
               )}
@@ -676,10 +676,10 @@ function FAQ() {
                         can be reached by bike in 20 minutes maximum, it is much
                         cheaper than a car, for example, it is your best workout
                         buddy and besides that it's fun. Especially because you
-                        almost never have to ride alone and you very
+                        almost never have to ride alone and you're very
                         spontaneous, a bicycle is worthwhile. The pros are
                         numerous and yet it would be possible to live in Münster
-                        without a bike. The semester ticket, which can be
+                        without a bike. With the semester ticket, which can be
                         downloaded onto your smartphone or be printed, you can
                         use public transport all over North Rhine-Westphalia for
                         free of charge. Nevertheless, we recommend to perceive
@@ -687,7 +687,7 @@ function FAQ() {
                       </p>
                       <p>
                         Surely, you can bring your own bike to Münster or you
-                        can buy new one or used in Münster. Used ones are
+                        can buy a new or used one in Münster. Used ones are
                         usually enough if you just use the bike for your daily
                         needs. Furthermore you could also rent a bike at stores
                         like{" "}
@@ -833,8 +833,8 @@ function FAQ() {
                     <>
                       <p>
                         {" "}
-                        The university sports programme is absolutely worth to
-                        give it a try. Besides learning a new sport, you can
+                        The university sports program is absolutely worth to
+                        give it a try. Besides learning a new sport, you may
                         also get to know new people. The courses are always
                         offered for one semester and range from Football to
                         Quidditch and Zumba. Nearly everything is represented.
@@ -940,9 +940,9 @@ function FAQ() {
                         In the first lecture of the semester a informative
                         presentation about your studies will take place. You
                         will be informed about this via e-mail. In addition
-                        there will be a cosy evening for all Master's first-year
-                        students where you get to know your fellow students in
-                        person.
+                        there will be a cosy evening event for all Master's
+                        first-year students where you get to know your fellow
+                        students in person.
                       </p>
                     </>
                   ) : (

@@ -23,9 +23,25 @@ function ContactPoints() {
         <Row className='contactPoints-heading-row'>
           <Col>
             {language === "german" ? (
-              <h2>Wichtige Kontakte</h2>
+              <>
+                <h2>Wichtige Kontakte</h2>
+                <p>
+                  Falls du Fragen zu Kurswahlen, deinem Studienprogramm oder
+                  beispielsweise den elektronischen Kurswahlen hast und auch die
+                  Informationen auf dieser Seite dir nicht weiterhelfen, stehen
+                  die folgenden Kontakte dir gerne zur Verfügung:
+                </p>
+              </>
             ) : language === "englisch" ? (
-              <h2>Important Contacts</h2>
+              <>
+                <h2>Important Contacts</h2>
+                <p>
+                  If you have questions regarding your program of study or for
+                  example the electronic course selections and the information
+                  on this page does not help you, the following contacts may
+                  assist you:
+                </p>
+              </>
             ) : (
               <></>
             )}
