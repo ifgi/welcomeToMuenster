@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/welcomeToMuenster/static/css/main.0818ca5c.chunk.css",
-    "main.js": "/welcomeToMuenster/static/js/main.40890ef4.chunk.js",
-    "main.js.map": "/welcomeToMuenster/static/js/main.40890ef4.chunk.js.map",
+    "main.js": "/welcomeToMuenster/static/js/main.b1368656.chunk.js",
+    "main.js.map": "/welcomeToMuenster/static/js/main.b1368656.chunk.js.map",
     "runtime-main.js": "/welcomeToMuenster/static/js/runtime-main.949624c6.js",
     "runtime-main.js.map": "/welcomeToMuenster/static/js/runtime-main.949624c6.js.map",
     "static/css/2.063fa238.chunk.css": "/welcomeToMuenster/static/css/2.063fa238.chunk.css",
@@ -84,6 +84,6 @@
     "static/css/2.063fa238.chunk.css",
     "static/js/2.13abb54a.chunk.js",
     "static/css/main.0818ca5c.chunk.css",
-    "static/js/main.40890ef4.chunk.js"
+    "static/js/main.b1368656.chunk.js"
   ]
 }
