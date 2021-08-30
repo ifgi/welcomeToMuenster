@@ -32,8 +32,8 @@ function Mainpage() {
       <Landing />
       <Intro />
       <Studies />
-      <FirstSteps />
       <ContactPoints />
+      <FirstSteps />
       <FAQ />
       <Discover />
       <Map />

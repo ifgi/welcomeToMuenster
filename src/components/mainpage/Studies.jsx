@@ -7,202 +7,10 @@ import Table from "react-bootstrap/Table";
 import Collapse from "react-bootstrap/Collapse";
 import { useMediaQuery } from "react-responsive";
 import lichthofGeo from "../../img/geo_2_lichthof.jpg";
-
+import masterModuleImg from "../../img/modulübersicht_master.png";
 function Studies() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  const isOverflowBachelor = useMediaQuery({ query: "(max-width: 1499px)" });
-  const isOverflowMaster = useMediaQuery({ query: "(max-width: 951px)" });
   const language = useSelector((state) => state.language);
-
-  const germanTable = (
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>
-            <h3>Semester 1</h3>
-            29 LP
-          </th>
-          <th>
-            <h3>Semester 2</h3>
-            32 LP
-          </th>{" "}
-          <th>
-            <h3>Semester 3</h3>
-            29/31 LP
-          </th>{" "}
-          <th>
-            <h3>Semester 4</h3>
-            34/32 LP
-          </th>{" "}
-          <th>
-            <h3>Semester 5</h3>
-            28/28 LP
-          </th>{" "}
-          <th>
-            <h3>Semester 6</h3>
-            28/28 LP
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Java-Programmierkurs</td>
-          <td>Allgemeine Studien</td>
-          <td>Einführung in die physische Geographie (VL)</td>
-          <td>Einführung in die physische Geographie (Ü)</td>
-          <td>Spezialisierung Informatik/Geoinformatik</td>
-          <td>Spezialisierung Informatik/Geoinformatik</td>
-        </tr>
-        <tr>
-          <td>Informatik 1</td>
-          <td>Informatik 2</td>
-          <td>Softwareentwicklung</td>
-          <td>Datenbanken</td>
-          <td>Projektplanung und -management</td>
-          <td>Allgemeine Studien</td>
-        </tr>
-        <tr>
-          <td>GIS Grundkurs</td>
-          <td>Lineare Algebra für Informatiker</td>
-          <td>Geospatial Data Infrastructure & Geoinformationsdienste</td>
-          <td>Einführung in die Fernerkundung</td>
-          <td>Vorbereitung Bachelorarbeit</td>
-          <td>Bachelorarbeit</td>
-        </tr>
-        <tr>
-          <td>Analysis für Informatiker</td>
-          <td>Angewandte Kartographie</td>
-          <td>
-            Einführung in die Modellierung dynamischer räumlicher Prozesse
-          </td>
-          <td>Reference Systems</td>
-          <td>Projekt</td>
-          <td>{""}</td>
-        </tr>
-        <tr>
-          <td>Einführung in die Geoinformatik</td>
-          <td>Einführung in die Geostatistik</td>
-          <td>Einführung in die Humangeographie / Raumplanung (Wahl)</td>
-          <td>Geosoftware 1</td>
-          <td>Geosoftware 2</td>
-          <td>{""}</td>
-        </tr>
-        <tr>
-          <td>{""}</td>
-          <td>{""}</td>
-          <td>{""}</td>
-          <td>Einführung Humangeographie / Allgemeine Studien (Wahl)</td>
-          <td>
-            Die Erde/ Bodenkunde/ Vegetationsökologie/ Hydrologie/ Klimatologie
-            (Wahl)
-          </td>
-          <td>{""}</td>
-        </tr>
-      </tbody>
-    </Table>
-  );
-
-  const englischTable = (
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>
-            <h3>Semester 1</h3>
-            31 CP
-          </th>{" "}
-          <th>
-            <h3>Semester 2</h3>
-            29 CP
-          </th>{" "}
-          <th>
-            <h3>Semester 3</h3>
-            30 CP
-          </th>{" "}
-          <th>
-            <h3>Semester 4</h3>
-            30 CP
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Geoinformatics Forum</td>
-          <td>Core Topics in GI Science</td>
-          <td>External Studies + Wrap-up Seminar</td>
-          <td>Master thesis including disputation</td>
-        </tr>
-        <tr>
-          <td>Wayfinding and Navigation</td>
-          <td>Advanced Research Methods and Skills</td>
-          <td>or</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Analysis of Spatio-Temporal Data</td>
-          <td>Geoinformatics Forum</td>
-          <td>
-            Internship in Industry, Government or Research + Wrap-up Seminar
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Geoinformation in Society</td>
-          <td>Location Based Services</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Elective Course</td>
-          <td>Geosimulation Modelling</td>
-          <td></td>
-
-          <td></td>
-        </tr>
-        <tr>
-          <td>Study Project</td>
-          <td>Elective Course</td>
-          <td></td>
-
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>Study Project</td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </Table>
-  );
-
-  const onWheel = (e) => {
-    window.addEventListener(
-      "onWheel",
-      function (event) {
-        event.preventDefault();
-      },
-      { passive: false }
-    );
-    e.preventDefault();
-    const container = document.getElementById("table-div");
-    const containerScrollPosition =
-      document.getElementById("table-div").scrollLeft;
-    container.scrollTo({
-      top: 0,
-      left: containerScrollPosition + e.deltaY,
-      behaviour: "smooth",
-    });
-  };
-
-  const changeScroll = () => {
-    let style = document.body.style.overflow;
-    document.body.style.overflow = style === "hidden" ? "auto" : "hidden";
-  };
-
-  const showScroll = () => {
-    let style = document.body.style.overflow;
-    document.body.style.overflow = "auto";
-  };
 
   return (
     <>
@@ -244,99 +52,106 @@ function Studies() {
             {language === "german" ? (
               <>
                 <p>
-                  In einer Zeit, in der rechnergestützte Systeme immer breiteren
-                  Raum in allen Lebensbereichen einnehmen, werden auch
-                  raumbezogene Informationen zunehmend digital bereitgestellt.
-                  Genau hier setzt die Geoinformatik an: Sie sucht nach Lösungen
-                  für raumbezogene Problemstellungen mit Hilfe von
-                  computergestützten Anwendungen.
+                  Bevor du dich beworben hast, hast du dich sicherlich bereits
+                  mit den grundlegenden Inhalten des Studiums beschäftigt, die
+                  auf{" "}
+                  <a
+                    href='https://bachelor-geoinformatik.de/'
+                    target='_blank'
+                    rel='noreferrer'>
+                    unserer Info-Hompage des Studiengangs beschrieben werden
+                  </a>
+                  . Nun solltest du dich, wenn noch nicht geschehen, auch schon
+                  einmal genauer mit dem Aufbau deines Studiums beschäftigen.
+                  Unten siehst du eine Übersicht über die Modulstruktur.
                 </p>
                 <p>
-                  Dein Bachelorstudium in Geoinformatik ist ein integrierter
-                  Studiengang ohne Haupt- und Nebenfächer, der vom Fachbereich
-                  Informatik/Mathematik (Institut für Informatik) und vom
-                  Fachbereich Geowissenschaften (Institut für Geoinformatik)
-                  gemeinsam durchgeführt wird. Nach einer Regelstudienzeit von 6
-                  Semestern erlangst du den Universitätsgrad ‚Bachelor of
-                  Science in Geoinformatik‘. Darauf aufbauend kannst du
-                  ebenfalls am Institut für Geoinformatik ein Master-Studiengang
-                  besuchen, mit dem der Universitätsgrad ‚Master of Science in
-                  Geoinformatics‘ erworben wird.
-                </p>
-                <p>
-                  Zunächst musst du dich weder um Kurswahlen noch um
-                  Prüfungsanmeldungen kümmern. In der Einführungswoche für
+                  Zunächst musst du dir allerdings keine Sorgen machen, dass du
+                  irgendeine Anmeldefrist verpasst. In der Einführungswoche für
                   Erstsemester, die von den Fachschaften Geoinformatik und
                   Geographie/ Landschaftsökologie organisiert wird, wirst du
-                  alle weiteren Informationen zu diesen Themen erhalten. Mehr
-                  dazu findest du auf dieser Seite unter den meist gestellten
-                  Fragen und{" "}
+                  alle weiteren Informationen zum Thema Kurswahlen und
+                  Prüfungsanmeldung erhalten. Außerdem bietet sich neben der
+                  Möglichkeit Rückfragen zu klären, die Chance deine
+                  Kommilitoninnen und Kommilitonen kennenzulernen. Die
+                  Fachschafte organisieren hierfür alljährlich eine ganze Woche
+                  voller Veranstaltungen für euch! Mehr zum Programm der
+                  Einführungswoche findest du auf dieser Seite unter den meist
+                  gestellten Fragen und{" "}
                   <a
                     href='https://geofs.uni-muenster.de/wp/erstsemester/erstiwoche/'
                     target='_blank'
                     rel='noreferrer'>
                     auf der entsprechenden Internetseite der Fachschaft
                   </a>
-                  . Wenn du dich bereits jetzt schon etwas schlau machen
-                  möchtest, hilft dir der vereinfachte Studienverlaufsplan
-                  unten. Der Bachelorstudiengang umfasst formal insgesamt 180
-                  Leistungspunkte (LP) was auf sechs Semester verteilt im
-                  Schnitt 30 LP pro Semester ergibt, abhängig von deinen
-                  Kurswahlen. Für mehr Informationen zum Studium{" "}
-                  <a
-                    href='https://bachelor-geoinformatik.de/'
-                    target='_blank'
-                    rel='noreferrer'>
-                    schaue auf diese Informationsseite
-                  </a>{" "}
-                  oder{" "}
-                  <a
-                    href='https://www.uni-muenster.de/Geoinformatics/Studies/study_programs/bachelor/ordnung.html'
-                    target='_blank'
-                    rel='noreferrer'>
-                    wirf einen Blick in die Prüfungsordnung und den
-                    detaillierten Studienverlaufsplan
-                  </a>
                   .
+                </p>
+                <p>
+                  Auch wenn du dich um die Kursbuchung im Moment noch nicht
+                  kümmern musst, solltest du schon jetzt einmal einen Blick in{" "}
+                  <a
+                    href='https://www.uni-muenster.de/studium/studienangebot/index.html'
+                    target='_blank'
+                    rel='noreferrer'>
+                    das Kursbuchungsportal der Uni werfen
+                  </a>
+                  . Um dich für Kurse anzumelden, musst du dieses Buchungsportal
+                  verwenden. Das Portal ist auch dein erster Anlaufpunkt, wenn
+                  du weitere Informationen zu einzelnen Veranstaltungen (z.B.
+                  Ort, Zeit, Dozent_In) suchst. So findest du auch heraus, wann
+                  du wo zu deiner ersten Veranstaltung aufschlagen musst. Die
+                  wichtigsten Kontaktpersonen für technische oder inhaltliche
+                  Fragen zum Studienprogramm findest du unter der Modulübersicht
+                  auf dieser Seite.
                 </p>
               </>
             ) : (
               <>
                 <p>
-                  Building on a Bachelor of Science in Geoinformatics or a
-                  related discipline, the Master of Science in Geoinformatics
-                  and Spatial Data Science program will further develop your
-                  problem-solving skills, analytic capabilities, and teach
-                  innovative and creative scientific research methods. Obtaining
-                  a Master’s degree from the Institute for Geoinformatics will
-                  prepare you for a leading position in industry and academics.
-                  Medium of instruction is English.
-                </p>
-                <p>
-                  There will be a formal information presentation in one of the
-                  first lectures of the semester and you will receive an e-mail
-                  to be informed when this will take place. There is a deadline
-                  for course enrollment and exam registration. You will be
-                  informed by e-mail about the respective deadline. The study
-                  plan gives a rough overview of the studies. The total workload
-                  of the study program is 120 credit points (ECTS) distributed
-                  over 8 modules (out of 10) and 4 semesters. For more
-                  information about the studies and course enrollment{" "}
+                  Before applying for this study program, you have probably
+                  already checked the main contents of it by visiting{" "}
+                  <a
+                    href='https://master-geoinformatics.com/'
+                    target='_blank'
+                    rel='noreferrer'>
+                    our info homepage
+                  </a>
+                  . Now is the time to have closer look at it and to understand
+                  the course program structure. As you can see from the figure
+                  below, the program of lectures and other courses is completed
+                  in the first two semesters while the rest of your studies is
+                  reserved for your external semester and the Master thesis.
+                  Choosing courses for your first semester will be one of your
+                  first tasks. Detailed information about the course program and
+                  on how to choose courses{" "}
                   <a
                     href='https://dachro.github.io/study_program_intro/study_program_intro.html'
                     target='_blank'
                     rel='noreferrer'>
-                    take a look at this infopage
-                  </a>{" "}
-                  or{" "}
-                  <a
-                    href='https://www.uni-muenster.de/Geoinformatics/en/Studies/study_programs/master/master-study-program.html'
-                    target='_blank'
-                    rel='noreferrer'>
-                    check out the more detailed study plan and the examination
-                    regulations
+                    can be found here
                   </a>
                   .
+                </p>
+                <p>
+                  <a
+                    href='https://www.uni-muenster.de/studium/en/studienangebot/index.html'
+                    target='_blank'
+                    rel='noreferrer'>
+                    You should also have a look at the course booking system
+                  </a>
+                  . You will use this system to enroll for courses. Although you
+                  don´t need to worry about this right now (the registration
+                  phase starts later during the semester) you should already
+                  have a look at the system: it is also the starting point for
+                  you to get more information about specific lectures, e.g.,
+                  when and where they take place.
+                </p>
+                <p>
+                  There will be a welcome meeting at the beginning of the
+                  semester, where you will receive information and get to know
+                  your fellow students, some lecturers and the people you can
+                  approach in case you have any questions or issues. You can
+                  also find the most important contacts below.
                 </p>
               </>
             )}
@@ -380,35 +195,27 @@ function Studies() {
               language === "englisch" ? "studies-col englisch" : "studies-col"
             }>
             {language === "german" ? (
-              <h2>Studienverlaufsplan</h2>
+              <h2>Modulübersicht</h2>
             ) : (
-              <h2>Study Plan</h2>
+              <h2>Module Overview</h2>
             )}
             {language === "german" ? (
-              isOverflowBachelor ? (
-                <div
-                  id='table-div'
-                  onWheel={onWheel}
-                  onMouseEnter={changeScroll}
-                  onMouseLeave={showScroll}>
-                  {language === "german" ? germanTable : englischTable}
-                </div>
-              ) : (
-                <div id='table-div' onWheel={onWheel}>
-                  {language === "german" ? germanTable : englischTable}
-                </div>
-              )
-            ) : isOverflowMaster ? (
-              <div
-                id='table-div'
-                onWheel={onWheel}
-                onMouseEnter={changeScroll}
-                onMouseLeave={showScroll}>
-                {language === "german" ? germanTable : englischTable}
+              <div id='table-div'>
+                <img
+                  src={masterModuleImg}
+                  width='100%'
+                  height='auto'
+                  alt='Module Overview: Master of Geoinformatics'
+                />
               </div>
             ) : (
-              <div id='table-div' onWheel={onWheel}>
-                {language === "german" ? germanTable : englischTable}
+              <div id='table-div'>
+                <img
+                  src={masterModuleImg}
+                  width='100%'
+                  height='auto'
+                  alt='Module Overview: Master of Geoinformatics'
+                />
               </div>
             )}
           </Col>

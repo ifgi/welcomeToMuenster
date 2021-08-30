@@ -65,9 +65,12 @@ function ContactPoints() {
                     <br />
                     <b>Karsten Höwelhans</b>
                     <br />
+                    <br />
                     <b>Telefon:</b> +49 (251) 83-33 083
                     <br />
                     <b>E-Mail:</b> khoew_01@uni-muenster.de
+                    <br />
+                    <b>Raum:</b> 123 (GEO1)
                   </p>
                 </>
               ) : (
@@ -81,9 +84,12 @@ function ContactPoints() {
                     <br />
                     <b>Karsten Höwelhans</b>
                     <br />
+                    <br />
                     <b>Phone:</b> +49 (251) 83-33 083
                     <br />
                     <b>Mail:</b> khoew_01@uni-muenster.de
+                    <br />
+                    <b>Room:</b> 123 (GEO1)
                   </p>
                 </>
               )}
@@ -103,11 +109,14 @@ function ContactPoints() {
                   <h3>Fragen zur Studienplanung</h3>
                   <p>
                     <br />
-                    <b>Christian Knoth</b>
+                    <b>Dr. Thomas Bartoschek</b>
                     <br />
-                    <b>Telefon:</b> +49 (251) 83-33 056
                     <br />
-                    <b>E-Mail:</b> christianknoth@uni-muenster.de
+                    <b>Telefon:</b> +49 (251) 83-30 011
+                    <br />
+                    <b>E-Mail:</b> bartoschek@uni-muenster.de
+                    <br />
+                    <b>Raum:</b> 104 (GEO1)
                   </p>
                 </>
               ) : (
@@ -115,16 +124,32 @@ function ContactPoints() {
                   <h3>Questions Regarding Study Planning</h3>
                   <p>
                     <br />
-                    <b>Christian Knoth</b>
+                    <b>Dr. Christian Knoth</b>
+                    <br />
                     <br />
                     <b>Phone:</b> +49 (251) 83-33 056
                     <br />
                     <b>Mail:</b> christianknoth@uni-muenster.de
+                    <br />
+                    <b>Room:</b> 137 (GEO1)
                   </p>
                 </>
               )}
             </div>
           </Col>
+        </Row>
+        <Row className='contactPoints-row'>
+          {language === "german" ? (
+            <p>
+              „Wenn du diese oder andere Personen im Geo suchst … (wurde
+              übrigens auch in studentischer Arbeit gebastelt)
+            </p>
+          ) : (
+            <p>
+              „Wenn du diese oder andere Personen im Geo suchst … (wurde
+              übrigens auch in studentischer Arbeit gebastelt)
+            </p>
+          )}
         </Row>
       </Container>
     </>

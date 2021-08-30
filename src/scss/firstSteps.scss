@@ -1,5 +1,4 @@
 #FirstSteps {
-  background-color: $primary-light;
   height: auto !important;
   position: relative;
   padding: 0;
@@ -8,14 +7,6 @@
   padding-left: 8vw;
   p {
     text-align: justify;
-    color: white;
-  }
-  a {
-    color: $secondary;
-  }
-  h2,
-  h3 {
-    color: white;
   }
 }
 .firststeps-heading-row {

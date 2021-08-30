@@ -17,12 +17,6 @@ import globeIconMaster from "../../img/icons/iconmonstr-globe-master.svg";
 import homeIconMaster from "../../img/icons/iconmonstr-home-master.svg";
 import dropdownIconMaster from "../../img/icons/iconmonstr-dropdown-master.svg";
 
-import mensaCardIconWhite from "../../img/icons/iconmonstr-mensa-card-white.svg";
-import courseIconWhite from "../../img/icons/iconmonstr-courses-white.svg";
-import globeIconWhite from "../../img/icons/iconmonstr-globe-white.svg";
-import homeIconWhite from "../../img/icons/iconmonstr-home-white.svg";
-import dropdownIconWhite from "../../img/icons/iconmonstr-dropdown-white.svg";
-
 function FAQ() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const language = useSelector((state) => state.language);
@@ -40,8 +34,8 @@ function FAQ() {
         className={
           language === "englisch"
             ? isTabletOrMobile
-              ? "master-backgroundcolor master-links mobile overflow-x"
-              : "master-backgroundcolor master-links"
+              ? "master-links mobile overflow-x"
+              : "master-links"
             : isTabletOrMobile
             ? "mobile overflow-x"
             : ""
@@ -67,7 +61,7 @@ function FAQ() {
                 : "firststeps-col"
             }>
             <img
-              src={courseIconWhite}
+              src={language === "german" ? speechBubbleIcon : courseIconMaster}
               className='firststeps-icon'
               alt='Icon for a course'
             />
@@ -102,7 +96,7 @@ function FAQ() {
               </>
             ) : language === "englisch" ? (
               <>
-                <h3>Course Enrollment</h3>
+                <h3>Study Planing</h3>
 
                 <Collapse in={openInfo[1]}>
                   <div id='example-collapse-text'>
@@ -110,7 +104,7 @@ function FAQ() {
                       If you are not already informed by our secretary's office
                       you can check out{" "}
                       <a
-                        href='https://www.uni-muenster.de/Geoinformatics/en/Studies/study_programs/master/practical-information-for-msc-gi-students.html'
+                        href='https://master-geoinformatics.com/faq'
                         rel='noreferrer'
                         target='_blank'>
                         this page for all the practical information
@@ -143,7 +137,7 @@ function FAQ() {
               aria-controls='example-collapse-text'
               aria-expanded={openInfo}>
               <img
-                src={dropdownIconWhite}
+                src={language === "german" ? dropdownIcon : dropdownIconMaster}
                 className={
                   openInfo[1]
                     ? "dropdown-opened dropdown-icon"
@@ -162,7 +156,7 @@ function FAQ() {
                 : "firststeps-col"
             }>
             <img
-              src={mensaCardIconWhite}
+              src={language === "german" ? mensaCardIcon : mensaCardIconMaster}
               className='firststeps-icon'
               alt='Icon of a Card'
             />
@@ -191,14 +185,14 @@ function FAQ() {
               </>
             ) : language === "englisch" ? (
               <>
-                <h3>Apply for Student ID / Mensacard (Canteen Card)</h3>
+                <h3>Apply for Student ID card</h3>
                 <Collapse in={openInfo[2]}>
                   <div id='example-collapse-text'>
                     <p>
                       To don't get in trouble by don't having a ID card for the
                       canteen or the library,{" "}
                       <a
-                        href='https://www.uni-muenster.de/studium/orga/studienverwaltung/studierendenkarte.html'
+                        href='https://www.uni-muenster.de/studium/en/orga/studienverwaltung/studierendenkarte.html'
                         target='_blank'
                         rel='noreferrer'>
                         check out this page
@@ -223,7 +217,7 @@ function FAQ() {
               aria-controls='example-collapse-text'
               aria-expanded={openInfo}>
               <img
-                src={dropdownIconWhite}
+                src={language === "german" ? dropdownIcon : dropdownIconMaster}
                 className={
                   openInfo[2]
                     ? "dropdown-opened dropdown-icon"
@@ -235,7 +229,7 @@ function FAQ() {
           </Col>{" "}
           <Col xs='12' md='6' className='firststeps-col'>
             <img
-              src={globeIconWhite}
+              src={language === "german" ? globeIcon : globeIconMaster}
               className='firststeps-icon'
               alt='Icon of a LGlobe'
             />
@@ -346,7 +340,7 @@ function FAQ() {
               aria-controls='example-collapse-text'
               aria-expanded={openInfo}>
               <img
-                src={dropdownIconWhite}
+                src={language === "german" ? dropdownIcon : dropdownIconMaster}
                 className={
                   openInfo[3]
                     ? "dropdown-opened dropdown-icon"
@@ -358,7 +352,7 @@ function FAQ() {
           </Col>
           <Col xs='12' md='6' className='firststeps-col'>
             <img
-              src={homeIconWhite}
+              src={language === "german" ? homeIcon : homeIconMaster}
               className='firststeps-icon'
               alt='Icon of a Card'
             />
@@ -443,7 +437,7 @@ function FAQ() {
               aria-controls='example-collapse-text'
               aria-expanded={openInfo}>
               <img
-                src={dropdownIconWhite}
+                src={language === "german" ? dropdownIcon : dropdownIconMaster}
                 className={
                   openInfo[4]
                     ? "dropdown-opened dropdown-icon"

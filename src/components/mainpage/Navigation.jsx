@@ -52,21 +52,21 @@ function Navigation() {
             </Nav.Link>
             <Nav.Link
               onClick={() =>
-                scroller.scrollTo("FirstSteps", {
-                  smooth: true,
-                  duration: 500,
-                })
-              }>
-              Erste Schritte
-            </Nav.Link>
-            <Nav.Link
-              onClick={() =>
                 scroller.scrollTo("ContactPoints", {
                   smooth: true,
                   duration: 500,
                 })
               }>
               Kontakte
+            </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("FirstSteps", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              Erste Schritte
             </Nav.Link>
             <Nav.Link
               onClick={() =>
@@ -124,15 +124,6 @@ function Navigation() {
             </Nav.Link>
             <Nav.Link
               onClick={() =>
-                scroller.scrollTo("FirstSteps", {
-                  smooth: true,
-                  duration: 500,
-                })
-              }>
-              First Steps
-            </Nav.Link>
-            <Nav.Link
-              onClick={() =>
                 scroller.scrollTo("ContactPoints", {
                   smooth: true,
                   duration: 500,
@@ -140,6 +131,16 @@ function Navigation() {
               }>
               Contacts
             </Nav.Link>
+            <Nav.Link
+              onClick={() =>
+                scroller.scrollTo("FirstSteps", {
+                  smooth: true,
+                  duration: 500,
+                })
+              }>
+              First Steps
+            </Nav.Link>
+
             <Nav.Link
               onClick={() =>
                 scroller.scrollTo("FAQ", {

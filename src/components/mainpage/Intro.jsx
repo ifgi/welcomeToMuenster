@@ -14,9 +14,12 @@ import germany from "../../data/germany.json";
 import nrw from "../../data/nrw.json";
 import muensterland from "../../data/muensterland.json";
 import muenster from "../../data/muenster.json";
+import nothing from "../../data/nothing.json";
 import geoOneJSON from "../../data/geo1.json";
 
 import lichthofGeo from "../../img/geo_1_lichthof.jpg";
+import geoDronePhoto from "../../img/GEO1_jan_lehmann.jpg";
+
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   shadowUrl:
@@ -28,11 +31,14 @@ const germanyCenter = [51.8, 3.4];
 const nrwCenter = [51.5, 5.2];
 const muensterCenter = [52.05, 6.3];
 const stadtCenter = [51.9583, 7.4];
+const geoCenter = [51.969371, 7.592296];
+
 //mobile centers
 const germanyCenterMobile = [51.746079, 10.601846];
 const nrwCenterMobile = [51.960667, 7.626135];
 const muensterCenterMobile = [51.961869, 7.383207];
 const stadtCenterMobile = [51.960667, 7.626135];
+const geoCenterMobile = [51.969371, 7.595696];
 
 function Intro() {
   const geoOne = geoOneJSON.features[0];
@@ -77,6 +83,11 @@ function Intro() {
       setCurrentCenter(isTabletOrMobile ? stadtCenterMobile : stadtCenter);
       setCurrentZoom(isTabletOrMobile ? 10.5 : 10.9);
       setGeoData(muenster);
+    }
+    if (data === 5) {
+      setCurrentCenter(isTabletOrMobile ? geoCenterMobile : geoCenter);
+      setCurrentZoom(isTabletOrMobile ? 17 : 17);
+      setGeoData(nothing);
     }
     return null;
   };
@@ -351,7 +362,6 @@ function Intro() {
               )}
             </div>
           </Step>
-
           <Step data={4} key={4}>
             <div
               className={
@@ -423,6 +433,61 @@ function Intro() {
             </div>
           </Step>
           <Step data={5} key={5}>
+            <div
+              className={
+                isTabletOrMobile
+                  ? "storymap-description mobile overflow-x"
+                  : "storymap-description"
+              }>
+              {language === "german" ? (
+                <>
+                  <h2>Dein Institut</h2>
+                  <p>
+                    Das Institut für Geoinformatik (ifgi) befindet sich im
+                    nordwestlichen Teil von Münster auf dem
+                    naturwissenschaftlichen Campus. Hier sitzen wir – zusammen
+                    mit den Instituten für Landschaftsökologie, Geographie und
+                    Didaktik der Geographie – im schönen „GEO1“-Gebäude. Die
+                    Räume des ifgi befinden sich hauptsächlich in den ersten
+                    beiden Obergeschossen. Einige eurer Veranstaltungen werden
+                    auch im GEO1 stattfinden, z.B. im großen GEO1-Hörsaal.
+                  </p>
+                </>
+              ) : language === "englisch" ? (
+                <>
+                  <h2>Your Institute</h2>
+                  <p>
+                    The Institute for Geoinformatics (ifgi) is located in the
+                    northwestern part of Muenster on the campus of natural
+                    sciences. Here we reside in the beautiful “GEO1” building
+                    together with the institutes of Landscape Ecology, Geography
+                    and Didactics of Geography. The rooms of ifgi are mainly
+                    located on the 1st and 2nd floor. Some of your courses and
+                    lectures will also take place in GEO1, e.g., in the GEO1
+                    lecture hall.
+                  </p>
+                </>
+              ) : (
+                <></>
+              )}
+              <img
+                src={geoDronePhoto}
+                width='100%'
+                height='auto'
+                title={
+                  language === "german"
+                    ? "Foto von Jan Lehmann"
+                    : "photo by Jan Lehmann"
+                }
+                alt={
+                  language === "german"
+                    ? "GEO-Gebäudes, Foto von Jan Lehmann"
+                    : "GEO-building, photo by Jan Lehmann"
+                }
+              />
+            </div>
+          </Step>
+          <Step data={6} key={6}>
             <div
               style={{
                 marginTop: "100vh",
