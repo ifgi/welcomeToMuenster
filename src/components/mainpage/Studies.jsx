@@ -7,7 +7,9 @@ import Table from "react-bootstrap/Table";
 import Collapse from "react-bootstrap/Collapse";
 import { useMediaQuery } from "react-responsive";
 import lichthofGeo from "../../img/geo_2_lichthof.jpg";
-import masterModuleImg from "../../img/modulübersicht_master.png";
+import masterModuleImg from "../../img/moduluebersicht_master.png";
+import bachelorModuleImg from "../../img/moduluebersicht_bachelor.png";
+
 function Studies() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const language = useSelector((state) => state.language);
@@ -202,7 +204,7 @@ function Studies() {
             {language === "german" ? (
               <div id='table-div'>
                 <img
-                  src={masterModuleImg}
+                  src={bachelorModuleImg}
                   width='100%'
                   height='auto'
                   alt='Module Overview: Master of Geoinformatics'

@@ -7,9 +7,17 @@
   padding-top: 40px;
   padding-left: 8vw;
   color: white;
-  p {
-    text-align: justify;
-  }
+}
+.info-sign {
+  height: 4rem;
+  width: auto;
+  margin: 10px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 .contactPoints-heading-row {
   color: white;
@@ -40,7 +48,7 @@
     -o-border-radius: 0.25rem;
     min-height: 250px;
     padding: 1rem;
-    width: 90%;
+    width: 100%;
   }
   padding: 25px !important;
 }

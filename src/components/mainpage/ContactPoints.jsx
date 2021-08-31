@@ -4,6 +4,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useMediaQuery } from "react-responsive";
 
+import infoSign from "../../img/info_schild.jpg";
+
 function ContactPoints() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const language = useSelector((state) => state.language);
@@ -139,17 +141,32 @@ function ContactPoints() {
           </Col>
         </Row>
         <Row className='contactPoints-row'>
-          {language === "german" ? (
-            <p>
-              „Wenn du diese oder andere Personen im Geo suchst … (wurde
-              übrigens auch in studentischer Arbeit gebastelt)
-            </p>
-          ) : (
-            <p>
-              „Wenn du diese oder andere Personen im Geo suchst … (wurde
-              übrigens auch in studentischer Arbeit gebastelt)
-            </p>
-          )}
+          <Col xs='12' md='2'>
+            <img
+              className='info-sign'
+              src={infoSign}
+              alt={
+                language === "german"
+                  ? "nach diesem Informationsschild solltest du Ausschau halten"
+                  : "the Information Sign you should look for"
+              }
+            />
+          </Col>
+          <Col xs='12' md='10'>
+            {language === "german" ? (
+              <p>
+                Falls du eine Person bzw. einen Raum im Geo suchst, halte in der
+                Eingangshalle ausschau nach diesem Informations-Schild. Hier
+                findest du ein interaktives Indoor-Leitsystem.
+              </p>
+            ) : (
+              <p>
+                If you are looking for a person or a room in the GEO building
+                just look for this information-sign in the entrance hall. Here
+                you will find an interactive indoor guidance system.
+              </p>
+            )}
+          </Col>
         </Row>
       </Container>
     </>

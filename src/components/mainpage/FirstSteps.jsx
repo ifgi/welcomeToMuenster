@@ -121,6 +121,12 @@ function FAQ() {
                       </a>
                       .
                     </p>
+                    <p>
+                      You should check out the booking system and your study
+                      plan to prepare your first semester. Also, you should have
+                      a look at the courses offered and which one you are going
+                      to take.{" "}
+                    </p>
                   </div>
                 </Collapse>
               </>
@@ -282,28 +288,40 @@ function FAQ() {
               </>
             ) : language === "englisch" ? (
               <>
-                <h3>Get well informed</h3>
+                <h3>get Connected / Get Informed</h3>
                 <Collapse in={openInfo[3]}>
                   <div id='example-collapse-text'>
                     <p>
-                      If you would like to get informed there are many important
-                      websites you can rely on. A small selection of the most
-                      important websites:
+                      There will be a information event and also a event for
+                      getting to know your fellow students. The information
+                      event will take place in the first lecture of the semester
+                      why the planing of your studies is important to not miss
+                      this event.{" "}
+                    </p>
+                    <p>
+                      Furthermore the Fachschaft always gives good opportunities
+                      to meet with other students. They plan events around the
+                      Christmas time, they take care of your concerns and the
+                      best thing, it is easy to participate. If you are
+                      interested{" "}
+                      <a
+                        href='https://geofs.uni-muenster.de/wp/'
+                        target='_blank'
+                        rel='noreferrer'>
+                        check out the Fachschaft's homepage.
+                      </a>
+                    </p>
+                    <p>
+                      If you need any further information about the WWU or your
+                      studies there are many important websites you can rely on.
+                      A small selection of the most important websites:
                       <ul>
                         <li>
                           <a
                             href='https://www.uni-muenster.de/Geoinformatics/'
                             target='_blank'
                             rel='noreferrer'>
-                            the website of your institute
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href='https://geofs.uni-muenster.de/wp/'
-                            target='_blank'
-                            rel='noreferrer'>
-                            everything you need to know about the Fachschaft
+                            your institute
                           </a>
                         </li>
                         <li>
@@ -319,7 +337,7 @@ function FAQ() {
                             href='https://dachro.github.io/study_program_intro/study_program_intro.html'
                             target='_blank'
                             rel='noreferrer'>
-                            about course program
+                            about course program and the booking system
                           </a>
                         </li>
                       </ul>
