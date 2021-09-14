@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/welcomeToMuenster/static/css/main.52c4aaec.chunk.css",
-    "main.js": "/welcomeToMuenster/static/js/main.c76641a1.chunk.js",
-    "main.js.map": "/welcomeToMuenster/static/js/main.c76641a1.chunk.js.map",
-    "runtime-main.js": "/welcomeToMuenster/static/js/runtime-main.f3b06a6c.js",
-    "runtime-main.js.map": "/welcomeToMuenster/static/js/runtime-main.f3b06a6c.js.map",
+    "main.css": "/welcomeToMuenster/static/css/main.76502317.chunk.css",
+    "main.js": "/welcomeToMuenster/static/js/main.ec7b5e74.chunk.js",
+    "main.js.map": "/welcomeToMuenster/static/js/main.ec7b5e74.chunk.js.map",
+    "runtime-main.js": "/welcomeToMuenster/static/js/runtime-main.b234a510.js",
+    "runtime-main.js.map": "/welcomeToMuenster/static/js/runtime-main.b234a510.js.map",
     "static/css/2.063fa238.chunk.css": "/welcomeToMuenster/static/css/2.063fa238.chunk.css",
-    "static/js/2.f5e3470b.chunk.js": "/welcomeToMuenster/static/js/2.f5e3470b.chunk.js",
-    "static/js/2.f5e3470b.chunk.js.map": "/welcomeToMuenster/static/js/2.f5e3470b.chunk.js.map",
-    "static/js/3.fe5bd0ab.chunk.js": "/welcomeToMuenster/static/js/3.fe5bd0ab.chunk.js",
-    "static/js/3.fe5bd0ab.chunk.js.map": "/welcomeToMuenster/static/js/3.fe5bd0ab.chunk.js.map",
+    "static/js/2.4483a669.chunk.js": "/welcomeToMuenster/static/js/2.4483a669.chunk.js",
+    "static/js/2.4483a669.chunk.js.map": "/welcomeToMuenster/static/js/2.4483a669.chunk.js.map",
+    "static/js/3.2588b3b1.chunk.js": "/welcomeToMuenster/static/js/3.2588b3b1.chunk.js",
+    "static/js/3.2588b3b1.chunk.js.map": "/welcomeToMuenster/static/js/3.2588b3b1.chunk.js.map",
     "index.html": "/welcomeToMuenster/index.html",
     "static/css/2.063fa238.chunk.css.map": "/welcomeToMuenster/static/css/2.063fa238.chunk.css.map",
-    "static/css/main.52c4aaec.chunk.css.map": "/welcomeToMuenster/static/css/main.52c4aaec.chunk.css.map",
-    "static/js/2.f5e3470b.chunk.js.LICENSE.txt": "/welcomeToMuenster/static/js/2.f5e3470b.chunk.js.LICENSE.txt",
+    "static/css/main.76502317.chunk.css.map": "/welcomeToMuenster/static/css/main.76502317.chunk.css.map",
+    "static/js/2.4483a669.chunk.js.LICENSE.txt": "/welcomeToMuenster/static/js/2.4483a669.chunk.js.LICENSE.txt",
     "static/media/GEO1_jan_lehmann.7bd164d1.jpg": "/welcomeToMuenster/static/media/GEO1_jan_lehmann.7bd164d1.jpg",
     "static/media/copy.5a98d636.svg": "/welcomeToMuenster/static/media/copy.5a98d636.svg",
     "static/media/culture_grey.77175b3d.svg": "/welcomeToMuenster/static/media/culture_grey.77175b3d.svg",
@@ -63,7 +63,7 @@
     "static/media/info_grey.2f7ceef8.svg": "/welcomeToMuenster/static/media/info_grey.2f7ceef8.svg",
     "static/media/info_primary.13feb469.svg": "/welcomeToMuenster/static/media/info_primary.13feb469.svg",
     "static/media/info_primary_master.8097a04b.svg": "/welcomeToMuenster/static/media/info_primary_master.8097a04b.svg",
-    "static/media/info_schild.cd2fc551.jpg": "/welcomeToMuenster/static/media/info_schild.cd2fc551.jpg",
+    "static/media/info_schild_gross.8b3dd9ec.jpg": "/welcomeToMuenster/static/media/info_schild_gross.8b3dd9ec.jpg",
     "static/media/moduluebersicht_bachelor.723426df.png": "/welcomeToMuenster/static/media/moduluebersicht_bachelor.723426df.png",
     "static/media/moduluebersicht_master.c6acadc6.png": "/welcomeToMuenster/static/media/moduluebersicht_master.c6acadc6.png",
     "static/media/muenster_schloss.373bfb9f.jpg": "/welcomeToMuenster/static/media/muenster_schloss.373bfb9f.jpg",
@@ -80,10 +80,10 @@
     "static/media/soccer_primary_master.e7fe6405.svg": "/welcomeToMuenster/static/media/soccer_primary_master.e7fe6405.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3b06a6c.js",
+    "static/js/runtime-main.b234a510.js",
     "static/css/2.063fa238.chunk.css",
-    "static/js/2.f5e3470b.chunk.js",
-    "static/css/main.52c4aaec.chunk.css",
-    "static/js/main.c76641a1.chunk.js"
+    "static/js/2.4483a669.chunk.js",
+    "static/css/main.76502317.chunk.css",
+    "static/js/main.ec7b5e74.chunk.js"
   ]
 }
