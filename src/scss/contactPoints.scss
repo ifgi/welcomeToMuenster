@@ -20,11 +20,14 @@
 }
 .contactPoints-row-sign {
   .sign-description {
-    margin: 0;
-    p {
+    #fachschaft-quote {
       text-align: center;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-style: italic;
+    }
+    #fachschaft-quote-author {
+      font-size: 0.8rem;
+      text-align: center;
     }
   }
   .sign-description-mobile {

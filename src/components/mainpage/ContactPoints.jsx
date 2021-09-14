@@ -183,17 +183,18 @@ function ContactPoints() {
                   : "sign-description align-self-center"
               }>
               {language === "german" ? (
-                <p>
-                  "Falls du eine Person bzw. einen Raum im Geo suchst, halte in
-                  der Eingangshalle Ausschau nach diesem Indoor-Leitsystem."
+                <p id='fachschaft-quote'>
+                  "Wenn du eine Person oder einen Raum suchst, verwende dieses
+                  Indoor-Leitsystem im Eingagsbereich des GEOs."
                 </p>
               ) : (
-                <p>
-                  "If you are looking for a person or a room in the GEO building
-                  just look for this interactive indoor guidance system in the
-                  entrance hall."
+                <p id='fachschaft-quote'>
+                  "If you are looking for a person or a room, use this
+                  interactive indoor guidance system in the entrance hall of the
+                  GEO-building."
                 </p>
               )}
+              <p id='fachschaft-quote-author'>Fachschaft Geoinformatik</p>
             </div>
           </Col>
         </Row>
