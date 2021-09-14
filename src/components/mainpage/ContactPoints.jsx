@@ -3,8 +3,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useMediaQuery } from "react-responsive";
-
-import infoSign from "../../img/info_schild.jpg";
+import Dropdown from "react-bootstrap/Dropdown";
+import infoSign from "../../img/info_schild_gross.jpg";
 
 function ContactPoints() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
@@ -140,8 +140,9 @@ function ContactPoints() {
             </div>
           </Col>
         </Row>
-        <Row className='contactPoints-row'>
-          <Col xs='12' md='2'>
+        <Dropdown.Divider />
+        <Row className='contactPoints-row-sign align-items-center'>
+          <Col xs='12' md='4'>
             <img
               className='info-sign'
               src={infoSign}
@@ -152,20 +153,48 @@ function ContactPoints() {
               }
             />
           </Col>
-          <Col xs='12' md='10'>
-            {language === "german" ? (
-              <p>
-                Falls du eine Person bzw. einen Raum im Geo suchst, halte in der
-                Eingangshalle ausschau nach diesem Informations-Schild. Hier
-                findest du ein interaktives Indoor-Leitsystem.
-              </p>
-            ) : (
-              <p>
-                If you are looking for a person or a room in the GEO building
-                just look for this information-sign in the entrance hall. Here
-                you will find an interactive indoor guidance system.
-              </p>
-            )}
+          {/*
+          <Col
+            xs={{ span: "12", order: "first" }}
+            md={{ span: "8", order: "last" }}>
+            <div className={isTabletOrMobile ? "" : "sign-description"}>
+              {language === "german" ? (
+                <p>
+                  Falls du eine Person bzw. einen Raum im Geo suchst, halte in
+                  der Eingangshalle Ausschau nach diesem Indoor-Leitsystem.
+                </p>
+              ) : (
+                <p>
+                  If you are looking for a person or a room in the GEO building
+                  just look for this information-sign in the entrance hall. Here
+                  you will find an interactive indoor guidance system.
+                </p>
+              )}
+            </div>
+          </Col>
+          */}
+          <Col
+            xs={{ span: "12", order: "first" }}
+            md={{ span: "8", order: "last" }}>
+            <div
+              className={
+                isTabletOrMobile
+                  ? "sign-description sign-description-mobile align-self-center"
+                  : "sign-description align-self-center"
+              }>
+              {language === "german" ? (
+                <p>
+                  "Falls du eine Person bzw. einen Raum im Geo suchst, halte in
+                  der Eingangshalle Ausschau nach diesem Indoor-Leitsystem."
+                </p>
+              ) : (
+                <p>
+                  "If you are looking for a person or a room in the GEO building
+                  just look for this interactive indoor guidance system in the
+                  entrance hall."
+                </p>
+              )}
+            </div>
           </Col>
         </Row>
       </Container>
