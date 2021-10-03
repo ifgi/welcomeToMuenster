@@ -96,28 +96,29 @@ function FAQ() {
               </>
             ) : language === "englisch" ? (
               <>
-                <h3>Study Planing</h3>
+                <h3>Study Planning</h3>
 
                 <Collapse in={openInfo[1]}>
                   <div id='example-collapse-text'>
                     <p>
-                      If you are not already informed by our secretary's office
-                      you can check out{" "}
+                      Please check out{" "}
                       <a
                         href='https://master-geoinformatics.com/faq'
                         rel='noreferrer'
                         target='_blank'>
-                        this page for all the practical information
-                      </a>
-                      . Here you will find explanations about the university's
-                      enrollment system and everything else regarding your
-                      course enrollment. Also, you can check out{" "}
+                        this page
+                      </a>{" "}
+                      for answers to the most frequently asked practical
+                      questions about the study program. Here you will find
+                      explanations about the university's enrollment system and
+                      everything else regarding your course enrollment. For a
+                      detailed description of the course program and a How-To
+                      for choosing your courses,{" "}
                       <a
                         href='https://dachro.github.io/study_program_intro/study_program_intro.html'
                         rel='noreferrer'
                         target='_blank'>
-                        this page for having specific descriptions for
-                        Geoinformatics Master students
+                        check this info homepage
                       </a>
                       .
                     </p>
@@ -288,22 +289,19 @@ function FAQ() {
               </>
             ) : language === "englisch" ? (
               <>
-                <h3>get Connected / Get Informed</h3>
+                <h3>Get Connected / Get Informed</h3>
                 <Collapse in={openInfo[3]}>
                   <div id='example-collapse-text'>
                     <p>
-                      There will be a information event and also a event for
-                      getting to know your fellow students. The information
-                      event will take place in the first lecture of the semester
-                      why the planing of your studies is important to not miss
-                      this event.{" "}
+                      There will be a welcome meeting at the beginning of the
+                      semester, where you can meet your fellow students.{" "}
                     </p>
                     <p>
-                      Furthermore the Fachschaft always gives good opportunities
-                      to meet with other students. They plan events around the
-                      Christmas time, they take care of your concerns and the
-                      best thing, it is easy to participate. If you are
-                      interested{" "}
+                      Furthermore the Fachschaft always provides good
+                      opportunities to meet with other students. They plan
+                      events around the Christmas time, they take care of your
+                      concerns, and the best thing: it is easy to participate.
+                      If you are interested{" "}
                       <a
                         href='https://geofs.uni-muenster.de/wp/'
                         target='_blank'
@@ -399,12 +397,11 @@ function FAQ() {
                     </p>
                     <p>
                       Wer das Studierendenleben voll auskosten möchte, sollte
-                      sich überlegen in eine WG zu ziehen oder sogar in eine
-                      Verbindung einzutreten. Hier knüpfst du sofort Kontakte,
-                      bist nicht alleine zuhause und sparst außerdem noch
-                      Kosten. Wer also mit dem Gedanken spielt, sich aber noch
-                      nicht sicher ist, sollte dem gemeinschaftlichen Wohnen
-                      eine Chance geben.{" "}
+                      sich überlegen in eine WG zu ziehen. Hier knüpfst du
+                      sofort Kontakte, bist nicht alleine zuhause und sparst
+                      außerdem noch Kosten. Wer also mit dem Gedanken spielt,
+                      sich aber noch nicht sicher ist, sollte dem
+                      gemeinschaftlichen Wohnen eine Chance geben.{" "}
                     </p>
                     <p>
                       Für mehr Informationen schaue in unsere häufig gestellten
@@ -421,8 +418,8 @@ function FAQ() {
                   <div id='example-collapse-text'>
                     <p>
                       It is not the easiest task to find a good and inexpensive
-                      flat in Münster so don't despair. The best opportunities
-                      to find a flat is to register for the{" "}
+                      flat in Münster but don't despair. The best opportunity to
+                      find a flat is to register for the{" "}
                       <a
                         href='https://www.stw-muenster.de/studentisches-wohnen/wohnanlagen/'
                         target='_blank'
@@ -436,7 +433,7 @@ function FAQ() {
                         rel='noreferrer'>
                         wg-gesucht.de
                       </a>
-                      . For more information scroll to the frequency asked
+                      . For more information scroll to the frequently asked
                       questions, the next section of this webpage.
                     </p>
                   </div>

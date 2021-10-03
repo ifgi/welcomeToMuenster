@@ -28,10 +28,10 @@ function ContactPoints() {
               <>
                 <h2>Wichtige Kontakte</h2>
                 <p>
-                  Falls du Fragen zu Kurswahlen, deinem Studienprogramm oder
-                  beispielsweise den elektronischen Kurswahlen hast und auch die
-                  Informationen auf dieser Seite dir nicht weiterhelfen, stehen
-                  die folgenden Kontakte dir gerne zur Verfügung:
+                  Falls du Fragen zu deinem Studienprogramm oder beispielsweise
+                  den elektronischen Kurswahlen hast und auch die Informationen
+                  auf dieser Seite dir nicht weiterhelfen, stehen die folgenden
+                  Kontakte dir gerne zur Verfügung:
                 </p>
               </>
             ) : language === "englisch" ? (
@@ -131,7 +131,7 @@ function ContactPoints() {
                     <br />
                     <b>Phone:</b> +49 (251) 83-33 056
                     <br />
-                    <b>Mail:</b> christianknoth@uni-muenster.de
+                    <b>Mail:</b> christian.knoth@uni-muenster.de
                     <br />
                     <b>Room:</b> 137 (GEO1)
                   </p>

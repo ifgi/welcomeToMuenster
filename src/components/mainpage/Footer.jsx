@@ -60,7 +60,7 @@ function Footer() {
                     openModal();
                   }}
                   className='master-color englisch-imprint'>
-                  Imprint
+                  Contact / Legal Notice
                 </Button>
                 <br />
                 <a href='https://www.uni-muenster.de/de/datenschutzerklaerung.html'>
@@ -109,6 +109,39 @@ function Footer() {
                 Einrichtung des Landes Nordrhein-Westfalen. Sie wird vertreten
                 durch Rektor Prof. Dr. Johannes Wessels.
               </p>
+              <h2>Zuständige Aufsichtsbehörde</h2>
+              <p>
+                Ministerium für Innovation, Wissenschaft und Forschung des
+                Landes Nordrhein-Westfalen
+                <br />
+                Völklinger Straße 49
+                <br />
+                40221 Düsseldorf
+                <br />
+                <br />
+                Umsatzsteuer-ID-Nummer: DE 126118759
+              </p>
+              <h2>Redaktionell verantwortlich gemäß § 55 Abs. 2 (RStV):</h2>
+              <p>
+                Geschäftsführender Direktor
+                <br />
+                Prof. Dr. Christian Kray
+                <br />
+                Heisenbergstraße 2
+                <br />
+                D-48149 Münster
+                <br />
+                <br />
+                E-Mail: c.kray@uni-muenster.de
+              </p>
+              <h2>Sekretariat</h2>
+              <p>
+                Karsten Höwelhans, Heike Wiefel, Christina Versmold
+                <br />
+                Telefon: +49 (251) 83-33 083
+                <br />
+                E-Mail: geoinformatik@uni-muenster.de
+              </p>
               <h2>Haftungshinweis</h2>
               <p>
                 Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine
@@ -133,30 +166,50 @@ function Footer() {
                   geoinformatik@uni-muenster.de
                 </p>
                 <>
-                  <h2>Imprint</h2>
-                  <p>Westfälischen Wilhelms-Universität Münster</p>
-                  <p>
-                    Fachbereich 14 Geowissenschaften
-                    <br />
-                    Heisenbergstr. 2, 48149 Münster
-                    <br />
-                    Tel.: +49 251 83-30001
-                    <br />
-                    E-Mail: gfgeo@uni-muenster.de
-                  </p>
-                  <p>
-                    Der Fachbereich 14 Geowissenschaften ist eine Einrichtung
-                    der Westfälischen Wilhelms-Universität Münster, WWU. Die WWU
-                    ist eine Körperschaft des öffentlichen Rechts und zugleich
-                    eine Einrichtung des Landes Nordrhein-Westfalen. Sie wird
-                    vertreten durch Rektor Prof. Dr. Johannes Wessels.
-                  </p>
                   <h2>Legal Notice</h2>
+                  <p>University of Muenster</p>
                   <p>
-                    Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir
-                    keine Haftung für die Inhalte externer Links. Für den Inhalt
-                    der verlinkten Seiten sind ausschließlich deren Betreiber
-                    verantwortlich.
+                    Institute for Geoinformatics
+                    <br />
+                    Heisenbergstr. 2
+                    <br />
+                    D-48149 Münster
+                    <br />
+                    <br />
+                    Phone: +49 (251) 83-33 083
+                  </p>
+
+                  <h2>Responsible for this Website:</h2>
+                  <p>
+                    Director
+                    <br />
+                    Prof. Dr. Christian Kray
+                    <br />
+                    Heisenbergstraße 2
+                    <br />
+                    D-48149 Münster
+                    <br />
+                    <br />
+                    E-Mail: c.kray@uni-muenster.de
+                  </p>
+                  <h2>Office</h2>
+                  <p>
+                    Karsten Höwelhans,
+                    <br />
+                    Heike Wiefel,
+                    <br />
+                    Christina Versmold
+                    <br />
+                    <br />
+                    Phone: +49 (251) 83-33 083
+                    <br />
+                    E-Mail: geoinformatik@uni-muenster.de
+                  </p>
+                  <h2>Notice of Liability</h2>
+                  <p>
+                    Although we check the content carefully, we cannot accept
+                    responsibility for the content of external links. The linked
+                    sites’ carriers are responsible for their sites’ content.
                   </p>
                 </>
               </>

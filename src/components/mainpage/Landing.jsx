@@ -86,7 +86,8 @@ function Landing() {
           <div id='p-container'>
             {language === "german" ? (
               <p>
-                Alles, was du für deinen Studienstart benötigst auf einer Seite.
+                Alles, was du für deinen Studienstart benötigst, auf einer
+                Seite.
               </p>
             ) : language === "englisch" ? (
               <p>Everything you need to start your studies on a single page.</p>

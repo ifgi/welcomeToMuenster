@@ -134,9 +134,9 @@ function Intro() {
                   {" "}
                   <h2>Willkommen in deinem neuen Zuhause!</h2>
                   <p>
-                    Schön, dass du dich entschieden hast, nach Münster zu kommen
-                    und umso schöner, dass du ab sofort Geoinformatik studieren
-                    wirst!
+                    Schön, dass du dich entschieden hast, nach Münster zu
+                    kommen! Umso schöner, dass du ab sofort Geoinformatik
+                    studieren wirst!
                   </p>
                   <p>
                     Damit du einen guten Start in dein Studierendenleben hast,
@@ -145,8 +145,8 @@ function Intro() {
                     Geoinformatiker-Art haben wir dafür diese Website mit
                     interaktiven Karten versehen. Diese erste Karte, die du im
                     Hintergrund sehe kannst, wird dich Schritt für Schritt nach
-                    Münster bringen und damit du nie die Orientierung verlierst,
-                    ist das GEO-Gebäude die ganze Zeit mit dem ifgi-Logo
+                    Münster bringen. Damit du nie die Orientierung verlierst,
+                    ist das GEO1-Gebäude die ganze Zeit mit dem ifgi-Logo
                     markiert.
                   </p>
                   <img
@@ -170,17 +170,17 @@ function Intro() {
                   {" "}
                   <h2>Welcome to Your New Home!</h2>
                   <p>
-                    Welcome to Münster and also welcome to the Institute of
+                    Welcome to Münster and welcome to the Institute for
                     Geoinformatics.
                   </p>
                   <p>
-                    To help you starting your life in Münster, we want to give
-                    you some tips and basic information and show you the most
+                    To help you start your life in Münster, we want to give you
+                    some tips and basic information and show you the most
                     important places in Münster. In true geoinformatics fashion,
-                    we provide you this website with interactive maps. On this
-                    first map which you can see in the background, you will be
-                    guided step by step to the city of Münster. The ifgi-logo
-                    marks the GEO-building to not get disorientated on the map.
+                    we provide this website with interactive maps. On this first
+                    map, which you can see in the background, you will be guided
+                    step by step to the city of Münster. The ifgi-logo marks the
+                    GEO1-building, home of our institute.
                   </p>
                   <img
                     src={lichthofGeo}
@@ -193,9 +193,9 @@ function Intro() {
                     }
                   />
                   <p>
-                    Münster is far in the west of Germany near the border to the
-                    Netherlands as you can see on the map. Now, scroll down to
-                    go on.
+                    Münster is in the far west of Germany near the border to the
+                    Netherlands, as you can see on the map. Scroll down to go
+                    on.
                   </p>
                 </>
               ) : (
@@ -223,9 +223,9 @@ function Intro() {
                 <>
                   <h2>Part of North Rhine-Westphalia</h2>
                   <p>
-                    North Rhine-Westphalia (NRW) is the most populated federal
-                    state of Germany. With over 300,000 inhabitants Münster is
-                    on of the top ten citys in NRW.
+                    North Rhine-Westphalia (NRW) is the most densely populated
+                    federal state of Germany. With over 300,000 inhabitants,
+                    Münster is one of the top ten cities in NRW.
                   </p>
                 </>
               ) : (
@@ -265,8 +265,8 @@ function Intro() {
                     can travel from Bonn to Cologne, from Münster to Düsseldorf,
                     from Dortmund to Aachen or from Domplatz in Münster to the
                     main train station, to name just a few possibilities.
-                    Partly, the ticket can bring you further then the borders of
-                    NRW, which is displayed on the map.
+                    Partly, the ticket can bring you even further than the
+                    borders of NRW, which is displayed on the map.
                   </p>
                 </>
               ) : (
@@ -285,15 +285,15 @@ function Intro() {
                 <>
                   <h2>Münsterland: Felder, Fahrräder und Freiheit.</h2>
                   <p>
-                    Mit 188,7 Metern Höhe ist der Westerberg der höchste Punkt
-                    des Münsterlandes und genau aus diesem Grund ist das Fahrrad
-                    der absolute Renner in Münster und Umgebung. Jede Strecke
-                    lässt sich ohne große Anstrengung bewältigen, macht Spaß und
-                    schont Geldbeutel und Umwelt. Außerdem kann sich das
-                    Münsterland sehen lassen. Eine Vielzahl von Burgen und
-                    Schlössern, sowie viel Natur laden zu entspannten Ausflügen
-                    ein. Um mehr über das Münsterland zu erfahren, besuche gerne
-                    die{" "}
+                    Der höchste Punkt des Münsterlandes ist der Westerberg mit
+                    gerade einmal 188,7 Metern und genau aus diesem Grund ist
+                    das Fahrrad der absolute Renner in Münster und Umgebung.
+                    Jede Strecke lässt sich ohne große Anstrengung bewältigen,
+                    das macht Spaß und schont Geldbeutel und Umwelt. Außerdem
+                    kann sich das Münsterland sehen lassen. Eine Vielzahl von
+                    Burgen und Schlössern, sowie viel Natur laden zu entspannten
+                    Ausflügen ein. Um mehr über das Münsterland zu erfahren,
+                    besuche gerne die{" "}
                     <a
                       href='https://www.muensterland.com/'
                       target='_blank'
@@ -307,14 +307,14 @@ function Intro() {
                 <>
                   <h2>Münsterland. Fields, Bicycles and Beauty.</h2>
                   <p>
-                    The Westerberg is the highest point of the Münsterland with
-                    188.7 meters. Therefore, it is always the right decision to
-                    ride your bicycle. It is easy to use because of the flat
-                    terrain, it is cheap and environmentally friendly and beside
-                    that it makes a lot of fun. With a huge number of castles
-                    and palaces and a lot of nature the Münsterland is always
-                    worth a tour. To learn more about the Münsterland, check out
-                    the{" "}
+                    With only 188.7 meters, the Westerberg is already the
+                    highest point of the Münsterland. Therefore, it is always
+                    the right decision to ride your bicycle. It is easy to use
+                    because of the flat terrain, it is cheap and environmentally
+                    friendly, and it is a lot of fun. With a huge number of
+                    castles and palaces and beautiful nature, the Münsterland is
+                    always worth a tour. To learn more about the Münsterland,
+                    check out the{" "}
                     <a
                       href='https://www.muensterland.com/en/'
                       target='_blank'
@@ -346,7 +346,7 @@ function Intro() {
                   <p>
                     Neben Münster sind auch die Kreise Borken, Coesfeld,
                     Steinfurt und Warendorf auf unserer Karte zu erkennen, die
-                    im Gesamten als das Münsterland bezeichnet werden.
+                    zusammen als das Münsterland bezeichnet werden.
                   </p>
                 </>
               ) : language === "englisch" ? (
@@ -415,8 +415,8 @@ function Intro() {
                 <>
                   <p>
                     Auf der Karte kannst du nun die einzelnen Stadtteile
-                    Münsters erkennen. Das Geo befindet sich, wie du siehst,
-                    sehr nahe der Altstadt und somit in bester Lage.
+                    Münsters erkennen. Das GEO1 befindet sich, wie du siehst,
+                    sehr nahe der Innenstadt und somit in bester Lage.
                   </p>
                 </>
               ) : language === "englisch" ? (
