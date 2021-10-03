@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/welcomeToMuenster/static/css/main.dbeab212.chunk.css",
-    "main.js": "/welcomeToMuenster/static/js/main.ca7a3280.chunk.js",
-    "main.js.map": "/welcomeToMuenster/static/js/main.ca7a3280.chunk.js.map",
+    "main.js": "/welcomeToMuenster/static/js/main.f5af1eee.chunk.js",
+    "main.js.map": "/welcomeToMuenster/static/js/main.f5af1eee.chunk.js.map",
     "runtime-main.js": "/welcomeToMuenster/static/js/runtime-main.b234a510.js",
     "runtime-main.js.map": "/welcomeToMuenster/static/js/runtime-main.b234a510.js.map",
     "static/css/2.063fa238.chunk.css": "/welcomeToMuenster/static/css/2.063fa238.chunk.css",
@@ -65,7 +65,7 @@
     "static/media/info_primary_master.8097a04b.svg": "/welcomeToMuenster/static/media/info_primary_master.8097a04b.svg",
     "static/media/info_schild_gross.8b3dd9ec.jpg": "/welcomeToMuenster/static/media/info_schild_gross.8b3dd9ec.jpg",
     "static/media/moduluebersicht_bachelor.723426df.png": "/welcomeToMuenster/static/media/moduluebersicht_bachelor.723426df.png",
-    "static/media/moduluebersicht_master.c6acadc6.png": "/welcomeToMuenster/static/media/moduluebersicht_master.c6acadc6.png",
+    "static/media/moduluebersicht_master.128b4c5f.png": "/welcomeToMuenster/static/media/moduluebersicht_master.128b4c5f.png",
     "static/media/muenster_schloss.373bfb9f.jpg": "/welcomeToMuenster/static/media/muenster_schloss.373bfb9f.jpg",
     "static/media/nature_grey.22f3ae69.svg": "/welcomeToMuenster/static/media/nature_grey.22f3ae69.svg",
     "static/media/nature_primary.ee5e81e8.svg": "/welcomeToMuenster/static/media/nature_primary.ee5e81e8.svg",
@@ -84,6 +84,6 @@
     "static/css/2.063fa238.chunk.css",
     "static/js/2.4483a669.chunk.js",
     "static/css/main.dbeab212.chunk.css",
-    "static/js/main.ca7a3280.chunk.js"
+    "static/js/main.f5af1eee.chunk.js"
   ]
 }
