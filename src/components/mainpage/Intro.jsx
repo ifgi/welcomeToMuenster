@@ -144,7 +144,7 @@ function Intro() {
                     dir die schönsten Orte in Münster zeigen. Ganz auf die
                     Geoinformatiker-Art haben wir dafür diese Website mit
                     interaktiven Karten versehen. Diese erste Karte, die du im
-                    Hintergrund sehe kannst, wird dich Schritt für Schritt nach
+                    Hintergrund sehen kannst, wird dich Schritt für Schritt nach
                     Münster bringen. Damit du nie die Orientierung verlierst,
                     ist das GEO1-Gebäude die ganze Zeit mit dem ifgi-Logo
                     markiert.
@@ -291,7 +291,7 @@ function Intro() {
                     Jede Strecke lässt sich ohne große Anstrengung bewältigen,
                     das macht Spaß und schont Geldbeutel und Umwelt. Außerdem
                     kann sich das Münsterland sehen lassen. Eine Vielzahl von
-                    Burgen und Schlössern, sowie viel Natur laden zu entspannten
+                    Burgen und Schlössern sowie viel Natur laden zu entspannten
                     Ausflügen ein. Um mehr über das Münsterland zu erfahren,
                     besuche gerne die{" "}
                     <a
