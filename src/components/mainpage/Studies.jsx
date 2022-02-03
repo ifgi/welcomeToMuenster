@@ -127,7 +127,7 @@ function Studies() {
                   first tasks. Detailed information about the course program and
                   on how to choose courses{" "}
                   <a
-                    href='https://dachro.github.io/study_program_intro/study_program_intro.html'
+                    href='https://ifgi.github.io/study_program_intro/study_program_intro.html'
                     target='_blank'
                     rel='noreferrer'>
                     can be found here
