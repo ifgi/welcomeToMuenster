@@ -115,7 +115,7 @@ function FAQ() {
                       detailed description of the course program and a How-To
                       for choosing your courses,{" "}
                       <a
-                        href='https://dachro.github.io/study_program_intro/study_program_intro.html'
+                        href='https://ifgi.github.io/study_program_intro/'
                         rel='noreferrer'
                         target='_blank'>
                         check this info homepage
