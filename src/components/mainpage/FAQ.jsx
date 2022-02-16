@@ -210,7 +210,7 @@ function FAQ() {
                         For further information on enrollment and the course
                         program, check out{" "}
                         <a
-                          href='https://dachro.github.io/study_program_intro/study_program_intro.html'
+                          href='https://ifgi.github.io/study_program_intro/'
                           rel='noreferrer'
                           target='_blank'>
                           this information page
