@@ -199,7 +199,7 @@ function FAQ() {
                         . If you are interested in how your studies are
                         structured you might check out this{" "}
                         <a
-                          href='https://www.uni-muenster.de/Geoinformatics/Studies/study_programs/index.html'
+                          href='https://www.uni-muenster.de/Geoinformatics/en/Studies/study_programs/index.html'
                           rel='noreferrer'
                           target='_blank'>
                           ifgi webpage
@@ -426,7 +426,7 @@ function FAQ() {
                           ERASMUS or any other scholarship. If not, you can
                           check out the website of the{" "}
                           <a
-                            href='https://www.uni-muenster.de/InternationalOffice/'
+                            href='https://www.uni-muenster.de/InternationalOffice/en/index.html'
                             rel='noreferrer'
                             target='_blank'>
                             International Office
@@ -550,7 +550,7 @@ function FAQ() {
                         inexpensive flat in Münster so don't despair. The best
                         opportunities to find a flat is to register for the{" "}
                         <a
-                          href='https://www.stw-muenster.de/studentisches-wohnen/wohnanlagen/'
+                          href='https://www.stw-muenster.de/en/studentisches-wohnen-en/wohnanlagen/'
                           target='_blank'
                           rel='noreferrer'>
                           official student residence
@@ -667,7 +667,7 @@ function FAQ() {
                         needs. Furthermore you could also rent a bike at stores
                         like{" "}
                         <a
-                          href='https://swapfiets.de/offer/munster'
+                          href='https://swapfiets.de/en-DE/munster'
                           target='_blank'
                           rel='noreferrer'>
                           Swapfiets
@@ -833,7 +833,7 @@ function FAQ() {
                         In addition to the courses, the HSP offers sports trips
                         which are also available on the{" "}
                         <a
-                          href='https://www.uni-muenster.de/Hochschulsport/'
+                          href='https://www.uni-muenster.de/Hochschulsport/en/'
                           target='_blank'
                           rel='noreferrer'>
                           homepage
