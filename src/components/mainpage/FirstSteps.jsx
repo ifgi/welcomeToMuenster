@@ -332,7 +332,7 @@ function FAQ() {
                         </li>
                         <li>
                           <a
-                            href='https://dachro.github.io/study_program_intro/study_program_intro.html'
+                            href='https://ifgi.github.io/study_program_intro/'
                             target='_blank'
                             rel='noreferrer'>
                             about course program and the booking system
