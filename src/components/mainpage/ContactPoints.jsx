@@ -65,12 +65,12 @@ function ContactPoints() {
                   <h3>Technische Betreuung / Organisatorisches / Kurswahlen</h3>
                   <p>
                     <br />
-                    <b>Karsten Höwelhans</b>
+                    <b>Jan Hardes</b>
                     <br />
                     <br />
                     <b>Telefon:</b> +49 (251) 83-33 083
                     <br />
-                    <b>E-Mail:</b> khoew_01@uni-muenster.de
+                    <b>E-Mail:</b> ifgi.studyorganization@uni-muenster.de
                     <br />
                     <b>Raum:</b> 123 (GEO1)
                   </p>
